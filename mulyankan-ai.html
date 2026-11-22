@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulyankan AI | Intelligent Descriptive Assessment Platform</title>
+  <meta name="description" content="Mulyankan AI is an AI-powered academic evaluation system for handwritten descriptive exams featuring teacher-in-the-loop moderation and rubric-based scoring.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+  <!-- Top Fixed Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Frosted Glass Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link" aria-label="Jaitraya Technolabs Home">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <div class="nav-item-dropdown">
+            <a href="products.html" class="nav-link active">Products</a>
+            <div class="nav-dropdown-menu">
+              <a href="mulyankan-ai.html" class="dropdown-item" style="background-color: var(--color-brand-light);">
+                <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" style="width: 28px; height: 28px; border-radius: 6px;">
+                <div>
+                  <div class="dropdown-item-title" style="color: var(--color-brand);">Mulyankan AI <span class="badge badge-active" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Live Beta</span></div>
+                  <div class="dropdown-item-desc">Descriptive Exam Evaluation Platform</div>
+                </div>
+              </a>
+              <a href="mira.html" class="dropdown-item">
+                <div style="width: 28px; height: 28px; border-radius: 6px; background: var(--color-mira); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem;">M</div>
+                <div>
+                  <div class="dropdown-item-title" style="color: var(--color-mira);">MIRA <span class="badge badge-mira" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Preview</span></div>
+                  <div class="dropdown-item-desc">Offline Multimodal Research Assistant</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="technology.html" class="nav-link">Technology</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          Live Portal ↗
+        </a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" style="height: 34px; width: auto;">
+        <button class="drawer-close" aria-label="Close menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="products.html" class="drawer-link active">Products</a>
+        <a href="technology.html" class="drawer-link">Technology</a>
+        <a href="contact.html" class="drawer-link">Contact Us</a>
+      </nav>
+    </div>
+    <div>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Us</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Mulyankan Hero -->
+    <section class="section" style="padding-top: 5rem; padding-bottom: 3.5rem;">
+      <div class="container container-narrow" data-reveal>
+        <div class="mulyankan-header-block" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.75rem;">
+          <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" class="mulyankan-header-icon" style="width: 76px; height: 76px; border-radius: 18px; box-shadow: var(--shadow-md);">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <span class="badge badge-active">
+                <span class="badge-dot"></span>
+                Flagship Platform
+              </span>
+              <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 600;">Version 2.4 Live Beta</span>
+            </div>
+            <h1 style="font-size: clamp(2.25rem, 4.5vw, 3.5rem); font-weight: 800; letter-spacing: -0.035em; margin-bottom: 0.25rem; color: var(--color-text-primary);">
+              Mulyankan AI
+            </h1>
+            <div style="font-size: 1.1rem; color: var(--color-brand); font-weight: 600;">
+              Intelligent Handwritten Descriptive Assessment with Teacher-in-the-Loop
+            </div>
+          </div>
+        </div>
+
+        <p class="lead" style="margin-bottom: 2rem; font-size: 1.15rem; line-height: 1.7;">
+          Mulyankan AI is an academic evaluation platform built for higher education institutions, universities, coaching academies, and examination boards. It automates answer-sheet OCR, question segmentation, and rubric-based assessment while placing final grading authority firmly in the hands of educators.
+        </p>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            Visit Official Portal (mulyankanai.in) ↗
+          </a>
+          <a href="contact.html?product=mulyankan" class="btn btn-secondary btn-lg">
+            Request Institutional Pilot
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem & Solution -->
+    <section class="section section-surface">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Institutional Problem</span>
+          <h2 class="section-title">The Bottleneck of Manual Examination Grading</h2>
+          <p class="section-desc">
+            Evaluating thousands of physical handwritten answer booklets is one of the most resource-intensive operational challenges in academia.
+          </p>
+        </div>
+
+        <div class="grid-3" data-reveal data-reveal-delay="100">
+          <div class="card card-hover glass-card">
+            <h3 class="card-title">Grader Fatigue</h3>
+            <p class="card-desc">
+              Faculty spend hundreds of hours manually evaluating physical paper scripts, leading to cognitive fatigue, inconsistent marking over time, and weeks of reporting delay.
+            </p>
+          </div>
+
+          <div class="card card-hover glass-card">
+            <h3 class="card-title">Subjective Variance</h3>
+            <p class="card-desc">
+              Different examiners apply inconsistent standards across the same subject, making standardized institutional moderation difficult and driving high revaluation volumes.
+            </p>
+          </div>
+
+          <div class="card card-hover glass-card">
+            <h3 class="card-title">Physical Logistics</h3>
+            <p class="card-desc">
+              Physical transport, storage, and ledger entry of paper answer sheets introduce significant handling overhead, security concerns, and administration costs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-Stage Workflow Progression -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Workflow Architecture</span>
+          <h2 class="section-title">The 4-Stage Evaluation Process</h2>
+          <p class="section-desc">
+            How examination scripts move through Mulyankan AI from ingestion to certified grade release.
+          </p>
+        </div>
+
+        <div class="grid-4" data-reveal data-reveal-delay="150">
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">Stage 01</div>
+            <h3 class="workflow-step-title">Exam Blueprint Setup</h3>
+            <p class="workflow-step-desc">
+              Upload the digital question paper, configure course codes, define maximum marks per question, and establish the master scoring rubric or model answers.
+            </p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">Stage 02</div>
+            <h3 class="workflow-step-title">Vision OCR &amp; Segmentation</h3>
+            <p class="workflow-step-desc">
+              Scanned answer booklets undergo automatic deskewing, noise reduction, and handwriting extraction with intelligent question-wise answer segmentation.
+            </p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">Stage 03</div>
+            <h3 class="workflow-step-title">Rubric &amp; Step Scoring</h3>
+            <p class="workflow-step-desc">
+              Student responses are evaluated against marking criteria step-by-step under selectable rigor profiles: Balanced, Lenient, or Strict evaluation modes.
+            </p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">Stage 04</div>
+            <h3 class="workflow-step-title">Faculty Moderation</h3>
+            <p class="workflow-step-desc">
+              Professors review evaluated scripts on an interactive digital canvas with 1-click approvals, manual score overrides, and instant Excel export.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Before/After Canvas Showcase -->
+    <section class="section section-surface">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Interactive Demonstration</span>
+          <h2 class="section-title">Before vs After: Neural OCR &amp; Step Breakdown</h2>
+          <p class="section-desc">
+            Drag the interactive slider to compare raw unconstrained student handwriting against Mulyankan AI's extracted bounding boxes, rubric matching, and teacher approval stamp.
+          </p>
+        </div>
+
+        <!-- Slider Component -->
+        <div class="exam-showcase-frame" data-reveal data-reveal-delay="150" style="max-width: 980px; margin-left: auto; margin-right: auto;">
+          <div class="exam-showcase-topbar">
+            <div class="window-dots">
+              <span class="window-dot dot-red"></span>
+              <span class="window-dot dot-yellow"></span>
+              <span class="window-dot dot-green"></span>
+            </div>
+            <div class="exam-showcase-meta">mulyankanai.in / live-vision-ocr-evaluation</div>
+            <span class="badge badge-active" style="font-size: 0.72rem; padding: 0.15rem 0.5rem;">
+              <span class="badge-dot"></span>
+              Live Comparison
+            </span>
+          </div>
+
+          <div class="exam-slider-container" style="--slider-pos: 50%;">
+            <!-- Base Layer: Raw Handwritten Answer Script -->
+            <div class="exam-pane-raw">
+              <div class="paper-header">
+                <span>Subject: Biochemistry &amp; Cellular Physiology</span>
+                <span>Booklet ID: 2026-MED-4091</span>
+              </div>
+              <div class="script-content">
+                <div class="q-title">Q3. Solve recurrence T(n) = 2T(n/2) + &Theta;(n)</div>
+                <div class="math-block">
+                  <strong>Step 1:</strong> Compare with standard form: T(n) = aT(n/b) + f(n)<br>
+                  Here a = 2, b = 2. So n^(log_b a) = n^(log_2 2) = n^1 = n.
+                </div>
+                <div class="math-block">
+                  <strong>Step 2:</strong> Given f(n) = &Theta;(n).<br>
+                  Since f(n) = &Theta;(n^(log_b a)) = &Theta;(n), this falls into Case 2 of Master Theorem.
+                </div>
+                <div class="math-block">
+                  <strong>Step 3:</strong> Recursion Tree depth is log_2 n.<br>
+                  Cost at each level i = 2^i * c(n / 2^i) = cn.<br>
+                  Total cost = &sum; cn = cn log_2 n = &Theta;(n log n).
+                </div>
+                <div class="student-note" style="margin-top: 0.5rem;">
+                  Ans: T(n) = &Theta;(n log n) [Verified via induction]
+                </div>
+              </div>
+            </div>
+
+            <!-- Overlay Layer: Mulyankan AI Neural Segmented & Evaluated View -->
+            <div class="exam-pane-ai" style="clip-path: inset(0 0 0 50%);">
+              <div class="ai-header">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                  <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" style="width: 28px; height: 28px; border-radius: 6px;">
+                  <div>
+                    <div style="font-size: 0.82rem; font-weight: 700; color: var(--color-text-primary);">Mulyankan AI Neural Engine</div>
+                    <div style="font-size: 0.68rem; color: var(--color-text-muted);">Vision OCR &bull; Spatial Segmentation</div>
+                  </div>
+                </div>
+                <span class="ai-engine-badge">99.4% OCR Confidence</span>
+              </div>
+
+              <!-- Segment 1 -->
+              <div class="ai-segment-box">
+                <div class="ai-segment-meta">
+                  <span class="ai-step-name">SEGMENT 1 &bull; RECURRENCE IDENTIFICATION</span>
+                  <span class="ai-step-score">2.0 / 2.0</span>
+                </div>
+                <div class="ai-ocr-extracted-text">
+                  Extracted: <code style="font-family: var(--font-mono); background: #E2E8F0; padding: 1px 4px; border-radius: 3px;">T(n) = 2T(n/2) + &Theta;(n) &rArr; a=2, b=2 &rArr; n^(log_2 2) = n^1</code>
+                </div>
+                <div class="ai-confidence-pill">&bull; Mathematical AST verified against master rubric</div>
+              </div>
+
+              <!-- Segment 2 -->
+              <div class="ai-segment-box">
+                <div class="ai-segment-meta">
+                  <span class="ai-step-name">SEGMENT 2 &bull; MASTER THEOREM CASE 2</span>
+                  <span class="ai-step-score">1.5 / 1.5</span>
+                </div>
+                <div class="ai-ocr-extracted-text">
+                  Extracted: <code style="font-family: var(--font-mono); background: #E2E8F0; padding: 1px 4px; border-radius: 3px;">f(n) = &Theta;(n^(log_b a)) &rArr; Case 2 condition satisfied</code>
+                </div>
+                <div class="ai-confidence-pill">&bull; Asymptotic condition match: 100%</div>
+              </div>
+
+              <!-- Segment 3 & Final Proof -->
+              <div class="ai-segment-box" style="margin-bottom: 0.5rem;">
+                <div class="ai-segment-meta">
+                  <span class="ai-step-name">SEGMENT 3 &bull; RECURSION TREE PROOF</span>
+                  <span class="ai-step-score">1.5 / 1.5</span>
+                </div>
+                <div class="ai-ocr-extracted-text">
+                  Extracted: <code style="font-family: var(--font-mono); background: #E2E8F0; padding: 1px 4px; border-radius: 3px;">Depth = log_2 n &rArr; Total Cost = &Theta;(n log n)</code>
+                </div>
+                <div class="ai-confidence-pill">&bull; Closed-form solution verified against answer key</div>
+              </div>
+
+              <!-- Official Moderation Seal -->
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                <div class="faculty-stamp">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  FACULTY MODERATION APPROVED &bull; Dr. A. Verma
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 800; color: #059669;">
+                  TOTAL: 5.0 / 5.0
+                </div>
+              </div>
+            </div>
+
+            <!-- Draggable Divider Line & Button -->
+            <div class="exam-slider-handle" style="left: 50%;">
+              <div class="exam-slider-button" aria-hidden="true">&harr;</div>
+            </div>
+          </div>
+
+          <!-- Bottom Preset Controls -->
+          <div class="exam-preset-bar">
+            <span style="color: var(--color-text-muted); font-size: 0.78rem;">Compare View:</span>
+            <div class="preset-buttons">
+              <button class="preset-btn" data-preset-pos="100">Raw Answer Sheet</button>
+              <button class="preset-btn active" data-preset-pos="50">50 / 50 Comparison</button>
+              <button class="preset-btn" data-preset-pos="0">AI Neural Evaluated</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Verified Core Capabilities -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Platform Capabilities</span>
+          <h2 class="section-title">10 Verified Core Features</h2>
+          <p class="section-desc">
+            Every capability listed here is verified and operational in the active Mulyankan AI platform architecture.
+          </p>
+        </div>
+
+        <div class="capability-list" data-reveal data-reveal-delay="150">
+          <div class="capability-item">
+            <div class="capability-num">01 / INGESTION</div>
+            <h3 class="capability-title">Answer-Sheet Upload &amp; Batch Processing</h3>
+            <p class="capability-desc">High-speed ingestion of multi-page scanned booklets in PDF, TIFF, or JPEG formats.</p>
+          </div>
+
+          <div class="capability-item">
+            <div class="capability-num">02 / VISION</div>
+            <h3 class="capability-title">Document Preprocessing &amp; Text Extraction</h3>
+            <p class="capability-desc">Automated contrast normalization, skew correction, and handwriting extraction across diverse student pen inks.</p>
+          </div>
+
+          <div class="capability-item">
+            <div class="capability-num">03 / SEGMENTATION</div>
+            <h3 class="capability-title">Automated Question-Answer Segmentation</h3>
+            <p class="capability-desc">Spatial bounding-box mapping that identifies question labels, sub-parts, and multi-page responses.</p>
+          </div>
+
+          <div class="capability-item">
+            <div class="capability-num">04 / REASONING</div>
+            <h3 class="capability-title">Rubric-Based AI Evaluation</h3>
+            <p class="capability-desc">Contextual assessment against standard marking criteria and domain keywords with zero speculative hallucination.</p>
+          </div>
+
+          <div class="capability-item">
+            <div class="capability-num">05 / ANSWER-KEYS</div>
+            <h3 class="capability-title">Answer-Key-Based Evaluation</h3>
+            <p class="capability-desc">Deterministic verification against model solutions for STEM problems requiring specific formulas and numerical outputs.</p>
+          </div>
+
+          <div class="capability-item">
+            <div class="capability-num">06 / CREATION</div>
+            <h3 class="capability-title">Automated Rubric Generation</h3>
+            <p class="capability-desc">Automatically generates balanced grading rubrics from uploaded question papers and sample answers.</p>
+          </div>
+
+          <div class="capability-item">
+            <div class="capability-num">07 / CALIBRATION</div>
+            <h3 class="capability-title">Balanced, Lenient &amp; Strict Modes</h3>
+            <p class="capability-desc">Customizable scoring rigor tailored to internal formative tests, regular semester exams, or competitive certifications.</p>
+          </div>
+
+          <div class="capability-item">
+            <div class="capability-num">08 / MODERATION</div>
+            <h3 class="capability-title">Professor Moderation &amp; Marks Review</h3>
+            <p class="capability-desc">An ergonomic digital review workspace where educators retain 100% final authority with 1-click approvals and manual overrides.</p>
+          </div>
+
+          <div class="capability-item">
+            <div class="capability-num">09 / REPORTING</div>
+            <h3 class="capability-title">Structured Evaluation Reports</h3>
+            <p class="capability-desc">Detailed student feedback reports with annotated answer pages and criterion-wise score breakdowns.</p>
+          </div>
+
+          <div class="capability-item">
+            <div class="capability-num">10 / ANALYTICS</div>
+            <h3 class="capability-title">Excel-Based Assessment Metrics</h3>
+            <p class="capability-desc">Cohort grade distributions, question difficulty analysis, and 1-click export to institutional Excel spreadsheets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Rubric & Rigor Playground -->
+    <section class="section section-surface" id="evaluation-playground">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Interactive Platform Sandbox</span>
+          <h2 class="section-title">Calibrate Evaluation Rigor in Real Time</h2>
+          <p class="section-desc">
+            Test Mulyankan AI's adaptive evaluation engine across different institutional marking standards in real time.
+          </p>
+        </div>
+
+        <div class="playground-container" data-reveal data-reveal-delay="150">
+          <div class="playground-header">
+            <div class="playground-title">
+              <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" style="width: 28px; height: 28px; border-radius: 6px;">
+              <span>Mulyankan AI Evaluation Playground</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span class="badge badge-brand">Autonomous Multi-Stroke OCR</span>
+              <span class="badge badge-active"><span class="badge-dot"></span> Live Sandbox</span>
+            </div>
+          </div>
+
+          <div class="playground-body">
+            <!-- Controls Column -->
+            <div class="playground-controls">
+              <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: 0.75rem;">
+                1. Select Evaluation Rigor Mode
+              </div>
+              <div class="rigor-toggle-group">
+                <button class="rigor-btn active" data-rigor="balanced">Balanced</button>
+                <button class="rigor-btn" data-rigor="strict">Strict (STEM)</button>
+                <button class="rigor-btn" data-rigor="lenient">Lenient (Formative)</button>
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-label-row">
+                  <span>Semantic Matching Tolerance</span>
+                  <span class="slider-val-tag" id="semantic-val-tag">85%</span>
+                </div>
+                <input type="range" min="70" max="98" value="85" class="range-input" id="semantic-tolerance-slider" aria-label="Semantic Matching Tolerance Slider">
+                <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--color-text-muted); margin-top: 0.35rem;">
+                  <span>Broad Conceptual (70%)</span>
+                  <span>Strict Exact Match (98%)</span>
+                </div>
+              </div>
+
+              <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem;">
+                <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.35rem;">
+                  Active Blueprint: University Examination Board &middot; Descriptive Assessment
+                </div>
+                <div style="font-size: 0.78rem; color: var(--color-text-secondary); line-height: 1.5;">
+                  Rubric criteria include Conceptual Definition, Step-by-Step Derivation, and Formulation Accuracy.
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem;">
+                <button type="button" class="btn btn-secondary btn-sm" id="teacher-override-btn" style="flex: 1;">
+                  Simulate Faculty Override (+0.5)
+                </button>
+              </div>
+            </div>
+
+            <!-- Preview & Metrics Column -->
+            <div class="playground-preview">
+              <div>
+                <div class="score-display-card">
+                  <div class="score-number-hero" id="playground-score-hero">8.5 / 10</div>
+                  <div class="score-mode-label" id="playground-score-mode-label">Balanced Academic Rigor</div>
+                </div>
+
+                <div class="rubric-step-list">
+                  <div class="rubric-step-row">
+                    <span class="rubric-step-title">Step 1: Recurrence Base Case &amp; Formulation</span>
+                    <span class="rubric-step-score-badge" id="step1-score">3.0 / 3.0 Marks</span>
+                  </div>
+                  <div class="rubric-step-row">
+                    <span class="rubric-step-title">Step 2: Recursive Tree Expansion &amp; Cost</span>
+                    <span class="rubric-step-score-badge" id="step2-score">3.5 / 4.0 Marks</span>
+                  </div>
+                  <div class="rubric-step-row">
+                    <span class="rubric-step-title">Step 3: Master Theorem Complexity Proof</span>
+                    <span class="rubric-step-score-badge" id="step3-score">2.0 / 3.0 Marks</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--color-border); flex-wrap: wrap; gap: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.8rem; color: var(--color-text-muted); font-weight: 500;">Status:</span>
+                  <span class="badge badge-active" id="playground-audit-status">&check; Certified Instant Pass (98.4% Confidence)</span>
+                </div>
+                <a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit mulyankanai.in ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Institutional Segments -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Institutional Segments</span>
+          <h2 class="section-title">Designed for Higher Education</h2>
+          <p class="section-desc">
+            Engineered to handle high-stakes examination operations across diverse educational tiers.
+          </p>
+        </div>
+
+        <div class="grid-4" data-reveal data-reveal-delay="150">
+          <div class="card card-hover glass-card" style="padding: 1.75rem;">
+            <h3 class="card-title" style="font-size: 1.15rem;">State &amp; Central Universities</h3>
+            <p class="card-desc">Evaluate tens of thousands of semester answer booklets in days rather than months, eliminating revaluation backlogs.</p>
+          </div>
+
+          <div class="card card-hover glass-card" style="padding: 1.75rem;">
+            <h3 class="card-title" style="font-size: 1.15rem;">Autonomous Engineering Colleges</h3>
+            <p class="card-desc">Step-wise grading for complex technical derivations, coding algorithms, and diagrams with full teacher moderation.</p>
+          </div>
+
+          <div class="card card-hover glass-card" style="padding: 1.75rem;">
+            <h3 class="card-title" style="font-size: 1.15rem;">Examination Boards</h3>
+            <p class="card-desc">Standardized digital moderation across external examiners, eliminating grader bias and scoring discrepancies.</p>
+          </div>
+
+          <div class="card card-hover glass-card" style="padding: 1.75rem;">
+            <h3 class="card-title" style="font-size: 1.15rem;">Coaching Academies</h3>
+            <p class="card-desc">Provide rapid formative feedback on mock exam papers to thousands of competitive test candidates within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo CTA -->
+    <section class="section section-surface" style="text-align: center;">
+      <div class="container container-narrow" data-reveal>
+        <span class="section-label">Institutional Pilot</span>
+        <h2 style="font-size: 2.25rem; margin-bottom: 1rem; color: var(--color-text-primary); font-weight: 700; letter-spacing: -0.02em;">
+          Schedule an Institutional Demonstration
+        </h2>
+        <p style="font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: 2rem; margin-left: auto; margin-right: auto; max-width: 640px; line-height: 1.7;">
+          We conduct structured evaluation trials with university faculty using actual historical examination booklets.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="contact.html?product=mulyankan" class="btn btn-primary btn-lg">Request Demonstration</a>
+          <a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">Visit mulyankanai.in ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimalist Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="footer-brand-logo">
+          <p class="footer-brand-desc">
+            Technology product development company engineering intelligent software systems, computer vision, and applied artificial intelligence.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Platforms</h4>
+          <ul class="footer-links">
+            <li><a href="mulyankan-ai.html" class="footer-link">Mulyankan AI (Live Beta)</a></li>
+            <li><a href="mira.html" class="footer-link">MIRA Platform (Preview)</a></li>
+            <li><a href="products.html" class="footer-link">Portfolio Overview</a></li>
+            <li><a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" class="footer-link">mulyankanai.in ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">About Jaitraya</a>
+            <a href="technology.html" class="footer-link">Technology &amp; Architecture</a>
+            <a href="about.html#team" class="footer-link">Leadership &amp; Team</a>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Governance</h4>
+          <div class="footer-links">
+            <a href="legal/compliance.html" class="footer-link">Corporate Entity Notice</a>
+            <a href="legal/privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="legal/terms.html" class="footer-link">Terms of Service</a>
+            <a href="legal/cookies.html" class="footer-link">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Jaitraya Technolabs. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="legal/privacy.html" class="footer-link">Privacy</a>
+          <a href="legal/terms.html" class="footer-link">Terms</a>
+          <a href="legal/compliance.html" class="footer-link">Regulatory</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

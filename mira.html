@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIRA Platform | Offline Multimodal Intelligent Retrieval Assistant | Jaitraya Technolabs</title>
+  <meta name="description" content="MIRA is an air-gapped, offline multimodal knowledge retrieval assistant engineered by Jaitraya Technolabs for scientific research institutes, university laboratories, and confidential archives.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+  <!-- Top Fixed Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Frosted Glass Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link" aria-label="Jaitraya Technolabs Home">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <div class="nav-item-dropdown">
+            <a href="products.html" class="nav-link active">Products</a>
+            <div class="nav-dropdown-menu">
+              <a href="mulyankan-ai.html" class="dropdown-item">
+                <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" style="width: 28px; height: 28px; border-radius: 6px;">
+                <div>
+                  <div class="dropdown-item-title">Mulyankan AI <span class="badge badge-active" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Live Beta</span></div>
+                  <div class="dropdown-item-desc">Descriptive Exam Evaluation Platform</div>
+                </div>
+              </a>
+              <a href="mira.html" class="dropdown-item" style="background-color: var(--color-mira-light);">
+                <div style="width: 28px; height: 28px; border-radius: 6px; background: var(--color-mira); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem;">M</div>
+                <div>
+                  <div class="dropdown-item-title" style="color: var(--color-mira);">MIRA <span class="badge badge-mira" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Preview</span></div>
+                  <div class="dropdown-item-desc">Offline Multimodal Research Assistant</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="technology.html" class="nav-link">Technology</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html?product=mira" class="btn btn-mira btn-sm">Request Lab Pilot</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" style="height: 34px; width: auto;">
+        <button class="drawer-close" aria-label="Close menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="products.html" class="drawer-link active">Products</a>
+        <a href="technology.html" class="drawer-link">Technology</a>
+        <a href="contact.html" class="drawer-link">Contact Us</a>
+      </nav>
+    </div>
+    <div>
+      <a href="contact.html?product=mira" class="btn btn-mira" style="width: 100%;">Request Lab Pilot</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- MIRA Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Copy & Value Proposition -->
+          <div data-reveal>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+              <span class="badge badge-mira">
+                <span class="badge-dot"></span>
+                Research Lab Preview &bull; Active Engineering
+              </span>
+              <span class="badge badge-airgap">100% Air-Gapped</span>
+            </div>
+
+            <h1 class="hero-title" style="letter-spacing: -0.04em;">
+              Offline Multimodal Intelligence for <span style="background: linear-gradient(135deg, var(--color-text-primary) 30%, var(--color-mira) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Research Institutes</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              MIRA (Multimodal Intelligent Retrieval &amp; Autonomous Assistant) empowers scientific research laboratories to index, search, and synthesize knowledge across confidential research papers, engineering schematics, and symposium audio recordings — entirely offline with zero cloud telemetry.
+            </p>
+
+            <div class="hero-actions">
+              <a href="contact.html?product=mira" class="btn btn-mira btn-lg">Request Research Pilot</a>
+              <a href="#architecture" class="btn btn-secondary btn-lg">Explore Architecture &darr;</a>
+            </div>
+
+            <!-- Verification Telemetry Badges -->
+            <div style="display: flex; align-items: center; gap: 1.75rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--color-text-muted);">
+                <span style="color: var(--color-success); font-weight: bold;">✓</span>
+                <span>Zero Cloud Egress</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--color-text-muted);">
+                <span style="color: var(--color-success); font-weight: bold;">✓</span>
+                <span>Local Ollama LLM RAG</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--color-text-muted);">
+                <span style="color: var(--color-success); font-weight: bold;">✓</span>
+                <span>Exact Source Citations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive MIRA Console Preview -->
+          <div data-reveal data-reveal-delay="100">
+            <div class="mira-console-window">
+              <div class="mira-console-topbar">
+                <div class="window-dots">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <div class="mira-meta-tag">MIRA Workstation &bull; Electron.js / FastAPI Core</div>
+                <span class="badge badge-mira" style="font-size: 0.72rem; padding: 0.15rem 0.5rem;">v1.0 Preview</span>
+              </div>
+
+              <!-- Air-gapped Hardware Telemetry Row -->
+              <div class="mira-telemetry-row">
+                <div class="telemetry-item"><span class="telemetry-dot"></span> <strong>Mode:</strong> Air-Gapped Sovereign</div>
+                <div class="telemetry-item"><strong>Vector DB:</strong> ChromaDB / FAISS</div>
+                <div class="telemetry-item"><strong>Local LLM:</strong> Ollama / Llama-3</div>
+                <div class="telemetry-item"><strong>Network Egress:</strong> 0.00 KB</div>
+              </div>
+
+              <!-- Interactive Simulator Box -->
+              <div class="mira-simulator-box">
+                <div class="mira-search-input-wrap">
+                  <svg class="mira-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  <input type="text" class="mira-search-input" value="Perovskite solar cell degradation mechanisms under thermal stress" readonly aria-label="MIRA Simulated Query Input">
+                </div>
+
+                <div class="mira-query-chips">
+                  <span class="mira-chip-label">Try Query:</span>
+                  <button type="button" class="mira-chip active" data-sample-key="perovskite">Perovskite Thermal Stress</button>
+                  <button type="button" class="mira-chip" data-sample-key="quantum">Quantum Dot Bandgap</button>
+                  <button type="button" class="mira-chip" data-sample-key="battery">Solid-State Lithium Dendrite</button>
+                </div>
+
+                <!-- Tri-Modal Retrieval Result Cards -->
+                <div class="mira-results-container">
+                  <!-- Result 1: PDF Document Extraction -->
+                  <div class="mira-result-card">
+                    <div class="mira-result-header">
+                      <span class="mira-source-badge source-doc">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                        Document Context
+                      </span>
+                      <span class="mira-citation-tag" id="mira-doc-cit">Solar_Energy_Materials_2026.pdf (Page 14, ¶3)</span>
+                    </div>
+                    <div class="mira-result-snippet" id="mira-doc-text">
+                      Section 4.2 indicates that lattice strain at 85°C induces iodide phase segregation, reducing power conversion efficiency from 22.4% to 17.1% over 500 hours.
+                    </div>
+                    <div style="font-size: 0.75rem; color: #0284C7; font-weight: 600;" id="mira-doc-score">&bull; 99.1% Vector Match</div>
+                  </div>
+
+                  <!-- Result 2: Visual Schematic Diagram -->
+                  <div class="mira-result-card">
+                    <div class="mira-result-header">
+                      <span class="mira-source-badge source-image">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                        Schematic Diagram
+                      </span>
+                      <span class="mira-citation-tag" id="mira-img-cit">Fig_3B_PhaseShift_TEM.png (Bounding Region: x=140, y=320, w=480, h=260)</span>
+                    </div>
+                    <div class="mira-result-snippet" id="mira-img-text">
+                      Figure 3B: In-situ XRD peak shift at 2θ = 14.1° confirming cubic-to-tetragonal phase transition under thermal bias.
+                    </div>
+                    <div style="font-size: 0.75rem; color: #7C3AED; font-weight: 600;" id="mira-img-score">&bull; 96.4% Cross-Modal Alignment</div>
+                  </div>
+
+                  <!-- Result 3: Speech Audio Recording -->
+                  <div class="mira-result-card">
+                    <div class="mira-result-header">
+                      <span class="mira-source-badge source-audio">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                        Audio Lecture Recording
+                      </span>
+                      <span class="mira-citation-tag" id="mira-audio-cit">Symposium_Keynote_DrGupta.wav (Timestamp: 18:42 - 19:15)</span>
+                    </div>
+                    <div class="mira-result-snippet" id="mira-audio-text">
+                      “...notice how the passivation layer prevents ion migration until temperatures cross roughly 358 Kelvin...”
+                    </div>
+                    <div class="mira-audio-scrubber">
+                      <button type="button" class="audio-play-btn" aria-label="Play audio citation snippet">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                      </button>
+                      <div class="audio-waveform-bars">
+                        <span class="wave-bar" style="height: 6px;"></span>
+                        <span class="wave-bar" style="height: 12px;"></span>
+                        <span class="wave-bar" style="height: 18px;"></span>
+                        <span class="wave-bar" style="height: 8px;"></span>
+                        <span class="wave-bar" style="height: 14px;"></span>
+                        <span class="wave-bar" style="height: 10px;"></span>
+                        <span class="wave-bar" style="height: 16px;"></span>
+                        <span class="wave-bar" style="height: 12px;"></span>
+                        <span class="wave-bar" style="height: 7px;"></span>
+                      </div>
+                      <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted);">18:42 / 45:10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem: Research Fragmentation & Data Sovereignty -->
+    <section class="section section-surface">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label section-label-mira">Institutional Challenge</span>
+          <h2 class="section-title">The Research Fragmentation Dilemma</h2>
+          <p class="section-desc">
+            Modern scientific research generates massive, disparate knowledge archives across documents, lab presentations, microscope micrographs, and recorded symposiums. Traditional tools force unacceptable compromises.
+          </p>
+        </div>
+
+        <div class="grid-3" data-reveal data-reveal-delay="100">
+          <div class="card card-mira-hover glass-card">
+            <div class="card-icon-wrap card-icon-wrap-mira">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Keyword Search Blind Spots</h3>
+            <p class="card-desc">
+              Standard file-search engines match exact string literals, missing synonyms, cross-disciplinary terminology, visual charts, and spoken seminar ideas entirely.
+            </p>
+          </div>
+
+          <div class="card card-mira-hover glass-card">
+            <div class="card-icon-wrap card-icon-wrap-mira">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Cloud AI Privacy Hazards</h3>
+            <p class="card-desc">
+              Sending confidential pre-publication manuscripts, unpublished patent formulations, and proprietary data to third-party cloud LLMs breaches institutional ethics and security protocols.
+            </p>
+          </div>
+
+          <div class="card card-mira-hover glass-card">
+            <div class="card-icon-wrap card-icon-wrap-mira">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="card-title">Disconnected Multimodal Media</h3>
+            <p class="card-desc">
+              Scientific papers reference diagrams that reference spoken lectures. Without unified vector embeddings, researchers spend hundreds of hours manually tracing cross-references.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Architecture Visualizer (2-Phase Engineering Pipeline) -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label section-label-mira">System Architecture</span>
+          <h2 class="section-title">2-Phase Working Methodology</h2>
+          <p class="section-desc">
+            MIRA decomposes knowledge retrieval into two deterministic pipelines: offline multimodal ingestion and vector indexing, followed by private local RAG synthesis with mathematical citations.
+          </p>
+        </div>
+
+        <!-- Phase Navigation Tabs -->
+        <div class="phase-tabs-nav" data-reveal>
+          <button type="button" class="phase-tab-btn active" data-phase="ingestion">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+            Phase 1: Ingestion &amp; Vector Pipeline
+          </button>
+          <button type="button" class="phase-tab-btn" data-phase="query">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Phase 2: Local Query &amp; RAG Engine
+          </button>
+        </div>
+
+        <!-- Panel 1: Data Ingestion Pipeline -->
+        <div class="phase-panel active" id="phase-panel-ingestion" data-reveal data-reveal-delay="100">
+          <div class="grid-4">
+            <div class="workflow-step-card">
+              <span class="workflow-step-num">STEP 1.1</span>
+              <h3 class="workflow-step-title">Multimodal Upload</h3>
+              <p class="workflow-step-desc">
+                Researchers deposit research papers (PDF/DOCX), engineering schematics (PNG/JPG), and symposium audio recordings (WAV/MP3) into the local repository.
+              </p>
+            </div>
+
+            <div class="workflow-step-card">
+              <span class="workflow-step-num">STEP 1.2</span>
+              <h3 class="workflow-step-title">Content Extraction</h3>
+              <p class="workflow-step-desc">
+                Text parsers extract structured prose; vision models isolate diagram captions and axis labels; local speech-to-text models transcribe spoken seminar audio.
+              </p>
+            </div>
+
+            <div class="workflow-step-card">
+              <span class="workflow-step-num">STEP 1.3</span>
+              <h3 class="workflow-step-title">Vector Conversion</h3>
+              <p class="workflow-step-desc">
+                Extracted multimodal tokens pass through local embedding models, translating textual, visual, and acoustic semantics into dense vector coordinate spaces.
+              </p>
+            </div>
+
+            <div class="workflow-step-card">
+              <span class="workflow-step-num">STEP 1.4</span>
+              <h3 class="workflow-step-title">Air-Gapped Indexing</h3>
+              <p class="workflow-step-desc">
+                Dense embeddings are stored in local ChromaDB / FAISS indices, original files reside in protected local storage, and metadata is mapped in local SQLite.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Query Processing & RAG Pipeline -->
+        <div class="phase-panel" id="phase-panel-query">
+          <div class="grid-4">
+            <div class="workflow-step-card">
+              <span class="workflow-step-num">STEP 2.1</span>
+              <h3 class="workflow-step-title">Query Vectorization</h3>
+              <p class="workflow-step-desc">
+                The researcher enters a natural-language query via the Electron desktop interface. The Python FastAPI controller generates an instant query embedding vector.
+              </p>
+            </div>
+
+            <div class="workflow-step-card">
+              <span class="workflow-step-num">STEP 2.2</span>
+              <h3 class="workflow-step-title">ChromaDB / FAISS Search</h3>
+              <p class="workflow-step-desc">
+                The engine executes approximate nearest-neighbor search across local vector indices, retrieving top contextual passages across text, schematics, and audio transcripts.
+              </p>
+            </div>
+
+            <div class="workflow-step-card">
+              <span class="workflow-step-num">STEP 2.3</span>
+              <h3 class="workflow-step-title">Local Ollama LLM RAG</h3>
+              <p class="workflow-step-desc">
+                Retrieved chunks are formatted into an anchored prompt context and piped into an offline LLM running locally via Ollama, eliminating hallucination.
+              </p>
+            </div>
+
+            <div class="workflow-step-card">
+              <span class="workflow-step-num">STEP 2.4</span>
+              <h3 class="workflow-step-title">Synthesized Citations</h3>
+              <p class="workflow-step-desc">
+                The assistant outputs an evidence-backed answer where every assertion links directly to exact PDF page numbers, diagram bounding boxes, or audio timestamps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 Verified Core Capabilities -->
+    <section class="section section-surface">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label section-label-mira">Platform Engineering</span>
+          <h2 class="section-title">6 Core Institutional Capabilities</h2>
+          <p class="section-desc">
+            Engineered specifically to solve the data sovereignty and multimodal indexing needs of high-consequence research institutes.
+          </p>
+        </div>
+
+        <div class="grid-3" data-reveal data-reveal-delay="100">
+          <!-- Capability 1 -->
+          <div class="card card-mira-hover glass-card">
+            <div class="card-icon-wrap card-icon-wrap-mira">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="card-title">100% Air-Gapped Sovereignty</h3>
+            <p class="card-desc">
+              Complete offline execution ensures strict data confidentiality. No telemetry, queries, or intellectual property ever leave your institutional hardware.
+            </p>
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--color-mira);">Zero External Network Sockets</div>
+          </div>
+
+          <!-- Capability 2 -->
+          <div class="card card-mira-hover glass-card">
+            <div class="card-icon-wrap card-icon-wrap-mira">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3 class="card-title">Unified Tri-Modal Search</h3>
+            <p class="card-desc">
+              Simultaneously query across technical documentation, visual laboratory micrographs, circuit schematics, and audio symposium presentations through one interface.
+            </p>
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--color-mira);">PDF &bull; Schematics &bull; Speech Audio</div>
+          </div>
+
+          <!-- Capability 3 -->
+          <div class="card card-mira-hover glass-card">
+            <div class="card-icon-wrap card-icon-wrap-mira">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="card-title">High-Density Vector Indexing</h3>
+            <p class="card-desc">
+              Utilizes local ChromaDB and FAISS vector databases to index millions of multidimensional tokens, delivering sub-150 millisecond semantic similarity retrieval.
+            </p>
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--color-mira);">ChromaDB &bull; FAISS Engine</div>
+          </div>
+
+          <!-- Capability 4 -->
+          <div class="card card-mira-hover glass-card">
+            <div class="card-icon-wrap card-icon-wrap-mira">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line></svg>
+            </div>
+            <h3 class="card-title">Local LLM Orchestration</h3>
+            <p class="card-desc">
+              Integrates with Ollama to run high-parameter open models (Llama 3, Mistral, Gemma) locally with hardware-accelerated quantization on workstation GPUs.
+            </p>
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--color-mira);">Ollama Local Runtime Integration</div>
+          </div>
+
+          <!-- Capability 5 -->
+          <div class="card card-mira-hover glass-card">
+            <div class="card-icon-wrap card-icon-wrap-mira">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+            </div>
+            <h3 class="card-title">Mathematical Source Citations</h3>
+            <p class="card-desc">
+              Every synthesized conclusion is mathematically mapped back to the origin: exact file names, page numbers, diagram bounding boxes, or audio timestamps.
+            </p>
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--color-mira);">Page &amp; Timestamp Auditing</div>
+          </div>
+
+          <!-- Capability 6 -->
+          <div class="card card-mira-hover glass-card">
+            <div class="card-icon-wrap card-icon-wrap-mira">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3 class="card-title">Native Desktop Architecture</h3>
+            <p class="card-desc">
+              Packaged as a lightweight cross-platform desktop application built with Electron.js and backed by a high-performance Python FastAPI service.
+            </p>
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--color-mira);">Electron.js + Python FastAPI</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specifications Table -->
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-header" data-reveal>
+          <span class="section-label section-label-mira">Technical Architecture</span>
+          <h2 class="section-title">Institutional Deployment Specifications</h2>
+          <p class="section-desc">
+            Verified engineering components and runtime profiles for laboratory deployment.
+          </p>
+        </div>
+
+        <table class="tech-spec-table" data-reveal data-reveal-delay="100">
+          <thead>
+            <tr>
+              <th>Architecture Layer</th>
+              <th>Technical Specification &amp; Implementation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Desktop Interface</td>
+              <td>Electron.js with native OS hardware acceleration (Windows, macOS, Linux)</td>
+            </tr>
+            <tr>
+              <td>Backend Service</td>
+              <td>FastAPI (Python 3.11+) asynchronous REST &amp; WebSocket microservice</td>
+            </tr>
+            <tr>
+              <td>Vector Databases</td>
+              <td>ChromaDB (Local persistent embedded store) &amp; FAISS (High-density index)</td>
+            </tr>
+            <tr>
+              <td>Local AI Engine</td>
+              <td>Ollama local inference runtime (support for Llama-3, Mistral, Gemma)</td>
+            </tr>
+            <tr>
+              <td>Supported Modalities</td>
+              <td>Documents (PDF, DOCX, PPT, TXT), Visuals (PNG, JPG, TIFF), Audio (WAV, MP3)</td>
+            </tr>
+            <tr>
+              <td>Metadata &amp; History</td>
+              <td>SQLite local encrypted database with session state persistence</td>
+            </tr>
+            <tr>
+              <td>Security Clearance</td>
+              <td>100% Air-Gapped; zero outbound API calls, zero telemetry, zero cloud sockets</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Target Beneficiaries & Sectors -->
+    <section class="section section-surface">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label section-label-mira">Deployment Target</span>
+          <h2 class="section-title">Designed for High-Consequence Research</h2>
+          <p class="section-desc">
+            MIRA is built for environments where research volume is massive, cross-disciplinary synthesis is critical, and cloud exposure is prohibited.
+          </p>
+        </div>
+
+        <div class="grid-3" data-reveal data-reveal-delay="100">
+          <div class="card">
+            <h3 class="card-title" style="font-size: 1.2rem;">Scientific Research Institutes</h3>
+            <p class="card-desc">
+              National laboratories, think tanks, and patent research facilities requiring instant semantic lookup across years of scientific publications without external data exposure.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title" style="font-size: 1.2rem;">University R&amp;D Centers</h3>
+            <p class="card-desc">
+              Academic research groups handling multi-departmental literature surveys, symposium recordings, and grant proposal synthesis across complex technical disciplines.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title" style="font-size: 1.2rem;">Confidential Corporate Labs</h3>
+            <p class="card-desc">
+              Pharmaceutical, semiconductor, and aerospace engineering labs requiring air-gapped retrieval across internal patents, material data sheets, and executive technical meetings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pilot Request & Collaboration Call to Action -->
+    <section class="section" style="text-align: center;">
+      <div class="container container-narrow" data-reveal>
+        <span class="section-label section-label-mira">Early Access Collaboration</span>
+        <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1.25rem;">
+          Deploy MIRA in Your Research Lab
+        </h2>
+        <p class="lead" style="margin-bottom: 2.25rem;">
+          We are partnering with select research institutions, university departments, and confidential archives for controlled offline laboratory pilots.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="contact.html?product=mira" class="btn btn-mira btn-lg">Request Institutional Pilot</a>
+          <a href="products.html" class="btn btn-secondary btn-lg">Explore All Products</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-link" aria-label="Jaitraya Technolabs Home">
+            <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="brand-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Engineering software systems with mathematical rigor, architectural integrity, and domain-first depth for education and scientific research.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Platforms</h4>
+          <ul class="footer-links">
+            <li><a href="mulyankan-ai.html" class="footer-link">Mulyankan AI (Live Beta)</a></li>
+            <li><a href="mira.html" class="footer-link">MIRA Platform (Preview)</a></li>
+            <li><a href="products.html" class="footer-link">Portfolio Overview</a></li>
+            <li><a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" class="footer-link">mulyankanai.in ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Engineering</h4>
+          <ul class="footer-links">
+            <li><a href="technology.html" class="footer-link">Core Technology</a></li>
+            <li><a href="technology.html#computer-vision" class="footer-link">Computer Vision &amp; OCR</a></li>
+            <li><a href="technology.html#applied-ai" class="footer-link">Vector RAG Architecture</a></li>
+            <li><a href="technology.html#human-in-loop" class="footer-link">Air-Gapped Sovereignty</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Jaitraya</a></li>
+            <li><a href="technology.html" class="footer-link">Technology &amp; Architecture</a></li>
+            <li><a href="about.html#team" class="footer-link">Leadership &amp; Team</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Jaitraya Technolabs. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="legal/compliance.html" class="footer-legal-link">Compliance</a>
+          <a href="legal/privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="legal/terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="legal/cookies.html" class="footer-legal-link">Cookie Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

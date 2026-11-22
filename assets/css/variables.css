@@ -1,0 +1,170 @@
+/**
+ * Jaitraya Technolabs — Executive Human-Centric Design System
+ * Official Brand System derived from Monogram & Industry B2B SaaS Benchmarks
+ * Benchmarks: GradeLab, GoGrade, Teknolab, Stripe, Apple
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,600;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ==========================================================================
+     Official Logo-Derived Brand Tokens
+     ========================================================================== */
+  --color-jt-navy: #002869;            /* 'J' Monogram */
+  --color-jt-navy-deep: #001C47;       /* Deep Navy Hover / Dark Mode */
+  --color-jt-navy-subtle: #F0F4F8;     /* Soft Navy Tint */
+  --color-jt-charcoal: #02060F;        /* 'T' Monogram & "JAITRAYA" */
+  --color-jt-titanium: #656871;        /* "TECHNOLABS" */
+  --color-jt-titanium-light: #E8EAED;  /* Subtle Hairline Dividers */
+
+  /* ==========================================================================
+     Surface & Canvas Tokens (Clean Executive Surfaces)
+     ========================================================================== */
+  --color-surface-primary: #FFFFFF;
+  --color-surface-secondary: #F8FAFC;
+  --color-surface-tertiary: #EEF2F6;
+  --color-canvas-bg: #FFFFFF;
+  --color-canvas-subtle: #F8FAFC;
+  --color-surface-card: #FFFFFF;
+  --color-surface-translucent: rgba(255, 255, 255, 0.80);
+
+  /* Legacy aliases for backwards compatibility */
+  --color-bg-base: #FFFFFF;
+  --color-bg-subtle: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F8FAFC;
+
+  /* ==========================================================================
+     Text Hierarchy Tokens (High Legibility & Contrast)
+     ========================================================================== */
+  --color-text-primary: #02060F;
+  --color-text-secondary: #4A4E57;
+  --color-text-tertiary: #656871;
+  --color-text-faint: #CBD5E1;
+  --color-text-muted: #656871;
+
+  /* ==========================================================================
+     Brand & Product Accent Tokens
+     ========================================================================== */
+  /* Brand Primary: Official High-Contrast Navy Blue */
+  --color-brand: #002869;
+  --color-brand-hover: #001C47;
+  --color-brand-subtle: #F0F4F8;
+  --color-brand-light: #F0F4F8;
+  --color-brand-deep: #001538;
+  --color-accent: #002869;
+  --color-accent-hover: #001C47;
+  --color-accent-subtle: #F0F4F8;
+
+  /* Product Pillar: MIRA (Sovereign Offline Intelligence) */
+  --color-mira: #3B387E;
+  --color-mira-hover: #2E2C6A;
+  --color-mira-subtle: #F5F4FA;
+  --color-mira-light: #F5F4FA;
+  --color-mira-deep: #252352;
+  --color-mira-border: rgba(59, 56, 126, 0.12);
+
+  /* Product Pillar: Mulyankan AI (Academic Descriptive Evaluation) */
+  --color-mulyankan: #0066E5;
+  --color-mulyankan-hover: #0052CC;
+  --color-mulyankan-subtle: #F0F6FF;
+  --color-mulyankan-light: #F0F6FF;
+  --color-mulyankan-border: rgba(0, 102, 229, 0.14);
+
+  /* Authentic Teacher & Evaluation Markers */
+  --color-teacher-red: #D9383A;
+  --color-teacher-red-subtle: #FEF2F2;
+  --color-verified-green: #059669;
+  --color-verified-green-subtle: #F0FDF4;
+
+  /* Semantic Status Indicators */
+  --color-success: #059669;
+  --color-success-bg: #F0FDF4;
+  --color-warning: #B45309;
+  --color-warning-bg: #FFFBEB;
+  --color-error: #D9383A;
+  --color-error-bg: #FEF2F2;
+
+  /* ==========================================================================
+     Hairline Borders & Dividers
+     ========================================================================== */
+  --border-hairline: 1px solid rgba(0, 0, 0, 0.08);
+  --color-border: #E5E5E7;
+  --color-border-subtle: rgba(0, 0, 0, 0.05);
+  --color-border-hover: #C7C7CC;
+  --color-border-focus: #0071E3;
+
+  /* ==========================================================================
+     Ambient Optical Shadows (Pure Optical Softness, Zero Neon Glows)
+     ========================================================================== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.10);
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-mira-hover: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-dropdown: 0 16px 40px rgba(0, 0, 0, 0.12);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.06);
+  --shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  /* ==========================================================================
+     Frosted Glass & Tactile Claymorphism Specifications
+     ========================================================================== */
+  --glass-bg: rgba(255, 255, 255, 0.80);
+  --glass-card-bg: #FFFFFF;
+  --glass-card-hover: #FFFFFF;
+  --glass-border: rgba(0, 40, 105, 0.08);
+  --glass-border-light: rgba(0, 40, 105, 0.09);
+  --glass-blur: blur(20px);
+  --glass-blur-sm: blur(12px);
+
+  /* Claymorphic Bevel Highlights (Tactile Volumetric Depth) */
+  --clay-bevel-stage: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 20px 48px -10px rgba(30, 58, 95, 0.12);
+  --clay-bevel-card: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 4px 18px -2px rgba(0, 40, 105, 0.06);
+
+  /* Multi-Layered Optical Ambient Shadows */
+  --shadow-clay-glass: 0 20px 48px -10px rgba(30, 58, 95, 0.10), 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-clay-glass-hover: 0 24px 56px -10px rgba(30, 58, 95, 0.16), 0 8px 20px -4px rgba(0, 40, 105, 0.08);
+
+  /* Split Slider Position */
+  --slider-pos: 50%;
+
+  /* ==========================================================================
+     Typography Standards (Plus Jakarta Sans / Inter / Playfair System)
+     ========================================================================== */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  --font-editorial: 'Playfair Display', Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* ==========================================================================
+     Spacing & Layout Standards
+     ========================================================================== */
+  --container-max: 1200px;
+  --container-narrow: 860px;
+  --space-section: 7rem;
+  --space-section-sm: 4.5rem;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 980px;
+  --radius-full: 980px;
+
+  /* ==========================================================================
+     Transitions & Motion (Subtle & Fluid)
+     ========================================================================== */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 240ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 380ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Hover Elevation Scale */
+  --shadow-hover-elevated: 0 20px 48px -10px rgba(0, 40, 105, 0.16), 0 6px 16px rgba(0, 0, 0, 0.04);
+  --shadow-button-hover: 0 8px 24px -4px rgba(0, 40, 105, 0.28);
+}

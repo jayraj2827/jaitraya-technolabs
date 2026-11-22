@@ -1,0 +1,402 @@
+/**
+ * Jaitraya Technolabs — Base Styles, Typography & Clean Surface Architecture
+ * Apple-grade minimalist aesthetic: pure neutral canvases, generous whitespace, crisp hierarchy
+ * Benchmarks: Apple, Stripe, Linear
+ */
+
+/* ==========================================================================
+   CSS Reset & Box Sizing
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ==========================================================================
+   Clean Neutral OLED Scrollbar (Floating Translucent Track)
+   ========================================================================== */
+html {
+  scrollbar-color: rgba(148, 163, 184, 0.45) #02060F;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #02060F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.45);
+  border-radius: var(--radius-pill);
+  border: 2px solid #02060F;
+  transition: background var(--transition-normal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* Adaptive Light Scrollbar when scrolled past dark hero */
+html.scrolled-page {
+  scrollbar-color: rgba(100, 116, 139, 0.35) #F8FAFC;
+}
+
+html.scrolled-page ::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+html.scrolled-page ::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.35);
+  border: 2px solid #F8FAFC;
+}
+
+html.scrolled-page ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand);
+}
+
+/* ==========================================================================
+   Subtle Scroll Progress Bar (2px hairline, zero neon glow)
+   ========================================================================== */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--color-brand);
+  z-index: 99999;
+  transition: width 0.08s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   Body & Clean Surface Architecture (Zero Blobs, Zero Grid Clutter)
+   ========================================================================== */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--color-surface-primary);
+  background-image: none;
+}
+
+/* Eliminate fixed engineering grid overlay */
+body::before {
+  display: none;
+}
+
+main {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Typography Standards (Apple-Grade SF Pro / Inter Hierarchy)
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.hero-title,
+.card-title,
+.page-title {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+p, li, span, input, select, textarea, button {
+  font-family: var(--font-sans);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-brand-hover);
+}
+
+code, kbd, samp, pre, .telemetry-code, .metric-value, .mono-text {
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Containers & Generous Whitespace Architecture
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+}
+
+.section {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+  position: relative;
+}
+
+.section-surface {
+  background-color: var(--color-surface-secondary);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+/* Architectural Slate Canvas with Subtle Radial Sapphire Wash */
+.section-portfolio-canvas {
+  background-color: #F8FAFC;
+  background-image: radial-gradient(circle at 50% 0%, rgba(0, 40, 105, 0.035) 0%, transparent 65%);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Inner Page OLED Compact Hero (About, Products, Technology, Contact) */
+.hero-inner-dark {
+  background-color: #02060F;
+  background-image: radial-gradient(ellipse at 50% 100%, rgba(30, 58, 95, 0.45) 0%, rgba(2, 6, 15, 0.98) 70%);
+  color: #FFFFFF;
+  padding: 8rem 0 4.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner-dark::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+}
+
+.hero-inner-dark .section-label {
+  background: rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.hero-inner-dark h1 {
+  color: #FFFFFF !important;
+}
+
+.hero-inner-dark .lead {
+  color: #94A3B8;
+}
+
+.hero-inner-dark .entity-metadata-strip {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+  color: rgba(203, 213, 225, 0.85);
+}
+
+.hero-inner-dark .entity-metadata-item strong {
+  color: #60A5FA;
+}
+
+/* Executive Institutional Dark Command Banner (Visual Bookend) */
+.section-dark-banner {
+  background-color: #02060F;
+  background-image: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.38) 0%, rgba(2, 6, 15, 0.96) 75%);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Section Header Typography */
+.section-header {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  background-color: var(--color-brand-subtle);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 113, 227, 0.15);
+}
+
+.section-label-mira {
+  color: var(--color-mira);
+  background-color: var(--color-mira-subtle);
+  border-color: var(--color-mira-border);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.section-desc {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   Multi-Column Grids & Layout Utilities
+   ========================================================================== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+/* 4-Column Footer Grid Utility (Dual-Class Support for footer-grid & footer-top) */
+.footer-grid,
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid,
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: var(--space-section-sm);
+    padding-bottom: var(--space-section-sm);
+  }
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-grid,
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ==========================================================================
+   Scroll-Triggered Reveal Animations
+   ========================================================================== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reveal Delays */
+[data-reveal-delay="50"] { transition-delay: 50ms; }
+[data-reveal-delay="100"] { transition-delay: 100ms; }
+[data-reveal-delay="150"] { transition-delay: 150ms; }
+[data-reveal-delay="200"] { transition-delay: 200ms; }
+[data-reveal-delay="250"] { transition-delay: 250ms; }
+[data-reveal-delay="300"] { transition-delay: 300ms; }
+[data-reveal-delay="350"] { transition-delay: 350ms; }
+[data-reveal-delay="400"] { transition-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

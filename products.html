@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Directory &amp; Systems | Jaitraya Technolabs</title>
+  <meta name="description" content="Explore production-grade software platforms and intelligent systems engineered by Jaitraya Technolabs, including flagship platforms Mulyankan AI and MIRA.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+  <!-- Top Fixed Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Frosted Glass Header (Dark Hero Overlay) -->
+  <header class="site-header header-hero-overlay">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link" aria-label="Jaitraya Technolabs Home">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <div class="nav-item-dropdown">
+            <a href="products.html" class="nav-link active">Products</a>
+            <div class="nav-dropdown-menu">
+              <a href="mulyankan-ai.html" class="dropdown-item">
+                <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" style="width: 28px; height: 28px; border-radius: 6px;">
+                <div>
+                  <div class="dropdown-item-title">Mulyankan AI <span class="badge badge-active" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Live Beta</span></div>
+                  <div class="dropdown-item-desc">Descriptive Exam Evaluation Platform</div>
+                </div>
+              </a>
+              <a href="mira.html" class="dropdown-item">
+                <div style="width: 28px; height: 28px; border-radius: 6px; background: var(--color-mira); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem;">M</div>
+                <div>
+                  <div class="dropdown-item-title" style="color: var(--color-mira);">MIRA <span class="badge badge-mira" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Preview</span></div>
+                  <div class="dropdown-item-desc">Offline Multimodal Research Assistant</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="technology.html" class="nav-link">Technology</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" style="height: 34px; width: auto;">
+        <button class="drawer-close" aria-label="Close menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="products.html" class="drawer-link active">Products</a>
+        <a href="technology.html" class="drawer-link">Technology</a>
+        <a href="contact.html" class="drawer-link">Contact Us</a>
+      </nav>
+    </div>
+    <div>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Us</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Products Hero (OLED Dark Gradient) -->
+    <section class="section hero-inner-dark">
+      <div class="container container-narrow" style="text-align: center;" data-reveal>
+        <span class="section-label">Product Directory</span>
+        <h1 style="font-size: clamp(2.25rem, 4.5vw, 3.25rem); font-weight: 800; letter-spacing: -0.035em; margin-bottom: 1.25rem;">
+          Specialized Systems for Mission-Critical Domains
+        </h1>
+        <p class="lead" style="margin-left: auto; margin-right: auto; max-width: 720px;">
+          Jaitraya Technolabs structures its product engineering around independent, domain-tailored software systems. Each platform maintains its own architecture, security model, and institutional target.
+        </p>
+      </div>
+    </section>
+
+    <!-- Flagship Product Showcases -->
+    <section class="section section-surface">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Core Product Portfolio</span>
+          <h2 class="section-title">The Two Pillars of Jaitraya Technolabs</h2>
+          <p class="section-desc">
+            Independent deep-tech platforms addressing descriptive academic examination grading and air-gapped multimodal research intelligence.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 3rem;">
+          <!-- Pillar 1: Mulyankan AI Card -->
+          <article class="card card-hover glass-card" style="padding: 3rem; border-top: 3px solid #10B981;" data-reveal data-reveal-delay="100">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 1.25rem;">
+                <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" style="width: 68px; height: 68px; border-radius: 16px; box-shadow: var(--shadow-md);">
+                <div>
+                  <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.25rem;">
+                    <h3 style="font-size: 1.85rem; color: var(--color-text-primary); margin-bottom: 0; font-weight: 700;">Mulyankan AI</h3>
+                    <span class="badge badge-active">
+                      <span class="badge-dot"></span>
+                      Live Platform Beta
+                    </span>
+                  </div>
+                  <div style="font-size: 0.88rem; color: var(--color-text-muted); font-weight: 500;">
+                    Education Technology &bull; Computer Vision &amp; Applied AI &bull; Higher Education
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                <a href="mulyankan-ai.html" class="btn btn-primary">Platform Overview</a>
+                <a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">mulyankanai.in ↗</a>
+              </div>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--color-text-secondary); line-height: 1.7; max-width: 880px; margin-bottom: 2rem;">
+              An AI-powered academic evaluation platform for handwritten descriptive examination answer sheets. Built with a teacher-in-the-loop philosophy, Mulyankan AI automates answer-sheet ingestion, unconstrained OCR handwriting extraction, question segmentation, and rubric-based assessment while ensuring educators retain ultimate grading authority.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; padding: 1.5rem; background-color: var(--color-bg-base); border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 2rem;">
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-brand); font-weight: bold;">&bull;</span> Answer-sheet upload &amp; processing
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-brand); font-weight: bold;">&bull;</span> Vision OCR handwriting extraction
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-brand); font-weight: bold;">&bull;</span> Question-wise answer segmentation
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-brand); font-weight: bold;">&bull;</span> Rubric-based contextual evaluation
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-brand); font-weight: bold;">&bull;</span> Balanced, lenient &amp; strict modes
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-brand); font-weight: bold;">&bull;</span> Professor moderation &amp; manual overrides
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-brand); font-weight: bold;">&bull;</span> Structured evaluation reports
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-brand); font-weight: bold;">&bull;</span> Excel-based institutional metrics
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.88rem; color: var(--color-text-muted); border-top: 1px solid var(--color-border); padding-top: 1.25rem;">
+              <div><strong>Institutional Focus:</strong> Higher Education Universities &bull; Autonomous Colleges &bull; Examination Boards</div>
+              <a href="mulyankan-ai.html" style="color: var(--color-brand); font-weight: 600; text-decoration: none;">Explore Full Architecture &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Pillar 2: MIRA Card -->
+          <article class="card card-mira-hover glass-card" style="padding: 3rem; border-top: 3px solid #4F46E5;" data-reveal data-reveal-delay="150">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 1.25rem;">
+                <div style="width: 68px; height: 68px; border-radius: 16px; background: linear-gradient(135deg, #4f46e5 0%, #312e81 100%); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.85rem; box-shadow: var(--shadow-md);">
+                  M
+                </div>
+                <div>
+                  <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.25rem;">
+                    <h3 style="font-size: 1.85rem; color: var(--color-text-primary); margin-bottom: 0; font-weight: 700;">MIRA</h3>
+                    <span class="badge badge-mira">
+                      <span class="badge-dot"></span>
+                      Research Lab Preview
+                    </span>
+                    <span class="badge badge-airgap" style="font-size: 0.72rem;">100% Air-Gapped</span>
+                  </div>
+                  <div style="font-size: 0.88rem; color: var(--color-text-muted); font-weight: 500;">
+                    Offline Multimodal Knowledge Retrieval &bull; Vector RAG &bull; Scientific Research Institutes
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                <a href="mira.html" class="btn btn-mira">Platform Architecture</a>
+                <a href="contact.html?product=mira" class="btn btn-secondary">Request Lab Pilot &rarr;</a>
+              </div>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--color-text-secondary); line-height: 1.7; max-width: 880px; margin-bottom: 2rem;">
+              An offline multimodal information retrieval workstation engineered specifically for scientific research institutes and academic laboratories. Operating entirely air-gapped without cloud dependencies, MIRA ingests research papers, diagram schematics, and symposium audio recordings — enabling context-aware semantic search with local LLM synthesis and exact citations.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; padding: 1.5rem; background-color: var(--color-bg-base); border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 2rem;">
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-mira); font-weight: bold;">&bull;</span> 100% Air-gapped offline sovereignty
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-mira); font-weight: bold;">&bull;</span> Tri-modal search (Text, Diagrams, Audio)
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-mira); font-weight: bold;">&bull;</span> Local ChromaDB &amp; FAISS vector storage
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-mira); font-weight: bold;">&bull;</span> Local LLM execution via Ollama (Llama-3/Mistral)
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-mira); font-weight: bold;">&bull;</span> Page number &amp; audio timestamp citations
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-mira); font-weight: bold;">&bull;</span> Cross-platform Electron.js desktop client
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-mira); font-weight: bold;">&bull;</span> High-performance Python FastAPI service
+              </div>
+              <div style="font-size: 0.9rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--color-mira); font-weight: bold;">&bull;</span> Local SQLite metadata &amp; state persistence
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.88rem; color: var(--color-text-muted); border-top: 1px solid var(--color-border); padding-top: 1.25rem;">
+              <div><strong>Institutional Focus:</strong> Scientific Research Institutes &bull; University R&amp;D Labs &bull; Air-Gapped Archives</div>
+              <a href="mira.html" style="color: var(--color-mira); font-weight: 600; text-decoration: none;">Explore MIRA Deep Dive &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-Platform Technical Comparison Matrix -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Architecture Matrix</span>
+          <h2 class="section-title">Comparative Platform Specifications</h2>
+          <p class="section-desc">
+            Direct comparison of deployment models, processing stacks, and institutional applications across our product lines.
+          </p>
+        </div>
+
+        <div style="overflow-x: auto;" data-reveal data-reveal-delay="100">
+          <table class="tech-spec-table" style="min-width: 680px;">
+            <thead>
+              <tr>
+                <th style="width: 24%;">Feature Dimension</th>
+                <th style="width: 38%;">Mulyankan AI</th>
+                <th style="width: 38%;">MIRA Assistant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Target Sector</td>
+                <td>Higher Education Universities &amp; Examination Boards</td>
+                <td>Scientific Research Institutes &amp; University R&amp;D Labs</td>
+              </tr>
+              <tr>
+                <td>Primary Mission</td>
+                <td>Descriptive handwritten exam evaluation &amp; moderation</td>
+                <td>Multimodal semantic retrieval across confidential files</td>
+              </tr>
+              <tr>
+                <td>Supported Modalities</td>
+                <td>Handwritten examination booklets (PDF / Scanned images)</td>
+                <td>Papers (PDF/DOCX), Schematics (Images), Speech (Audio)</td>
+              </tr>
+              <tr>
+                <td>Core AI Engine</td>
+                <td>Computer Vision OCR + Spatial Script Segmentation + AST</td>
+                <td>Vector Embeddings + ChromaDB/FAISS + Local Ollama LLM</td>
+              </tr>
+              <tr>
+                <td>Data Sovereignty</td>
+                <td>Institutional campus server / controlled hybrid cloud</td>
+                <td><strong>100% Air-Gapped</strong> local execution (zero cloud telemetry)</td>
+              </tr>
+              <tr>
+                <td>Client Interface</td>
+                <td>High-performance responsive web console (mulyankanai.in)</td>
+                <td>Native cross-platform desktop client (Electron.js + FastAPI)</td>
+              </tr>
+              <tr>
+                <td>Current Status</td>
+                <td><span class="badge badge-active"><span class="badge-dot"></span> Live Platform Beta</span></td>
+                <td><span class="badge badge-mira"><span class="badge-dot"></span> Research Lab Preview</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Exploration Tracks -->
+    <section class="section section-surface" id="rd-labs">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Applied Lab Tracks</span>
+          <h2 class="section-title">Algorithmic Research Initiatives</h2>
+          <p class="section-desc">
+            In keeping with our commitment to transparency, these initiatives represent active algorithmic exploration in our research labs.
+          </p>
+        </div>
+
+        <div class="grid-3" data-reveal data-reveal-delay="150">
+          <div class="card card-hover glass-card">
+            <span class="badge" style="margin-bottom: 1rem;">Research Track</span>
+            <h3 class="card-title">Autonomous Institutional Audit</h3>
+            <p class="card-desc">
+              Statistical anomaly detection models that analyze evaluation distributions across large university examination cohorts to identify grading drift and curriculum alignment gaps.
+            </p>
+          </div>
+
+          <div class="card card-hover glass-card">
+            <span class="badge" style="margin-bottom: 1rem;">Research Track</span>
+            <h3 class="card-title">Multimodal Spatial Geometry</h3>
+            <p class="card-desc">
+              Spatial graph architectures designed to parse complex engineering schematics, circuit diagrams, and chemical equations in academic booklets.
+            </p>
+          </div>
+
+          <div class="card card-hover glass-card">
+            <span class="badge" style="margin-bottom: 1rem;">Research Track</span>
+            <h3 class="card-title">Deterministic Verification Solvers</h3>
+            <p class="card-desc">
+              Hybrid systems that combine language model reasoning with formal SMT constraint solvers to mathematically eliminate hallucination in STEM evaluations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pilot CTA -->
+    <section class="section" style="text-align: center;">
+      <div class="container container-narrow" data-reveal>
+        <span class="section-label">Institutional Collaboration</span>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1rem; color: var(--color-text-primary); font-weight: 700; letter-spacing: -0.025em;">
+          Deploy Jaitraya Platforms in Your Institution
+        </h2>
+        <p class="lead" style="margin-bottom: 2rem; margin-left: auto; margin-right: auto; max-width: 640px;">
+          Whether automating semester examination grading or establishing an air-gapped multimodal knowledge workstation, we work directly with institutional leadership.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Schedule Institutional Consultation</a>
+          <a href="contact.html?product=mira" class="btn btn-mira btn-lg">Request MIRA Lab Pilot</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-link" aria-label="Jaitraya Technolabs Home">
+            <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="brand-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Engineering software systems with mathematical rigor, architectural integrity, and domain-first depth for education and scientific research.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Platforms</h4>
+          <ul class="footer-links">
+            <li><a href="mulyankan-ai.html" class="footer-link">Mulyankan AI (Live Beta)</a></li>
+            <li><a href="mira.html" class="footer-link">MIRA Platform (Preview)</a></li>
+            <li><a href="products.html" class="footer-link">Portfolio Overview</a></li>
+            <li><a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" class="footer-link">mulyankanai.in ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Engineering</h4>
+          <ul class="footer-links">
+            <li><a href="technology.html" class="footer-link">Core Technology</a></li>
+            <li><a href="technology.html#computer-vision" class="footer-link">Computer Vision &amp; OCR</a></li>
+            <li><a href="technology.html#applied-ai" class="footer-link">Vector RAG Architecture</a></li>
+            <li><a href="technology.html#human-in-loop" class="footer-link">Air-Gapped Sovereignty</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Jaitraya</a></li>
+            <li><a href="technology.html" class="footer-link">Technology &amp; Architecture</a></li>
+            <li><a href="about.html#team" class="footer-link">Leadership &amp; Team</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Jaitraya Technolabs. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="legal/compliance.html" class="footer-legal-link">Compliance</a>
+          <a href="legal/privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="legal/terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="legal/cookies.html" class="footer-legal-link">Cookie Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Technology &amp; Engineering | Jaitraya Technolabs</title>
+  <meta name="description" content="Deep dive into the architectural foundations, Computer Vision OCR, Vector RAG, and Air-Gapped Sovereign Engineering powering Jaitraya Technolabs platforms.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+  <!-- Top Fixed Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Frosted Glass Header (Dark Hero Overlay) -->
+  <header class="site-header header-hero-overlay">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link" aria-label="Jaitraya Technolabs Home">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <div class="nav-item-dropdown">
+            <a href="products.html" class="nav-link">Products</a>
+            <div class="nav-dropdown-menu">
+              <a href="mulyankan-ai.html" class="dropdown-item">
+                <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" style="width: 28px; height: 28px; border-radius: 6px;">
+                <div>
+                  <div class="dropdown-item-title">Mulyankan AI <span class="badge badge-active" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Live Beta</span></div>
+                  <div class="dropdown-item-desc">Descriptive Exam Evaluation Platform</div>
+                </div>
+              </a>
+              <a href="mira.html" class="dropdown-item">
+                <div style="width: 28px; height: 28px; border-radius: 6px; background: var(--color-mira); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem;">M</div>
+                <div>
+                  <div class="dropdown-item-title" style="color: var(--color-mira);">MIRA <span class="badge badge-mira" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Preview</span></div>
+                  <div class="dropdown-item-desc">Offline Multimodal Research Assistant</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="technology.html" class="nav-link active">Technology</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" style="height: 34px; width: auto;">
+        <button class="drawer-close" aria-label="Close menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <a href="about.html" class="drawer-link">About Us</a>
+        <a href="products.html" class="drawer-link">Products</a>
+        <a href="technology.html" class="drawer-link active">Technology</a>
+        <a href="contact.html" class="drawer-link">Contact Us</a>
+      </nav>
+    </div>
+    <div>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Us</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Technology Hero (OLED Dark Gradient) -->
+    <section class="section hero-inner-dark">
+      <div class="container container-narrow" style="text-align: center;" data-reveal>
+        <span class="section-label">Engineering Architecture</span>
+        <h1 style="font-size: clamp(2.25rem, 4.5vw, 3.25rem); font-weight: 800; letter-spacing: -0.035em; margin-bottom: 1.25rem;">
+          Engineering Systems for High-Consequence Realities
+        </h1>
+        <p class="lead" style="margin-left: auto; margin-right: auto; max-width: 680px;">
+          We architect software systems where statistical variance must be bounded, data sovereignty is non-negotiable, and automated decisions require transparent mathematical explainability.
+        </p>
+      </div>
+    </section>
+
+    <!-- Technical Disciplines Deep Dive -->
+    <section class="section section-surface">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Core Capabilities</span>
+          <h2 class="section-title">Technical Disciplines &amp; Engineering Pillars</h2>
+          <p class="section-desc">
+            All listed capabilities are supported by active production code in Mulyankan AI and documented research systems in MIRA.
+          </p>
+        </div>
+
+        <div class="grid-2" data-reveal data-reveal-delay="150">
+          <!-- Discipline 1: Computer Vision & OCR -->
+          <div class="card card-hover glass-card" id="computer-vision">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <div class="card-icon-wrap" style="margin-bottom: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                  <circle cx="9" cy="9" r="2"></circle>
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+                </svg>
+              </div>
+              <span class="badge badge-active">
+                <span class="badge-dot"></span>
+                Mulyankan AI Core
+              </span>
+            </div>
+            <h3 class="card-title">Computer Vision &amp; Document Intelligence</h3>
+            <p class="card-desc" style="margin-bottom: 1.25rem;">
+              Physical documents contain severe noise: inconsistent scan resolutions, shadows from mobile capture, rotational skew, bleed-through ink, and diverse cursive handwriting styles.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--color-text-secondary); border-top: 1px solid var(--color-border); padding-top: 1rem;">
+              <div>&bull; <strong>Adaptive Deskewing:</strong> Sub-degree rotation and perspective correction.</div>
+              <div>&bull; <strong>Layout Analysis:</strong> Dynamic segmentation of question numbers, headers, and diagrams.</div>
+              <div>&bull; <strong>Handwriting Parsing:</strong> Character extraction optimized for cursive handwriting styles.</div>
+            </div>
+          </div>
+
+          <!-- Discipline 2: Applied AI & Rubric Matching -->
+          <div class="card card-hover glass-card" id="applied-ai">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <div class="card-icon-wrap" style="margin-bottom: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <span class="badge badge-active">
+                <span class="badge-dot"></span>
+                Mulyankan AI Core
+              </span>
+            </div>
+            <h3 class="card-title">Applied AI &amp; Semantic Alignment</h3>
+            <p class="card-desc" style="margin-bottom: 1.25rem;">
+              Standard generative language models suffer from hallucination and subjective scoring drift. Our systems constrain model inference using explicit rubric graphs and deterministic rules.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--color-text-secondary); border-top: 1px solid var(--color-border); padding-top: 1rem;">
+              <div>&bull; <strong>Rubric Anchoring:</strong> Scores bound strictly to educator-defined grading criteria.</div>
+              <div>&bull; <strong>Step-Scoring Logic:</strong> Intermediate credit deduction algorithms for multi-step derivations.</div>
+              <div>&bull; <strong>Mode Rigor:</strong> Mathematical parameterization of Balanced, Lenient, and Strict scoring profiles.</div>
+            </div>
+          </div>
+
+          <!-- Discipline 3: Offline Vector Search & Local RAG -->
+          <div class="card card-mira-hover glass-card" id="vector-rag">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <div class="card-icon-wrap card-icon-wrap-mira" style="margin-bottom: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="badge badge-mira">
+                <span class="badge-dot"></span>
+                MIRA Core
+              </span>
+            </div>
+            <h3 class="card-title">Offline Vector Embeddings &amp; Local RAG</h3>
+            <p class="card-desc" style="margin-bottom: 1.25rem;">
+              Scientific research demands instant cross-referencing between dense mathematical literature, laboratory micrographs, and symposium speech recordings without sending queries to the cloud.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--color-text-secondary); border-top: 1px solid var(--color-border); padding-top: 1rem;">
+              <div>&bull; <strong>Tri-Modal Embeddings:</strong> High-density unified vector space across text, images, and audio.</div>
+              <div>&bull; <strong>Embedded ChromaDB / FAISS:</strong> Local approximate nearest-neighbor search (&lt; 150ms latency).</div>
+              <div>&bull; <strong>Ollama Local LLMs:</strong> In-process contextual synthesis via Llama-3, Mistral, or Gemma.</div>
+            </div>
+          </div>
+
+          <!-- Discipline 4: Air-Gapped Sovereign Engineering -->
+          <div class="card card-mira-hover glass-card" id="human-in-loop">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <div class="card-icon-wrap card-icon-wrap-mira" style="margin-bottom: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="badge badge-airgap">
+                100% Air-Gapped
+              </span>
+            </div>
+            <h3 class="card-title">Air-Gapped Sovereign Engineering</h3>
+            <p class="card-desc" style="margin-bottom: 1.25rem;">
+              In confidential patent labs and academic examination boards, zero data leakage is a regulatory mandate. Our architecture executes on physical workstation hardware with zero network calls.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem; color: var(--color-text-secondary); border-top: 1px solid var(--color-border); padding-top: 1rem;">
+              <div>&bull; <strong>Native Desktop Shell:</strong> Cross-platform Electron.js application with OS hardware acceleration.</div>
+              <div>&bull; <strong>Local Microservices:</strong> Asynchronous Python FastAPI backend communicating over local IPC.</div>
+              <div>&bull; <strong>Cryptographic Isolation:</strong> All embeddings and metadata encrypted on local NVMe storage.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- R&D Lab Tracks -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">Research &amp; Development</span>
+          <h2 class="section-title">Active R&amp;D Research Vectors</h2>
+          <p class="section-desc">
+            Initiatives currently in algorithmic exploration within our research labs.
+          </p>
+        </div>
+
+        <div class="grid-3" data-reveal data-reveal-delay="150">
+          <div class="card card-hover glass-card">
+            <span class="badge" style="margin-bottom: 1rem;">R&amp;D Track 01</span>
+            <h3 class="card-title">Spatial Document Graph Networks</h3>
+            <p class="card-desc">
+              Modeling physical exam pages as heterogeneous graphs of textual entities, hand-drawn diagrams, and mathematical symbols to reason over complex multi-modal answers.
+            </p>
+          </div>
+
+          <div class="card card-hover glass-card">
+            <span class="badge" style="margin-bottom: 1rem;">R&amp;D Track 02</span>
+            <h3 class="card-title">Deterministic Constraint Solvers</h3>
+            <p class="card-desc">
+              Pairing neural evaluation outputs with formal SMT solvers to mathematically verify whether an answer strictly satisfies the marking rubric.
+            </p>
+          </div>
+
+          <div class="card card-hover glass-card">
+            <span class="badge" style="margin-bottom: 1rem;">R&amp;D Track 03</span>
+            <h3 class="card-title">Privacy-Preserving Edge Inference</h3>
+            <p class="card-desc">
+              Compacting vision OCR and rubric models for on-premise university deployment, ensuring student answer booklets never leave institutional servers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Consultation CTA -->
+    <section class="section section-surface" style="text-align: center;">
+      <div class="container container-narrow" data-reveal>
+        <span class="section-label">Technical Inquiries</span>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1rem; color: var(--color-text-primary); font-weight: 700; letter-spacing: -0.025em;">
+          Discuss Institutional Technical Requirements
+        </h2>
+        <p class="lead" style="margin-bottom: 2rem; margin-left: auto; margin-right: auto; max-width: 640px;">
+          Our engineering leadership conducts architecture walkthroughs for university chief technology officers, exam directors, and research lab heads.
+        </p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Schedule Technical Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-link" aria-label="Jaitraya Technolabs Home">
+            <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="brand-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Engineering software systems with mathematical rigor, architectural integrity, and domain-first depth for education and scientific research.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Platforms</h4>
+          <ul class="footer-links">
+            <li><a href="mulyankan-ai.html" class="footer-link">Mulyankan AI (Live Beta)</a></li>
+            <li><a href="mira.html" class="footer-link">MIRA Platform (Preview)</a></li>
+            <li><a href="products.html" class="footer-link">Portfolio Overview</a></li>
+            <li><a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" class="footer-link">mulyankanai.in ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Engineering</h4>
+          <ul class="footer-links">
+            <li><a href="technology.html" class="footer-link">Core Technology</a></li>
+            <li><a href="technology.html#computer-vision" class="footer-link">Computer Vision &amp; OCR</a></li>
+            <li><a href="technology.html#applied-ai" class="footer-link">Vector RAG Architecture</a></li>
+            <li><a href="technology.html#human-in-loop" class="footer-link">Air-Gapped Sovereignty</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Jaitraya</a></li>
+            <li><a href="technology.html" class="footer-link">Technology &amp; Architecture</a></li>
+            <li><a href="about.html#team" class="footer-link">Leadership &amp; Team</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Jaitraya Technolabs. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="legal/compliance.html" class="footer-legal-link">Compliance</a>
+          <a href="legal/privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="legal/terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="legal/cookies.html" class="footer-legal-link">Cookie Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
