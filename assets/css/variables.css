@@ -186,4 +186,8 @@
   /* Hover Elevation Scale */
   --shadow-hover-elevated: 0 20px 48px -10px rgba(0, 40, 105, 0.16), 0 6px 16px rgba(0, 0, 0, 0.04);
   --shadow-button-hover: 0 8px 24px -4px rgba(0, 40, 105, 0.28);
+
+  /* 3D Perspective & Motion Tokens */
+  --perspective-depth: 1000px;
+  --transform-3d-card: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(0px);
 }

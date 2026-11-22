@@ -561,4 +561,41 @@ document.addEventListener('DOMContentLoaded', () => {
       closeDrawer();
     }
   });
+
+  // ==========================================================================
+  // 11. 3D Card Tilt Physics & Hover Parallax
+  // ==========================================================================
+  const isReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!isReducedMotion) {
+    const cards3d = document.querySelectorAll('.card-3d, .card-hover, .service-pillar-card');
+    cards3d.forEach(card => {
+      let bounds = null;
+
+      const onMouseEnter = () => {
+        bounds = card.getBoundingClientRect();
+      };
+
+      const onMouseMove = (e) => {
+        if (!bounds) bounds = card.getBoundingClientRect();
+        const mouseX = e.clientX - bounds.left;
+        const mouseY = e.clientY - bounds.top;
+        const xPct = (mouseX / bounds.width) - 0.5;
+        const yPct = (mouseY / bounds.height) - 0.5;
+
+        const rotateX = -(yPct * 7).toFixed(2);
+        const rotateY = (xPct * 7).toFixed(2);
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(6px)`;
+      };
+
+      const onMouseLeave = () => {
+        bounds = null;
+        card.style.transform = '';
+      };
+
+      card.addEventListener('mouseenter', onMouseEnter, { passive: true });
+      card.addEventListener('mousemove', onMouseMove, { passive: true });
+      card.addEventListener('mouseleave', onMouseLeave, { passive: true });
+    });
+  }
 });
