@@ -103,10 +103,12 @@ const ROOT_DIR = path.resolve('.');
 const HTML_PAGES = [
   'index.html',
   'about.html',
+  'solutions.html',
   'products.html',
   'mulyankan-ai.html',
   'mira.html',
   'technology.html',
+  'projects.html',
   'contact.html',
   'legal/compliance.html',
   'legal/privacy.html',

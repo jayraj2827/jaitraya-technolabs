@@ -85,6 +85,25 @@
   --color-error: #D9383A;
   --color-error-bg: #FEF2F2;
 
+  /* Hardware, Robotics & R&D Engineering Tokens */
+  --color-robotics: #0284C7;
+  --color-robotics-hover: #0369A1;
+  --color-robotics-subtle: #F0F9FF;
+  --color-robotics-border: rgba(2, 132, 199, 0.20);
+  --color-hardware: #D97706;
+  --color-hardware-hover: #B45309;
+  --color-hardware-subtle: #FFFBEB;
+  --color-hardware-border: rgba(217, 119, 6, 0.20);
+  --color-rnd: #6366F1;
+  --color-rnd-hover: #4F46E5;
+  --color-rnd-subtle: #EEF2FF;
+  --color-rnd-border: rgba(99, 102, 241, 0.20);
+
+  /* Deep Engineering Surfaces */
+  --color-bg-obsidian: #030712;
+  --color-bg-surface-dark: #0B132B;
+  --color-bg-elevated-dark: #111C3D;
+
   /* ==========================================================================
      Hairline Borders & Dividers
      ========================================================================== */

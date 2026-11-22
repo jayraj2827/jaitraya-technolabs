@@ -5,10 +5,12 @@ const rootDir = path.resolve('.');
 const htmlFiles = [
   'index.html',
   'about.html',
+  'solutions.html',
   'products.html',
   'mulyankan-ai.html',
   'mira.html',
   'technology.html',
+  'projects.html',
   'contact.html',
   'legal/compliance.html',
   'legal/privacy.html',
