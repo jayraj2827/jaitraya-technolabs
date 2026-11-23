@@ -1,663 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full bg-surface" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Jaitraya Technolabs</title>
-  <meta name="description" content="Learn about the engineering philosophy, mission, and leadership direction of Jaitraya Technolabs.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
+  <meta content="web_standard" name="shell-type">
+  <title>About Us — Jaitraya TechnoLabs</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/logos/jaitraya-icon-darkmode.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#03224d",
+            "primary-container": "#1f3864",
+            "secondary": "#555f71",
+            "secondary-container": "#d6e0f5",
+            "surface": "#f7f9ff",
+            "surface-bright": "#f7f9ff",
+            "surface-dim": "#d6dae2",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f0f4fc",
+            "surface-container": "#eaeef6",
+            "surface-container-high": "#e4e8f1",
+            "surface-container-highest": "#dee3eb",
+            "on-surface": "#171c22",
+            "on-surface-variant": "#44474f",
+            "outline": "#747780",
+            "outline-variant": "#c4c6d0"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.75rem",
+            "space-xl": "3rem"
+          },
+          fontFamily: {
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "display-hero": ["Plus Jakarta Sans", "sans-serif"],
+            "body-default": ["Inter", "sans-serif"],
+            "body-lead": ["Inter", "sans-serif"],
+            "body-muted": ["Inter", "sans-serif"],
+            "label-structural": ["IBM Plex Mono", "monospace"],
+            "label-interface": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-
-  <!-- Top Fixed Scroll Progress Bar -->
-  <div id="scroll-progress" aria-hidden="true"></div>
-
-  <!-- Frosted Glass Header (Dark Hero Overlay) -->
-  <header class="site-header header-hero-overlay">
-    <div class="container header-container">
-      <a href="index.html" class="brand-link" aria-label="Jaitraya Technolabs Home">
-        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="brand-logo-img">
+<body class="bg-surface-container-lowest text-on-surface font-body-default antialiased">
+<header class="site-header fixed top-0 left-0 right-0 z-50 bg-[#030712] border-b border-white/10 backdrop-blur-md transition-all duration-300" id="main-nav">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="brand-link flex items-center gap-3 group" aria-label="Jaitraya TechnoLabs Home">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya TechnoLabs" class="brand-logo-img h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105" id="nav-logo">
+        <div class="flex flex-col justify-center">
+          <span class="font-headline-sm text-[15px] font-semibold tracking-tight text-white leading-none group-hover:text-slate-200 transition-colors" id="nav-brand-title">JAITRAYA TECHNOLABS</span>
+          <span class="font-label-structural text-[9px] uppercase tracking-widest text-slate-400 leading-none mt-1" id="nav-brand-subtitle">IDEAS · INTELLIGENCE · IMPACT</span>
+        </div>
       </a>
+    </div>
 
-      <!-- Desktop Navigation -->
-      <nav class="desktop-nav" aria-label="Main Navigation">
-        <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="solutions.html" class="nav-link">Solutions</a>
-          <div class="nav-item-dropdown">
-            <a href="products.html" class="nav-link">Products</a>
-            <div class="nav-dropdown-menu">
-              <a href="mulyankan-ai.html" class="dropdown-item">
-                <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" style="width: 28px; height: 28px; border-radius: 6px;">
-                <div>
-                  <div class="dropdown-item-title">Mulyankan AI <span class="badge badge-active" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Live Beta</span></div>
-                  <div class="dropdown-item-desc">Descriptive Exam Evaluation Platform</div>
-                </div>
-              </a>
-              <a href="mira.html" class="dropdown-item">
-                <img src="assets/images/logos/mira-icon.svg" alt="MIRA" style="width: 28px; height: 28px; border-radius: 6px;">
-                <div>
-                  <div class="dropdown-item-title" style="color: var(--color-mira);">MIRA <span class="badge badge-mira" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Preview</span></div>
-                  <div class="dropdown-item-desc">Offline Multimodal Research Assistant</div>
-                </div>
-              </a>
-              <a href="products.html" class="dropdown-item" style="border-top: 1px solid var(--color-border); margin-top: 0.25rem; padding-top: 0.5rem;">
-                <span class="dropdown-item-title" style="color: var(--color-brand); font-size: 0.82rem;">Portfolio Overview &rarr;</span>
-              </a>
-            </div>
+    <!-- Desktop Navigation (5 Core Destinations) -->
+    <nav class="desktop-nav hidden md:flex items-center gap-6 h-full" aria-label="Main Navigation">
+      <div class="nav-links flex items-center gap-6">
+        <a href="index.html" class="nav-link font-label-interface text-slate-300 hover:text-white transition-colors py-2">Home</a>
+        <a href="solutions.html" class="nav-link font-label-interface text-slate-300 hover:text-white transition-colors py-2">Solutions</a>
+        <div class="nav-item-dropdown relative group py-2">
+          <a href="products.html" class="nav-link font-label-interface text-slate-300 hover:text-white transition-colors py-2">Products</a>
+          <div class="nav-dropdown-menu hidden group-hover:flex flex-col absolute top-full left-0 w-64 bg-[#0a0f1d] border border-white/10 rounded-xl p-2 shadow-xl backdrop-blur-lg">
+            <a href="mulyankan-ai.html" class="dropdown-item flex items-center gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors">
+              <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" class="w-7 h-7 rounded-md">
+              <div>
+                <div class="text-white text-xs font-semibold">Mulyankan AI <span class="badge badge-active text-[10px] text-emerald-400 bg-emerald-400/10 px-1.5 py-0.5 rounded">Live Beta</span></div>
+                <div class="text-slate-400 text-[10px]">Exam Evaluation Platform</div>
+              </div>
+            </a>
+            <a href="mira.html" class="dropdown-item flex items-center gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors">
+              <img src="assets/images/logos/mira-icon.svg" alt="MIRA" class="w-7 h-7 rounded-md">
+              <div>
+                <div class="text-white text-xs font-semibold">MIRA Engine <span class="badge badge-mira text-[10px] text-sky-400 bg-sky-400/10 px-1.5 py-0.5 rounded">Preview R&D</span></div>
+                <div class="text-slate-400 text-[10px]">Offline Multimodal Terminal</div>
+              </div>
+            </a>
           </div>
-          <a href="about.html" class="nav-link active">About Us</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
         </div>
-      </nav>
-
-      <div class="header-actions">
-        <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
-        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
+        <a href="about.html" class="nav-link font-label-interface text-slate-300 hover:text-white transition-colors py-2 active" aria-current="page">About Us</a>
+        <a href="contact.html" class="nav-link font-label-interface px-4 py-1.5 rounded-full bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 transition-all">Contact Us</a>
       </div>
-    </div>
-  </header>
+    </nav>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-drawer-overlay"></div>
-  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
-    <div>
-      <div class="drawer-header">
-        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" style="height: 34px; width: auto;">
-        <button class="drawer-close" aria-label="Close menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <nav class="drawer-nav">
-        <a href="index.html" class="drawer-link">Home</a>
-        <a href="solutions.html" class="drawer-link">Solutions</a>
-        <a href="products.html" class="drawer-link">Products</a>
-        <a href="about.html" class="drawer-link active">About Us</a>
-        <a href="contact.html" class="drawer-link">Contact Us</a>
-      </nav>
+    <!-- Mobile Navigation Toggle Button -->
+    <div class="flex items-center md:hidden">
+      <button class="mobile-toggle w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
     </div>
-    <div>
-      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Us</a>
-    </div>
-  </aside>
+  </div>
+</header>
 
-  <main id="main-content">
-    <!-- About Hero (OLED Dark Gradient) -->
-    <section class="section hero-inner-dark">
-      <div class="container container-narrow" style="text-align: center;" data-reveal>
-        <span class="section-label">Institutional Profile</span>
-        <h1 style="font-size: clamp(2.25rem, 4.5vw, 3.5rem); font-weight: 800; letter-spacing: -0.035em; margin-bottom: 1.25rem;">
-          Engineering Products with Intent and Depth
-        </h1>
-        <p class="lead" style="margin-left: auto; margin-right: auto; max-width: 680px;">
-          Jaitraya Technolabs was founded on the conviction that software systems in high-consequence domains must solve deep structural operational friction rather than generate superficial digital noise.
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-drawer-overlay fixed inset-0 bg-black/60 z-50 hidden"></div>
+<aside class="mobile-drawer fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#0a0f1d] border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300" aria-label="Mobile Navigation Drawer">
+  <div>
+    <div class="drawer-header flex items-center justify-between pb-6 border-b border-white/10">
+      <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya TechnoLabs" class="h-8 w-auto">
+      <button class="drawer-close w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav flex flex-col gap-4 pt-6">
+      <a href="index.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium">Home</a>
+      <a href="solutions.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium">Solutions</a>
+      <a href="products.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium">Products</a>
+      <a href="about.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium active">About Us</a>
+      <a href="contact.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium">Contact Us</a>
+    </nav>
+  </div>
+  <div class="pt-6 border-t border-white/10">
+    <a href="contact.html" class="w-full py-3 bg-white text-primary rounded-xl font-medium text-center block">Contact Us</a>
+  </div>
+</aside>
+<script>
+  (function() {
+    const nav = document.getElementById('main-nav');
+    const brandTitle = document.getElementById('nav-brand-title');
+    const brandSub = document.getElementById('nav-brand-subtitle');
+    const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+    const toggle = document.querySelector('.mobile-toggle');
+    const drawer = document.querySelector('.mobile-drawer');
+    const overlay = document.querySelector('.mobile-drawer-overlay');
+    const closeBtn = document.querySelector('.drawer-close');
+
+    if (toggle && drawer && overlay && closeBtn) {
+      function openDrawer() {
+        drawer.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+      function closeDrawer() {
+        drawer.classList.add('translate-x-full');
+        overlay.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+      toggle.addEventListener('click', openDrawer);
+      closeBtn.addEventListener('click', closeDrawer);
+      overlay.addEventListener('click', closeDrawer);
+    }
+
+    function updateNavScroll() {
+      if (!nav) return;
+      if (window.scrollY > 80) {
+        nav.classList.remove('bg-[#030712]', 'border-white/10');
+        nav.classList.add('bg-white/95', 'border-slate-200', 'shadow-sm');
+        if (brandTitle) { brandTitle.classList.remove('text-white'); brandTitle.classList.add('text-slate-900'); }
+        if (brandSub) { brandSub.classList.remove('text-slate-400'); brandSub.classList.add('text-slate-500'); }
+        navLinks.forEach(link => {
+          if (!link.classList.contains('bg-white/10') && !link.classList.contains('bg-primary')) {
+            link.classList.remove('text-slate-300', 'hover:text-white');
+            link.classList.add('text-slate-600', 'hover:text-slate-900');
+          }
+        });
+      } else {
+        nav.classList.remove('bg-white/95', 'border-slate-200', 'shadow-sm');
+        nav.classList.add('bg-[#030712]', 'border-white/10');
+        if (brandTitle) { brandTitle.classList.remove('text-slate-900'); brandTitle.classList.add('text-white'); }
+        if (brandSub) { brandSub.classList.remove('text-slate-500'); brandSub.classList.add('text-slate-400'); }
+        navLinks.forEach(link => {
+          link.classList.remove('text-slate-600', 'hover:text-slate-900');
+          link.classList.add('text-slate-300', 'hover:text-white');
+        });
+      }
+    }
+    window.addEventListener('scroll', updateNavScroll, { passive: true });
+    updateNavScroll();
+  })();
+</script>
+<main class="w-full pt-20 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Subtle Architectural Bar -->
+
+<!-- Hero Section -->
+<section class="w-full bg-[#030712] py-space-xl lg:py-24 border-b border-white/10 relative overflow-hidden"><div class="max-w-7xl mx-auto px-gutter relative z-10"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-space-xl items-center"><div class="lg:col-span-8 flex flex-col items-start"><div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/15 text-slate-200 font-label-structural text-label-structural uppercase tracking-wider mb-space-md rounded-full backdrop-blur-sm shadow-sm"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span>INSTITUTIONAL AUTONOMY PROTOCOLS ACTIVE</span><span class="text-slate-400">//</span><span class="text-slate-400">v4.2</span></div><h1 class="font-headline-lg text-headline-lg text-white tracking-tight mb-space-md max-w-4xl">Pioneering Independent Technology Through Disciplined Engineering.</h1><p class="font-body-lead text-body-lead text-slate-300 max-w-2xl mb-space-lg">Jaitraya TechnoLabs was founded to build durable software, physical robotics, and verifiable intelligence for mission-critical institutional operations. We replace transient industry abstraction with deterministic, physical-grade technical integrity.</p><div class="flex flex-wrap items-center gap-space-md"><a href="solutions.html" data-path="solutions" class="px-5 py-3 bg-white text-slate-900 font-label-interface text-label-interface font-medium hover:bg-slate-100 transition-all rounded-xl inline-flex items-center gap-2 shadow-sm"><span>Explore System Frameworks</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a><a href="contact.html?type=careers" data-path="contact-us" class="px-5 py-3 border border-white/20 bg-white/5 text-white font-label-interface text-label-interface font-medium hover:bg-white/10 hover:border-white/30 transition-all rounded-xl inline-flex items-center gap-2 backdrop-blur-sm"><span class="material-symbols-outlined text-[18px] text-slate-300">terminal</span><span>Technical Briefing NDA</span></a></div></div><div class="lg:col-span-4 flex flex-col gap-space-md bg-white/[0.04] p-space-lg border border-white/10 shadow-sm rounded-2xl backdrop-blur-md"><div class="flex items-center justify-between"><span class="font-label-structural text-label-structural text-slate-400 uppercase tracking-widest">Engineering Cohort</span><span class="font-label-structural text-label-structural px-2.5 py-1 bg-white/10 border border-white/20 text-white font-medium rounded-lg">6 Roster Principals</span></div><div class="grid grid-cols-2 gap-space-sm pt-space-xs"><div class="p-space-sm bg-white/5 border border-white/10 rounded-xl"><span class="block font-headline-sm text-headline-sm text-white font-semibold">100%</span><span class="font-label-structural text-[10px] text-slate-400 uppercase tracking-wider">Air-Gapped IP</span></div><div class="p-space-sm bg-white/5 border border-white/10 rounded-xl"><span class="block font-headline-sm text-headline-sm text-white font-semibold">0.0 ms</span><span class="font-label-structural text-[10px] text-slate-400 uppercase tracking-wider">Cloud Egress Lag</span></div></div><p class="font-body-muted text-body-muted text-slate-400 leading-relaxed">All primary systems operate on bare-metal firmware, custom sensory rigs, and offline edge transformers with zero runtime dependencies.</p><div class="pt-space-sm border-t border-white/10 flex items-center justify-between font-label-structural text-[11px] text-slate-300"><span>Zero-Cloud Telemetry</span><span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>ONLINE</span></div></div></div></div></section>
+<!-- Strategic Milestone Roadmap (2024-2030) -->
+<section class="w-full bg-surface py-space-xl lg:py-20 border-b border-outline-variant/40"><div class="max-w-7xl mx-auto px-gutter"><div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md"><div><span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest block mb-space-xs">Horizon Vector</span><h2 class="font-headline-md text-headline-md text-primary tracking-tight">Strategic Milestone Roadmap (2024–2030)</h2></div><p class="font-body-muted text-body-muted text-secondary max-w-md">A phased trajectory translating applied deep research into sovereign hardware systems and institutional-grade deployments.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative"><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-surface border border-outline-variant/60 text-primary font-semibold rounded-lg">2024</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Phase I: Completed</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Foundational Platform Pilots</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Successful deployment of Mulyankan AI across select university evaluation centers, scoring unconstrained handwritten answer scripts offline.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">verified</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">300K+ Scripts Scored</span></div></div><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-primary text-on-primary font-semibold rounded-lg">2025</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-primary font-medium">Phase II: Active</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">MIRA Offline Workstation</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Commercial rollout of the MIRA unified desktop terminal and expansion of our dedicated physical mechatronics lab in Delhi NCR.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">precision_manufacturing</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">1.2 kW Turnkey Rig</span></div></div><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-surface border border-outline-variant/60 text-secondary font-semibold rounded-lg">2026</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Phase III: Engineering</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Multi-DoF Kinematics</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Commercialization of autonomous 6-DoF robotic manipulation arms paired with low-wattage Edge TPUs for high-speed automated document handling.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">memory</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Sub-Millimeter Feedback</span></div></div><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-surface border border-outline-variant/60 text-secondary font-semibold rounded-lg">2027–2030</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Phase IV: Vision</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Sovereign Ecosystems</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Integrated autonomous software-hardware computing matrices deployed across pan-national testing bodies, defense telemetry, and statutory registries.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">public</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Institutional Scale</span></div></div></div></div></section>
+<!-- Institutional Tri-Pillar Philosophy -->
+<section class="w-full bg-surface-container-lowest py-space-xl lg:py-24 border-b border-outline-variant/40"><div class="max-w-7xl mx-auto px-gutter"><div class="max-w-2xl mb-space-xl"><span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest block mb-space-xs">Operating Axioms</span><h2 class="font-headline-md text-headline-md text-primary tracking-tight">Institutional Tri-Pillar Philosophy</h2><p class="font-body-lead text-body-lead text-secondary mt-space-sm">We reject transient hype cycles in favor of deterministic engineering doctrines that perform under severe physical and statutory constraints.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter"><div class="flex flex-col p-space-xl bg-surface border border-outline-variant/50 relative group rounded-2xl card-hover-lift"><span class="font-label-structural text-headline-lg text-outline-variant font-bold mb-space-md">01</span><h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Eliminating Structural Friction</h3><p class="font-body-default text-body-default text-secondary leading-relaxed mb-space-lg">Mission-critical organizations lose thousands of man-hours to fragmented, manual data reconciliations. Our systems digest noisy real-world artifacts into structured cryptographic ledgers in real time.</p><div class="mt-auto pt-space-md bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary block mb-1">Target Outcome</span><span class="font-body-muted text-body-muted text-primary font-medium">99.4% Reduction in physical script processing cycles.</span></div></div><div class="flex flex-col p-space-xl bg-surface border border-outline-variant/50 relative group rounded-2xl card-hover-lift"><span class="font-label-structural text-headline-lg text-outline-variant font-bold mb-space-md">02</span><h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Hardware-Software Co-Design</h3><p class="font-body-default text-body-default text-secondary leading-relaxed mb-space-lg">Pure software fails when exposed to analog constraints. We engineer custom PCB enclosures, optical sensing rigs, and embedded control loops alongside our machine intelligence models from Day Zero.</p><div class="mt-auto pt-space-md bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary block mb-1">Target Outcome</span><span class="font-body-muted text-body-muted text-primary font-medium">Single-unit synchronization between servos and neural inferencing.</span></div></div><div class="flex flex-col p-space-xl bg-surface border border-outline-variant/50 relative group rounded-2xl card-hover-lift"><span class="font-label-structural text-headline-lg text-outline-variant font-bold mb-space-md">03</span><h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Responsible, Human-Governed Intelligence</h3><p class="font-body-default text-body-default text-secondary leading-relaxed mb-space-lg">AI should never serve as an opaque judge. Our evaluation and classification models deliver mathematically traceable rubric evidence, preserving definitive override control for human adjudicators.</p><div class="mt-auto pt-space-md bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary block mb-1">Target Outcome</span><span class="font-body-muted text-body-muted text-primary font-medium">Traceable citation coordinates for every inferenced mark.</span></div></div></div></div></section>
+<!-- Technical Leadership & Team Formation (6-Member Executive Roster) -->
+<section class="w-full bg-surface py-space-xl lg:py-24 border-b border-outline-variant/40"><div class="max-w-7xl mx-auto px-gutter"><div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md"><div><div class="inline-flex items-center gap-2 mb-space-xs"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Executive Systems Architects</span></div><h2 class="font-headline-md text-headline-md text-primary tracking-tight">Technical Leadership &amp; Team Formation</h2><div id="team"></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-sm"><button id="autoplay-toggle-btn" class="font-label-structural text-[11px] uppercase tracking-wider text-primary px-3 py-1 bg-surface-container-lowest border border-outline-variant/50 hover:border-primary transition-all rounded-lg flex items-center gap-1.5 cursor-pointer shadow-sm"><span id="autoplay-icon" class="material-symbols-outlined text-[14px] text-primary">pause</span><span id="autoplay-status-text">Autoplay Active</span></button></div><div class="flex items-center gap-2"><button id="team-prev" aria-label="Previous leadership member" class="w-10 h-10 rounded-full border border-outline-variant/50 bg-surface-container-lowest text-primary hover:bg-surface-container-low hover:border-primary transition-all flex items-center justify-center cursor-pointer shadow-sm"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><button id="team-next" aria-label="Next leadership member" class="w-10 h-10 rounded-full border border-outline-variant/50 bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow-sm"><span class="material-symbols-outlined text-[20px]">arrow_forward</span></button></div></div></div><!-- Progress Timer Bar --><div class="w-full h-1 bg-outline-variant/40 rounded-full mb-space-lg overflow-hidden relative"><div id="carousel-progress-bar" class="h-full bg-primary rounded-full transition-all duration-100 ease-linear w-0"></div></div><!-- Interactive Carousel Track --><div id="team-slider" class="overflow-x-auto flex gap-6 scroll-smooth snap-x snap-mandatory no-scrollbar pb-6 pt-1 -mx-2 px-2"><!-- Member 1: Vikramaditya S. --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Vikramaditya S." src="assets/images/stitch/stitch_asset_10.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Vikramaditya S.</h3><p class="font-body-muted text-body-muted text-secondary">Founder &amp; Chief Systems Architect</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">SYSTEMS ARCHITECTURE</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Architects distributed sovereign cloud fabrics and low-latency bare-metal backbones. Directs company-wide engineering roadmaps and security postures for institutional-scale software.</p><!-- Expanded Dossier Details --><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Patents:</span><span class="text-primary font-medium">IN-2024-009182 (Air-Gapped Sync)</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">4D8E · 9A12 · C082</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Fault-Tolerant Distributed OS</span></div></div><!-- Member 2: Dr. Ananya Mukherjee --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Dr. Ananya Mukherjee" src="assets/images/stitch/stitch_asset_19.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Dr. Ananya Mukherjee</h3><p class="font-body-muted text-body-muted text-secondary">Co-Founder &amp; Head of AI / Vision</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">COMPUTER VISION &amp; OCR</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Leads research in unconstrained handwritten text recognition, spatial vision transformers, and multimodal rubric alignment engines powering Mulyankan AI.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Publications:</span><span class="text-primary font-medium">IEEE CVPR · Offline ViTs</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">7B13 · 330F · E449</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Dense Document OCR &amp; ViTs</span></div></div><!-- Member 3: Rajesh K. Nair --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Rajesh K. Nair" src="assets/images/stitch/stitch_asset_11.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Rajesh K. Nair</h3><p class="font-body-muted text-body-muted text-secondary">Head of Hardware &amp; Robotics</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">ROBOTICS &amp; KINEMATICS</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Directs kinematic motion control pipelines, 6-DoF robotic manipulation arms, rapid physical prototype milling, and CNC assembly at the Bengaluru Mechatronics Lab.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Patents:</span><span class="text-primary font-medium">WO/2025/1109 (6-DoF Haptic Rig)</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">89C0 · AA41 · 22E7</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Sub-mm Robotic Actuation</span></div></div><!-- Member 4: Siddharth Varma --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Siddharth Varma" src="assets/images/stitch/stitch_asset_15.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Siddharth Varma</h3><p class="font-body-muted text-body-muted text-secondary">Lead Embedded Systems &amp; Firmware</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">EMBEDDED SYSTEMS &amp; RTOS</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Engineers deterministic hard real-time operating microkernels, peripheral PCIe sensor links, and custom PCB firmware designed for offline embedded resilience.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Focus:</span><span class="text-primary font-medium">RISC-V Hardware Firmware</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">110A · 55F2 · 902D</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Hard RTOS &amp; Sensory Buses</span></div></div><!-- Member 5: Meera Swaminathan --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Meera Swaminathan" src="assets/images/stitch/stitch_asset_17.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Meera Swaminathan</h3><p class="font-body-muted text-body-muted text-secondary">Lead Product Strategist</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">INSTITUTIONAL STRATEGY</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Spearheads large-scale university deployments, regulatory governance audits, and statutory agency rollouts ensuring friction-free transition from legacy workflows to offline automated stacks.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Governance:</span><span class="text-primary font-medium">FERPA · ISO-27001 Stacks</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">667E · DC89 · 41B3</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Statutory Compliance &amp; Scaled Ops</span></div></div><!-- Member 6: Col. Retd. Arvind Deshmukh --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Col. Retd. Arvind Deshmukh" src="assets/images/stitch/stitch_asset_05.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Col. Retd. Arvind Deshmukh</h3><p class="font-body-muted text-body-muted text-secondary">Principal Security Architect</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">ZERO-EGRESS &amp; SECURITY</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Oversees air-gapped cryptographic protocols, zero-egress audits, hardware security module (HSM) attestation, and statutory compliance across critical deployments.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Certification:</span><span class="text-primary font-medium">FIPS 140-3 Cryptographic HSM</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">FF83 · 9910 · 37A8</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Defense-Grade HSM &amp; Cryptography</span></div></div></div><!-- Navigation Footer and Indicators --><div class="flex items-center justify-between pt-space-md border-t border-outline-variant/40 mt-space-md"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span id="team-counter" class="font-label-structural text-label-structural text-secondary uppercase tracking-wider">Active Slide 1 of 6 · Hover to Pause Autoplay</span></div><div class="flex items-center gap-1.5" id="team-dots"><button class="w-6 h-1 rounded-full bg-primary inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 1"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 2"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 3"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 4"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 5"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 6"></button></div></div><script>(function(){
+  const slider = document.getElementById('team-slider');
+  const prevBtn = document.getElementById('team-prev');
+  const nextBtn = document.getElementById('team-next');
+  const progressBar = document.getElementById('carousel-progress-bar');
+  const counterText = document.getElementById('team-counter');
+  const toggleBtn = document.getElementById('autoplay-toggle-btn');
+  const autoplayIcon = document.getElementById('autoplay-icon');
+  const autoplayStatusText = document.getElementById('autoplay-status-text');
+  const dots = document.querySelectorAll('#team-dots button');
+  if(!slider) return;
+
+  let isPaused = false;
+  let currentIndex = 0;
+  const totalSlides = 6;
+  const intervalDuration = 4500;
+  let stepTime = 50;
+  let elapsed = 0;
+  let timer = null;
+
+  function getCardWidth() {
+    const card = slider.querySelector('.snap-start');
+    return card ? card.offsetWidth + 24 : 380;
+  }
+
+  function updateDots(index) {
+    dots.forEach((dot, idx) => {
+      if(idx === index) {
+        dot.className = 'w-6 h-1 rounded-full bg-primary inline-block transition-all cursor-pointer border-0';
+      } else {
+        dot.className = 'w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0';
+      }
+    });
+    if(counterText) {
+      counterText.textContent = 'Active Slide ' + (index + 1) + ' of ' + totalSlides + ' · ' + (isPaused ? 'Paused' : 'Hover to Pause');
+    }
+  }
+
+  function scrollToIndex(index) {
+    currentIndex = (index + totalSlides) % totalSlides;
+    const scrollPos = currentIndex * getCardWidth();
+    slider.scrollTo({ left: scrollPos, behavior: 'smooth' });
+    updateDots(currentIndex);
+    elapsed = 0;
+    if(progressBar) progressBar.style.width = '0%';
+  }
+
+  function startTimer() {
+    if(timer) clearInterval(timer);
+    timer = setInterval(() => {
+      if(isPaused) return;
+      elapsed += stepTime;
+      const pct = Math.min((elapsed / intervalDuration) * 100, 100);
+      if(progressBar) progressBar.style.width = pct + '%';
+      if(elapsed >= intervalDuration) {
+        scrollToIndex(currentIndex + 1);
+      }
+    }, stepTime);
+  }
+
+  if(prevBtn) prevBtn.addEventListener('click', () => scrollToIndex(currentIndex - 1));
+  if(nextBtn) nextBtn.addEventListener('click', () => scrollToIndex(currentIndex + 1));
+
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => scrollToIndex(idx));
+  });
+
+  slider.addEventListener('mouseenter', () => { isPaused = true; updateDots(currentIndex); });
+  slider.addEventListener('mouseleave', () => { isPaused = false; updateDots(currentIndex); });
+
+  if(toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      isPaused = !isPaused;
+      if(autoplayIcon) autoplayIcon.textContent = isPaused ? 'play_arrow' : 'pause';
+      if(autoplayStatusText) autoplayStatusText.textContent = isPaused ? 'Autoplay Paused' : 'Autoplay Active';
+      updateDots(currentIndex);
+    });
+  }
+
+  slider.addEventListener('scroll', () => {
+    const width = getCardWidth();
+    const calculated = Math.round(slider.scrollLeft / width);
+    if(calculated !== currentIndex && calculated >= 0 && calculated < totalSlides) {
+      currentIndex = calculated;
+      updateDots(currentIndex);
+    }
+  }, { passive: true });
+
+  updateDots(0);
+  startTimer();
+})();</script></div><div class="mt-space-xl p-space-lg bg-surface-container-low border border-outline-variant/40 rounded-2xl">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-structural text-label-structural text-secondary uppercase">ORGANIZATIONAL COHORTS</span>
+<span class="font-label-structural text-[11px] text-primary font-semibold">SOVEREIGN R&amp;D TEAMS</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Engineering Groups &amp; Culture</h3>
+<p class="font-body-default text-body-default text-on-surface-variant mb-space-md">
+Our laboratory is structured into three cross-functional sovereign teams: Applied AI &amp; Vision Transformers, Kinematics &amp; Real-Time Systems, and Zero-Egress Cryptographic Infrastructure. We foster a culture of deep mathematical rigor, reproducible benchmarking, and direct hands-on prototype manufacturing.
+</p>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-2 border-t border-outline-variant/30">
+<span class="font-label-structural text-[11px] text-secondary">Currently seeking Principal Robotics Engineers &amp; ViT Researchers</span>
+<a href="contact.html?type=careers" class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-on-primary font-label-interface text-label-interface font-medium rounded-xl hover:bg-primary-container transition-colors shadow-sm">
+<span>Explore Engineering Careers</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div></section>
+<!-- Geographic Engineering Nodes -->
+<section class="w-full bg-surface-container-lowest py-space-xl lg:py-24 border-b border-outline-variant/40"><div class="max-w-7xl mx-auto px-gutter"><div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md"><div><span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest block mb-space-xs">Physical Footprint</span><h2 class="font-headline-md text-headline-md text-primary tracking-tight">Geographic Engineering Nodes</h2><div id="geo-nodes"></div></div><p class="font-body-muted text-body-muted text-secondary max-w-md">Dual physical facilities dedicated to isolated research streams, mechanical testing cells, and sovereign inferencing clusters.</p></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter"><div class="bg-surface p-space-lg flex flex-col justify-between border border-outline-variant/50 shadow-sm rounded-2xl card-hover-lift"><div><div class="flex items-center justify-between mb-space-md"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span class="font-headline-sm text-headline-sm text-primary font-semibold">Delhi NCR Engineering Complex</span></div><span class="font-label-structural text-[10px] uppercase tracking-wider px-2 py-0.5 bg-surface-container-lowest border border-outline-variant/40 text-primary rounded-lg">Headquarters</span></div><p class="font-body-default text-body-default text-secondary mb-space-lg">Housing the central Applied AI Lab, core model training clusters, and administrative sovereign cloud telemetry operations. Focused on handwriting dataset generation and cryptographic attestation.</p><div class="w-full h-56 bg-cover bg-center border border-outline-variant/40 shadow-sm mb-space-md rounded-xl" data-location="Sector 62, Noida, Uttar Pradesh, India" style="background-image: url(&quot;assets/images/stitch/stitch_asset_01.jpg&quot;);"></div></div><div class="grid grid-cols-3 gap-space-sm pt-space-sm bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Applied AI &amp; Vision</span></div><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Floor Space</span><span class="font-label-structural text-[11px] text-primary font-medium">18,500 Sq. Ft.</span></div><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Compliance</span><span class="font-label-structural text-[11px] text-primary font-medium">ISO-27001</span></div></div></div><div class="bg-surface p-space-lg flex flex-col justify-between border border-outline-variant/50 shadow-sm rounded-2xl card-hover-lift"><div><div class="flex items-center justify-between mb-space-md"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span><span class="font-headline-sm text-headline-sm text-primary font-semibold">Bengaluru Mechatronics Lab</span></div><span class="font-label-structural text-[10px] uppercase tracking-wider px-2 py-0.5 bg-surface-container-lowest border border-outline-variant/40 text-primary rounded-lg">Physical Computing</span></div><p class="font-body-default text-body-default text-secondary mb-space-lg">Dedicated to robotic arm testing rigs, sensor calibration loops, kinematic dynamometer evaluations, and micro-fabrication cleanrooms for custom PCB integration.</p><div class="w-full h-56 bg-cover bg-center border border-outline-variant/40 shadow-sm mb-space-md rounded-xl" data-location="Whitefield, Bengaluru, Karnataka, India" style="background-image: url(&quot;assets/images/stitch/stitch_asset_06.jpg&quot;);"></div></div><div class="grid grid-cols-3 gap-space-sm pt-space-sm bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Robotics &amp; RTOS</span></div><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Fabrication</span><span class="font-label-structural text-[11px] text-primary font-medium">Class 10K Cleanroom</span></div><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Kinematics</span><span class="font-label-structural text-[11px] text-primary font-medium">6-DoF Validation</span></div></div></div></div></div></section>
+<!-- Technical Inquiry Callout -->
+<section class="w-full bg-primary text-on-primary py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="max-w-2xl">
+<span class="font-label-structural text-label-structural text-on-primary-container uppercase tracking-widest block mb-space-xs">Institutional Direct Line</span>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-space-xs">Collaborate With Our Engineering Principals</h3>
+<p class="font-body-default text-body-default text-surface-container-highest">
+          We invite institutional partners, research bodies, and procurement officers to inspect our offline prototypes and sovereign architectures under NDA.
         </p>
-
-        <!-- Executive Corporate Metadata Strip -->
-        <div class="entity-metadata-strip">
-          <div class="entity-metadata-item"><strong>ENTITY:</strong> JAITRAYA TECHNOLABS</div>
-          <div class="entity-metadata-item"><strong>MANDATE:</strong> SOVEREIGN DETERMINISTIC SYSTEMS</div>
-          <div class="entity-metadata-item"><strong>STATUS:</strong> ACTIVE PRODUCTION &amp; R&amp;D</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<a class="px-5 py-3 bg-surface-container-lowest text-primary font-label-interface text-label-interface font-medium hover:bg-surface-container-low transition-colors inline-flex items-center gap-2 rounded-xl" data-path="contact-us" href="contact.html?type=careers">
+<span>Schedule Technical Briefing</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</div></main>
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/60">
+  <div class="max-w-7xl mx-auto px-gutter pt-space-xl pb-space-lg">
+    <div class="footer-grid footer-col grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl mb-space-xl">
+      <div class="lg:col-span-5 flex flex-col items-start">
+        <div class="flex items-center gap-space-sm mb-space-md">
+          <img alt="Jaitraya TechnoLabs Logo" class="h-9 w-auto object-contain shrink-0" src="assets/images/logos/jaitraya-icon-darkmode.png">
+          <div class="flex flex-col justify-center">
+            <span class="font-headline-sm text-[14px] font-semibold tracking-tight text-primary leading-tight">JAITRAYA TECHNOLABS</span>
+            <span class="font-label-structural text-[9px] uppercase tracking-widest text-secondary leading-none mt-1">Executive Systems Architecture</span>
+          </div>
+        </div>
+        <p class="font-body-muted text-body-muted text-on-surface-variant max-w-sm mb-space-md">
+          Parent technology company engineering intelligent software systems, physical robotics, and applied artificial intelligence.
+        </p>
+        <div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+          <span class="font-label-structural text-[10px] tracking-wider uppercase px-2 py-0.5 rounded border border-outline-variant/80 bg-surface-container-lowest text-secondary">ISO-27001 Certified</span>
+          <span class="font-label-structural text-[10px] tracking-wider uppercase px-2 py-0.5 rounded border border-outline-variant/80 bg-surface-container-lowest text-secondary">SOC-2 Type II Aligned</span>
         </div>
       </div>
-    </section>
-
-    <!-- Editorial Thesis & Official Brand Keynote Spotlight -->
-    <section class="section section-portfolio-canvas">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <span class="section-label">Founding Philosophy</span>
-          <h2 class="section-title">The Deterministic Alternative</h2>
-          <p class="section-desc">
-            Why we reject brittle cloud wrappers in favor of air-gapped, mathematically verifiable sovereign software.
-          </p>
-        </div>
-
-        <!-- Comparative Thesis Grid -->
-        <div class="thesis-grid" data-reveal>
-          <div class="thesis-card thesis-card-dilemma">
-            <span class="discipline-badge" style="color: #DC2626; background: rgba(220, 38, 38, 0.08); border-color: rgba(220, 38, 38, 0.2);">THE INDUSTRY DILEMMA</span>
-            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.75rem;">Speculative AI &amp; Cloud Telemetry Leakage</h3>
-            <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-secondary); margin-bottom: 1.25rem;">
-              The technology industry has flooded high-stakes institutions with hasty API wrappers and probabilistic language models prone to hallucinations. In higher education examinations and classified research laboratories, uncontrolled guessing and third-party cloud data egress represent unacceptable operational, legal, and regulatory liabilities.
-            </p>
-            <div style="font-size: 0.85rem; font-weight: 600; color: #DC2626; margin-top: auto;">&times; Speculative hallucination &bull; Third-party data egress &bull; Black-box opacity</div>
-          </div>
-
-          <div class="thesis-card thesis-card-mandate">
-            <span class="discipline-badge" style="color: var(--color-brand); background: var(--color-brand-subtle); border-color: rgba(0, 40, 105, 0.2);">THE JAITRAYA MANDATE</span>
-            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.75rem;">Air-Gapped Sovereignty &amp; Deterministic Rigor</h3>
-            <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-secondary); margin-bottom: 1.25rem;">
-              At Jaitraya Technolabs, we engineer systems bounded by first-principles mathematics. Our computer vision pipelines, offline vector retrievers, and rubric matching engines operate strictly air-gapped. Every automated step is verifiable, explainable, and subordinated to mandatory human oversight.
-            </p>
-            <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-brand); margin-top: auto;">&check; 100% Air-Gapped Compute &bull; Zero Hallucination &bull; Faculty-in-the-Loop</div>
-          </div>
-        </div>
-
-        <!-- Official Brand Keynote Spotlight (Retina Monogram Lockup) -->
-        <div class="card card-hover glass-card" style="padding: 3rem 2.5rem; text-align: center; position: relative; overflow: hidden;" data-reveal data-reveal-delay="100">
-          <div style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
-            <img src="assets/images/logos/jaitraya-icon-darkmode.png" alt="Jaitraya Monogram" style="width: 44px; height: auto;">
-            <span style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-brand);">
-              Corporate Identity &amp; Motto
-            </span>
-          </div>
-
-          <blockquote style="font-family: var(--font-heading); font-size: clamp(1.25rem, 2.8vw, 1.65rem); font-weight: 700; line-height: 1.45; color: var(--color-text-primary); max-width: 820px; margin: 0 auto 1.75rem auto; text-wrap: balance;">
-            &ldquo;Ideas without rigorous engineering are merely hypotheses. Intelligence is only valuable when it produces verifiable real-world impact.&rdquo;
-          </blockquote>
-
-          <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-            <div style="height: 1px; width: 60px; background: rgba(0, 40, 105, 0.2);"></div>
-            <div style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; color: var(--color-brand); letter-spacing: 0.08em;">
-              &mdash; IDEAS &middot; INTELLIGENCE &middot; IMPACT &mdash;
-            </div>
-            <div style="height: 1px; width: 60px; background: rgba(0, 40, 105, 0.2);"></div>
-          </div>
-        </div>
+      <div class="lg:col-span-2 lg:col-start-7 flex flex-col gap-space-sm">
+        <span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Solutions &amp; Platforms</span>
+        <ul class="flex flex-col gap-space-xs font-body-muted text-body-muted">
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="solutions.html#software">Software &amp; IT Solutions</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="solutions.html#hardware">Hardware &amp; Robotics</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="products.html#mulyankan-deep-dive">Mulyankan AI</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="products.html#mira-deep-dive">MIRA Engine</a></li>
+        </ul>
       </div>
-    </section>
-
-    <!-- Mission & Vision -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <span class="section-label">Strategic Horizon</span>
-          <h2 class="section-title">Mission &amp; Long-Term Direction</h2>
-          <p class="section-desc">
-            Positioned as a global-first product studio, our roadmap focuses on mission-critical operational challenges in education and automated governance.
-          </p>
-        </div>
-
-        <div class="grid-2" data-reveal data-reveal-delay="150">
-          <div class="card card-hover glass-card">
-            <span class="section-label" style="align-self: flex-start;">Our Mission</span>
-            <h3 class="card-title" style="margin-top: 0.25rem; font-size: 1.35rem;">Disciplined Product Engineering</h3>
-            <p class="card-desc">
-              To research, architect, and commercialize purpose-built technology products that eliminate repetitive human drudgery, accelerate institutional workflows, and uphold deterministic standards of reliability, explainability, and data security.
-            </p>
-          </div>
-
-          <div class="card card-hover glass-card">
-            <span class="section-label" style="align-self: flex-start;">Our Vision</span>
-            <h3 class="card-title" style="margin-top: 0.25rem; font-size: 1.35rem;">Autonomous Intelligent Systems (2026&ndash;2030)</h3>
-            <p class="card-desc">
-              To establish Jaitraya Technolabs as an internationally recognized product engineering firm known for solving structural operational problems where computer vision, machine reasoning, and human moderation converge.
-            </p>
-          </div>
-        </div>
-
-        <!-- Strategic Engineering Evolution Roadmap -->
-        <div style="margin-top: 4rem;" data-reveal>
-          <div class="section-header" style="margin-bottom: 2rem;">
-            <span class="section-label">Execution Milestones</span>
-            <h3 style="font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; color: var(--color-text-primary);">Engineering Evolution (2024&ndash;2026+)</h3>
-            <p class="section-desc">
-              From foundational computer vision mathematics to sovereign institutional deployments.
-            </p>
-          </div>
-
-          <div class="roadmap-timeline-grid">
-            <div class="roadmap-card">
-              <span class="roadmap-phase-tag">PHASE 01</span>
-              <div class="roadmap-year">2024</div>
-              <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-primary);">Algorithmic Foundations</h4>
-              <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.5;">
-                Research and development of multi-stroke handwriting segmentation, sub-degree page deskewing, and zero-hallucination rubric deduction trees.
-              </p>
-            </div>
-
-            <div class="roadmap-card">
-              <span class="roadmap-phase-tag">PHASE 02</span>
-              <div class="roadmap-year">2025</div>
-              <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-primary);">Mulyankan AI Launch</h4>
-              <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.5;">
-                Production deployment of Mulyankan AI live beta, academic institutional pilots, and faculty-moderated grading canvas workflows.
-              </p>
-            </div>
-
-            <div class="roadmap-card">
-              <span class="roadmap-phase-tag">PHASE 03</span>
-              <div class="roadmap-year">2026</div>
-              <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-primary);">Sovereign MIRA R&amp;D</h4>
-              <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.5;">
-                Active laboratory R&amp;D on MIRA air-gapped multimodal retrieval workstation, local Ollama integration, and schematic vector search.
-              </p>
-            </div>
-
-            <div class="roadmap-card">
-              <span class="roadmap-phase-tag">PHASE 04</span>
-              <div class="roadmap-year">2026&ndash;2030</div>
-              <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-primary);">Institutional Expansion</h4>
-              <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.5;">
-                National examination board scaling, cross-border research lab consortiums, and distributed sovereign inference appliances.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="lg:col-span-2 flex flex-col gap-space-sm">
+        <span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Technology</span>
+        <ul class="flex flex-col gap-space-xs font-body-muted text-body-muted">
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="technology.html#computer-vision">Computer Vision</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="technology.html#applied-ai">Applied AI</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="technology.html#vector-rag">Vector RAG</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="technology.html#human-in-loop">Human-in-the-Loop</a></li>
+        </ul>
       </div>
-    </section>
-
-    <!-- 4 Engineering Principles -->
-    <section class="section section-surface">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <span class="section-label">Operating Tenets</span>
-          <h2 class="section-title">Our Engineering Principles</h2>
-          <p class="section-desc">
-            The foundational standards that guide how we evaluate ideas, architect software, and ship production systems.
-          </p>
-        </div>
-
-        <div class="grid-4" data-reveal data-reveal-delay="150">
-          <div class="card card-hover glass-card">
-            <div class="stat-number" style="font-size: 2rem; color: var(--color-brand); margin-bottom: 0.75rem;">01</div>
-            <h3 class="card-title" style="font-size: 1.15rem;">Human-in-the-Loop Authority</h3>
-            <p class="card-desc">
-              In high-stakes domains, AI should assist and accelerate professional human decision-makers, never replace them without audit trails.
-            </p>
-          </div>
-
-          <div class="card card-hover glass-card">
-            <div class="stat-number" style="font-size: 2rem; color: var(--color-brand); margin-bottom: 0.75rem;">02</div>
-            <h3 class="card-title" style="font-size: 1.15rem;">First-Principles Architecture</h3>
-            <p class="card-desc">
-              We design software around mathematical bounds and physical realities, rather than stacking brittle third-party dependencies.
-            </p>
-          </div>
-
-          <div class="card card-hover glass-card">
-            <div class="stat-number" style="font-size: 2rem; color: var(--color-brand); margin-bottom: 0.75rem;">03</div>
-            <h3 class="card-title" style="font-size: 1.15rem;">Deterministic Reliability</h3>
-            <p class="card-desc">
-              Statistical variance must be bounded. We pair neural model inference with strict rule graphs to eliminate hallucinations.
-            </p>
-          </div>
-
-          <div class="card card-hover glass-card">
-            <div class="stat-number" style="font-size: 2rem; color: var(--color-brand); margin-bottom: 0.75rem;">04</div>
-            <h3 class="card-title" style="font-size: 1.15rem;">Institutional Transparency</h3>
-            <p class="card-desc">
-              Every automated score, layout bounding box, and rubric evaluation must provide complete step-by-step explainability.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Executive Leadership, Founders, Governance & Engineering Team Section -->
-    <section class="section" id="team">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <span class="section-label">Organization &amp; Governance</span>
-          <h2 class="section-title">Founders, Directors &amp; Systems Leadership</h2>
-          <p class="section-desc">
-            Statutory board directors, founding technologists, strategic advisors, and core operations analysts steering Jaitraya Technolabs.
-          </p>
-        </div>
-
-        <!-- 1. Founding Members & Systems Architects -->
-        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;" data-reveal>
-          <span class="section-label" style="margin-bottom: 0;">First Principles</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-text-primary); margin: 0; letter-spacing: -0.02em;">Founding Team &amp; Systems Architects</h3>
-        </div>
-
-        <div class="grid-3" data-reveal data-reveal-delay="100" style="margin-bottom: 3.5rem;">
-          <!-- Founder 1 -->
-          <div class="card card-hover glass-card" style="display: flex; flex-direction: column; padding: 2.25rem; border-top: 3px solid var(--color-brand);">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
-              <img src="assets/images/team/founder-1.svg" alt="Founder &amp; Chief Technology Architect" width="58" height="58" style="border-radius: 14px; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid rgba(0, 40, 105, 0.12);">
-              <div>
-                <h4 style="font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.2rem; font-weight: 700;">Founder</h4>
-                <span class="badge badge-brand" style="font-size: 0.72rem;">Founding Member</span>
-              </div>
-            </div>
-            <div style="font-size: 0.8rem; color: var(--color-brand); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem;">
-              Algorithmic Research &amp; Product Architecture
-            </div>
-            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
-              Conceived Jaitraya Technolabs' founding thesis of deterministic, sovereign machine intelligence. Directs core computer vision algorithms, rubric-anchored deduction models, and air-gapped system pipelines across Mulyankan AI and MIRA.
-            </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-top: auto;">
-              <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Systems Architecture</span>
-              <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Computer Vision</span>
-              <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Sovereign AI</span>
-            </div>
-          </div>
-
-          <!-- Founder 2 -->
-          <div class="card card-hover glass-card" style="display: flex; flex-direction: column; padding: 2.25rem; border-top: 3px solid #0284C7;">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
-              <img src="assets/images/team/founder-2.svg" alt="Co-Founder &amp; Head of Systems Engineering" width="58" height="58" style="border-radius: 14px; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid rgba(2, 132, 199, 0.15);">
-              <div>
-                <h4 style="font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.2rem; font-weight: 700;">Co-Founder</h4>
-                <span class="badge badge-brand" style="font-size: 0.72rem; background: rgba(2, 132, 199, 0.1); color: #0284C7; border-color: rgba(2, 132, 199, 0.25);">Founding Member</span>
-              </div>
-            </div>
-            <div style="font-size: 0.8rem; color: #0284C7; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem;">
-              Core Infrastructure &amp; Systems Engineering
-            </div>
-            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
-              Co-founded Jaitraya Technolabs to solve mission-critical operational bottlenecks. Leads infrastructure scalability, local vector databases, multi-stroke handwriting segmentation pipelines, and air-gapped runtime hardening.
-            </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-top: auto;">
-              <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Distributed Systems</span>
-              <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Edge Compute</span>
-              <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Vector DB</span>
-            </div>
-          </div>
-
-          <!-- Founder 3 -->
-          <div class="card card-hover glass-card" style="display: flex; flex-direction: column; padding: 2.25rem; border-top: 3px solid #6366F1;">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
-              <img src="assets/images/team/founder-3.svg" alt="Founding Member &amp; Lead Research Scientist" width="58" height="58" style="border-radius: 14px; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid rgba(99, 102, 241, 0.15);">
-              <div>
-                <h4 style="font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.2rem; font-weight: 700;">Founding Member</h4>
-                <span class="badge badge-brand" style="font-size: 0.72rem; background: rgba(99, 102, 241, 0.1); color: #6366F1; border-color: rgba(99, 102, 241, 0.25);">Founding Member</span>
-              </div>
-            </div>
-            <div style="font-size: 0.8rem; color: #6366F1; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem;">
-              Multimodal R&amp;D &amp; Reasoning Models
-            </div>
-            <p style="font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
-              Core founding researcher specializing in offline multimodal retrieval, mathematical deduction bounds, zero-hallucination verification algorithms, and acoustic symposium indexing within MIRA.
-            </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); margin-top: auto;">
-              <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Multimodal RAG</span>
-              <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Reasoning Models</span>
-              <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Audio Indexing</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. Board of Directors (Statutory Governance) -->
-        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;" data-reveal>
-          <span class="section-label" style="margin-bottom: 0;">Statutory Governance</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-text-primary); margin: 0; letter-spacing: -0.02em;">Board of Directors</h3>
-        </div>
-
-        <div class="grid-2" data-reveal data-reveal-delay="120" style="margin-bottom: 3.5rem;">
-          <!-- Director 1 -->
-          <div class="card card-hover glass-card" style="display: flex; gap: 1.75rem; align-items: flex-start; padding: 2.25rem; border-top: 3px solid #1E293B;">
-            <img src="assets/images/team/director-1.svg" alt="Director &amp; Designated Partner" width="64" height="64" style="border-radius: 16px; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid rgba(0, 40, 105, 0.12);">
-            <div style="flex: 1;">
-              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
-                <h4 style="font-size: 1.25rem; color: var(--color-text-primary); margin-bottom: 0; font-weight: 700;">Director</h4>
-                <span class="badge badge-brand">Designated Partner</span>
-              </div>
-              <div style="font-size: 0.82rem; color: var(--color-brand); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem;">
-                Corporate Governance &amp; Statutory Fiduciary Oversight
-              </div>
-              <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-                Serves on the statutory board directing institutional compliance, corporate regulatory filings, statutory auditing protocols, and institutional governance frameworks.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted);">
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Statutory Compliance</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Corporate Governance</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Fiduciary Oversight</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Director 2 -->
-          <div class="card card-hover glass-card" style="display: flex; gap: 1.75rem; align-items: flex-start; padding: 2.25rem; border-top: 3px solid #1E293B;">
-            <img src="assets/images/team/director-2.svg" alt="Director &amp; Designated Partner" width="64" height="64" style="border-radius: 16px; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid rgba(0, 40, 105, 0.12);">
-            <div style="flex: 1;">
-              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
-                <h4 style="font-size: 1.25rem; color: var(--color-text-primary); margin-bottom: 0; font-weight: 700;">Director</h4>
-                <span class="badge badge-brand">Designated Partner</span>
-              </div>
-              <div style="font-size: 0.82rem; color: var(--color-brand); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem;">
-                Operations Stewardship &amp; Institutional Relations
-              </div>
-              <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-                Serves on the statutory board stewarding institutional capital administration, stakeholder governance, university testing partnerships, and organizational policy.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted);">
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Stakeholder Governance</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Institutional Stewardship</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Policy Administration</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Advisory Board -->
-        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;" data-reveal>
-          <span class="section-label" style="margin-bottom: 0;">Strategic Counsel</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-text-primary); margin: 0; letter-spacing: -0.02em;">Advisory Board</h3>
-        </div>
-
-        <div class="grid-2" data-reveal data-reveal-delay="150" style="margin-bottom: 3.5rem;">
-          <!-- Advisor 1: Strategic Advisor -->
-          <div class="card card-hover glass-card" style="display: flex; gap: 1.75rem; align-items: flex-start; padding: 2.25rem; border-top: 3px solid #3B387E;">
-            <img src="assets/images/team/advisor-strategic.svg" alt="Strategic Advisor" width="64" height="64" style="border-radius: 16px; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid rgba(59, 56, 126, 0.15);">
-            <div style="flex: 1;">
-              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
-                <h4 style="font-size: 1.25rem; color: var(--color-text-primary); margin-bottom: 0; font-weight: 700;">Strategic Advisor</h4>
-                <span class="badge badge-mira">Institutional Strategy</span>
-              </div>
-              <div style="font-size: 0.82rem; color: var(--color-mira); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem;">
-                Institutional Alliances &amp; Academic Strategy
-              </div>
-              <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-                Advises on national-scale examination board engagements, higher education policy alignment, sovereign scientific research laboratory partnerships, and deep-tech organizational scaling.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted);">
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Academic Strategy</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Institutional Alliances</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Policy Alignment</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Advisor 2: Equity Advisor -->
-          <div class="card card-hover glass-card" style="display: flex; gap: 1.75rem; align-items: flex-start; padding: 2.25rem; border-top: 3px solid #059669;">
-            <img src="assets/images/team/advisor-equity.svg" alt="Equity Advisor" width="64" height="64" style="border-radius: 16px; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid rgba(5, 150, 105, 0.15);">
-            <div style="flex: 1;">
-              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
-                <h4 style="font-size: 1.25rem; color: var(--color-text-primary); margin-bottom: 0; font-weight: 700;">Equity Advisor</h4>
-                <span class="badge badge-active" style="background: rgba(16, 185, 129, 0.12); color: #059669; border-color: rgba(16, 185, 129, 0.25);">Capital &amp; Equity</span>
-              </div>
-              <div style="font-size: 0.82rem; color: #059669; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem;">
-                Capital Architecture &amp; Corporate Equity Strategy
-              </div>
-              <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-                Advises on corporate capital structuring, institutional equity frameworks, long-term asset valuation, and governance compliance for sustainable sovereign technology development.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted);">
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Capital Architecture</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Equity Structuring</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Corporate Governance</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Operations & Specialized Leads -->
-        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;" data-reveal>
-          <span class="section-label" style="margin-bottom: 0;">Execution Leads</span>
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-text-primary); margin: 0; letter-spacing: -0.02em;">Business Development &amp; Security</h3>
-        </div>
-
-        <div class="grid-2" data-reveal data-reveal-delay="180">
-          <!-- Lead 1: Business Development Lead -->
-          <div class="card card-hover glass-card" style="display: flex; gap: 1.75rem; align-items: flex-start; padding: 2.25rem; border-top: 3px solid #2563EB;">
-            <img src="assets/images/team/lead-bd.svg" alt="Business Development Lead" width="64" height="64" style="border-radius: 16px; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid rgba(37, 99, 235, 0.15);">
-            <div style="flex: 1;">
-              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
-                <h4 style="font-size: 1.25rem; color: var(--color-text-primary); margin-bottom: 0; font-weight: 700;">Business Development Lead</h4>
-                <span class="badge badge-brand">Institutional Growth</span>
-              </div>
-              <div style="font-size: 0.82rem; color: var(--color-brand); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem;">
-                University Partnerships &amp; Enterprise Rollout
-              </div>
-              <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-                Spearheads institutional onboarding for Mulyankan AI across universities, state examination councils, and autonomous colleges; manages client relationships and pilot verification.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted);">
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Institutional Ingestion</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">University Pilots</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Enterprise Rollout</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Lead 2: Security Analyst -->
-          <div class="card card-hover glass-card" style="display: flex; gap: 1.75rem; align-items: flex-start; padding: 2.25rem; border-top: 3px solid #D97706;">
-            <img src="assets/images/team/lead-security.svg" alt="Security Analyst" width="64" height="64" style="border-radius: 16px; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 1px solid rgba(217, 119, 6, 0.15);">
-            <div style="flex: 1;">
-              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
-                <h4 style="font-size: 1.25rem; color: var(--color-text-primary); margin-bottom: 0; font-weight: 700;">Security Analyst</h4>
-                <span class="badge" style="background: rgba(245, 158, 11, 0.12); color: #D97706; border: 1px solid rgba(245, 158, 11, 0.25);">Data Sovereignty</span>
-              </div>
-              <div style="font-size: 0.82rem; color: #D97706; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.75rem;">
-                Air-Gap Verification &amp; Compliance Auditing
-              </div>
-              <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-                Audits local air-gapped system isolation, verifies zero network telemetry egress across workstation setups, and conducts institutional penetration testing for examination data security.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted);">
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Air-Gapped Isolation</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Telemetry Auditing</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.5rem; border-radius: 4px;">Penetration Testing</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Technical Disciplines -->
-        <div style="margin-top: 3.5rem;">
-          <div class="section-header" data-reveal style="margin-bottom: 2rem;">
-            <span class="section-label">Engineering Culture</span>
-            <h3 style="font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; color: var(--color-text-primary);">Multidisciplinary Engineering Groups</h3>
-            <p class="section-desc">
-              Researchers and systems architects collaborating from first-principles math to sovereign production deployment.
-            </p>
-          </div>
-
-          <div class="grid-3" data-reveal data-reveal-delay="150">
-            <div class="card card-hover glass-card">
-              <div class="discipline-badge">VISION &amp; OCR</div>
-              <h4 class="card-title" style="font-size: 1.15rem; margin-bottom: 0.5rem;">Computer Vision &amp; OCR</h4>
-              <p class="card-desc" style="margin-bottom: 1rem;">
-                Specialists in document preprocessing, handwriting segmentation, rotational geometry, and neural character recognition.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted); margin-top: auto;">
-                <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">OpenCV</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">PyTorch</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">ONNX Runtime</span>
-              </div>
-            </div>
-
-            <div class="card card-hover glass-card">
-              <div class="discipline-badge">REASONING &amp; ML</div>
-              <h4 class="card-title" style="font-size: 1.15rem; margin-bottom: 0.5rem;">Applied ML &amp; Rubric Alignment</h4>
-              <p class="card-desc" style="margin-bottom: 1rem;">
-                Researchers engineering constrained reasoning models, step-scoring deduction logic, and zero-hallucination evaluation guards.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted); margin-top: auto;">
-                <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Rubric Graphs</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Vector Embeddings</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Deterministic Deductions</span>
-              </div>
-            </div>
-
-            <div class="card card-hover glass-card">
-              <div class="discipline-badge">DISTRIBUTED &amp; HITL</div>
-              <h4 class="card-title" style="font-size: 1.15rem; margin-bottom: 0.5rem;">Full-Stack &amp; Distributed Systems</h4>
-              <p class="card-desc" style="margin-bottom: 1rem;">
-                Systems architects building asynchronous queue infrastructure, interactive canvas interfaces, and high-security institutional APIs.
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted); margin-top: auto;">
-                <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Electron.js</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">FastAPI</span>
-                <span style="background: #F1F5F9; padding: 0.15rem 0.45rem; border-radius: 4px;">Audit Canvas</span>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top: 2.5rem; text-align: center;" data-reveal>
-            <p style="color: var(--color-text-secondary); margin-bottom: 1rem; font-size: 0.95rem;">
-              Interested in collaborating on high-consequence sovereign AI architectures?
-            </p>
-            <a href="contact.html?type=careers" class="btn btn-secondary">Inquire About Engineering Opportunities ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <a href="index.html" class="brand-link" aria-label="Jaitraya TechnoLabs Home">
-            <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya TechnoLabs" class="brand-logo-img">
-          </a>
-          <p class="footer-brand-desc">
-            Technology product development company engineering intelligent software systems, computer vision, and integrated hardware technology.
-          </p>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Platforms &amp; Solutions</h4>
-          <ul class="footer-links">
-            <li><a href="mulyankan-ai.html" class="footer-link">Mulyankan AI (Live Beta)</a></li>
-            <li><a href="mira.html" class="footer-link">MIRA Platform (Preview)</a></li>
-            <li><a href="solutions.html" class="footer-link">Solutions &amp; Services</a></li>
-            <li><a href="projects.html" class="footer-link">Projects &amp; R&amp;D</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Technology</h4>
-          <ul class="footer-links">
-            <li><a href="technology.html#computer-vision" class="footer-link">Computer Vision &amp; OCR</a></li>
-            <li><a href="technology.html#applied-ai" class="footer-link">Applied AI Alignment</a></li>
-            <li><a href="technology.html#vector-rag" class="footer-link">Offline Vector RAG</a></li>
-            <li><a href="technology.html#human-in-loop" class="footer-link">Human-in-the-Loop</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Company</h4>
-          <ul class="footer-links">
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="technology.html" class="footer-link">Technology &amp; Architecture</a></li>
-            <li><a href="about.html#team" class="footer-link">Leadership &amp; Team</a></li>
-            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 Jaitraya TechnoLabs. All rights reserved.</div>
-        <div class="footer-legal-links">
-          <a href="legal/compliance.html" class="footer-legal-link">Compliance</a>
-          <a href="legal/privacy.html" class="footer-legal-link">Privacy Policy</a>
-          <a href="legal/terms.html" class="footer-legal-link">Terms of Service</a>
-          <a href="legal/cookies.html" class="footer-legal-link">Cookie Notice</a>
-        </div>
+      <div class="lg:col-span-2 flex flex-col gap-space-sm">
+        <span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Company</span>
+        <ul class="flex flex-col gap-space-xs font-body-muted text-body-muted">
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html#team">Team Roster</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html#geo-nodes">Research Labs</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="pt-space-md border-t border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+      <span class="font-label-structural text-[11px] text-secondary">© 2026 Jaitraya TechnoLabs. All rights reserved.</span>
+      <div class="flex items-center gap-space-md font-label-structural text-[11px] text-secondary">
+        <a class="hover:text-primary transition-colors" href="legal/compliance.html">Compliance</a>
+        <span class="text-outline-variant">|</span>
+        <a class="hover:text-primary transition-colors" href="legal/privacy.html">Privacy Policy (Zero-Egress Commitment)</a>
+        <span class="text-outline-variant">|</span>
+        <a class="hover:text-primary transition-colors" href="legal/terms.html">Terms of Service</a>
+        <span class="text-outline-variant">|</span>
+        <a class="hover:text-primary transition-colors" href="legal/cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  <script src="assets/js/main.js"></script>
 </body>
 </html>

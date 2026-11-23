@@ -1,269 +1,635 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full bg-surface" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact &amp; Institutional Inquiries | Jaitraya Technolabs</title>
-  <meta name="description" content="Get in touch with Jaitraya Technolabs for institutional partnerships, Mulyankan AI demonstrations, or technology collaboration.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
+  <meta content="web_standard" name="shell-type">
+  <title>Contact Us — Jaitraya TechnoLabs</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/logos/jaitraya-icon-darkmode.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#03224d",
+            "primary-container": "#1f3864",
+            "secondary": "#555f71",
+            "secondary-container": "#d6e0f5",
+            "surface": "#f7f9ff",
+            "surface-bright": "#f7f9ff",
+            "surface-dim": "#d6dae2",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f0f4fc",
+            "surface-container": "#eaeef6",
+            "surface-container-high": "#e4e8f1",
+            "surface-container-highest": "#dee3eb",
+            "on-surface": "#171c22",
+            "on-surface-variant": "#44474f",
+            "outline": "#747780",
+            "outline-variant": "#c4c6d0"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.75rem",
+            "space-xl": "3rem"
+          },
+          fontFamily: {
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "display-hero": ["Plus Jakarta Sans", "sans-serif"],
+            "body-default": ["Inter", "sans-serif"],
+            "body-lead": ["Inter", "sans-serif"],
+            "body-muted": ["Inter", "sans-serif"],
+            "label-structural": ["IBM Plex Mono", "monospace"],
+            "label-interface": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-
-  <!-- Top Fixed Scroll Progress Bar -->
-  <div id="scroll-progress" aria-hidden="true"></div>
-
-  <!-- Frosted Glass Header (Dark Hero Overlay) -->
-  <header class="site-header header-hero-overlay">
-    <div class="container header-container">
-      <a href="index.html" class="brand-link" aria-label="Jaitraya Technolabs Home">
-        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" class="brand-logo-img">
+<body class="bg-surface-container-lowest text-on-surface font-body-default antialiased">
+<header class="site-header fixed top-0 left-0 right-0 z-50 bg-[#030712] border-b border-white/10 backdrop-blur-md transition-all duration-300" id="main-nav">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="brand-link flex items-center gap-3 group" aria-label="Jaitraya TechnoLabs Home">
+        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya TechnoLabs" class="brand-logo-img h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105" id="nav-logo">
+        <div class="flex flex-col justify-center">
+          <span class="font-headline-sm text-[15px] font-semibold tracking-tight text-white leading-none group-hover:text-slate-200 transition-colors" id="nav-brand-title">JAITRAYA TECHNOLABS</span>
+          <span class="font-label-structural text-[9px] uppercase tracking-widest text-slate-400 leading-none mt-1" id="nav-brand-subtitle">IDEAS · INTELLIGENCE · IMPACT</span>
+        </div>
       </a>
+    </div>
 
-      <!-- Desktop Navigation -->
-      <nav class="desktop-nav" aria-label="Main Navigation">
-        <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="solutions.html" class="nav-link">Solutions</a>
-          <div class="nav-item-dropdown">
-            <a href="products.html" class="nav-link">Products</a>
-            <div class="nav-dropdown-menu">
-              <a href="mulyankan-ai.html" class="dropdown-item">
-                <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" style="width: 28px; height: 28px; border-radius: 6px;">
-                <div>
-                  <div class="dropdown-item-title">Mulyankan AI <span class="badge badge-active" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Live Beta</span></div>
-                  <div class="dropdown-item-desc">Descriptive Exam Evaluation Platform</div>
-                </div>
-              </a>
-              <a href="mira.html" class="dropdown-item">
-                <img src="assets/images/logos/mira-icon.svg" alt="MIRA" style="width: 28px; height: 28px; border-radius: 6px;">
-                <div>
-                  <div class="dropdown-item-title" style="color: var(--color-mira);">MIRA <span class="badge badge-mira" style="font-size: 0.68rem; padding: 0.1rem 0.4rem;">Preview</span></div>
-                  <div class="dropdown-item-desc">Offline Multimodal Research Assistant</div>
-                </div>
-              </a>
-              <a href="products.html" class="dropdown-item" style="border-top: 1px solid var(--color-border); margin-top: 0.25rem; padding-top: 0.5rem;">
-                <span class="dropdown-item-title" style="color: var(--color-brand); font-size: 0.82rem;">Portfolio Overview &rarr;</span>
-              </a>
-            </div>
+    <!-- Desktop Navigation (5 Core Destinations) -->
+    <nav class="desktop-nav hidden md:flex items-center gap-6 h-full" aria-label="Main Navigation">
+      <div class="nav-links flex items-center gap-6">
+        <a href="index.html" class="nav-link font-label-interface text-slate-300 hover:text-white transition-colors py-2">Home</a>
+        <a href="solutions.html" class="nav-link font-label-interface text-slate-300 hover:text-white transition-colors py-2">Solutions</a>
+        <div class="nav-item-dropdown relative group py-2">
+          <a href="products.html" class="nav-link font-label-interface text-slate-300 hover:text-white transition-colors py-2">Products</a>
+          <div class="nav-dropdown-menu hidden group-hover:flex flex-col absolute top-full left-0 w-64 bg-[#0a0f1d] border border-white/10 rounded-xl p-2 shadow-xl backdrop-blur-lg">
+            <a href="mulyankan-ai.html" class="dropdown-item flex items-center gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors">
+              <img src="assets/images/logos/mulyankan-icon.png" alt="Mulyankan AI" class="w-7 h-7 rounded-md">
+              <div>
+                <div class="text-white text-xs font-semibold">Mulyankan AI <span class="badge badge-active text-[10px] text-emerald-400 bg-emerald-400/10 px-1.5 py-0.5 rounded">Live Beta</span></div>
+                <div class="text-slate-400 text-[10px]">Exam Evaluation Platform</div>
+              </div>
+            </a>
+            <a href="mira.html" class="dropdown-item flex items-center gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors">
+              <img src="assets/images/logos/mira-icon.svg" alt="MIRA" class="w-7 h-7 rounded-md">
+              <div>
+                <div class="text-white text-xs font-semibold">MIRA Engine <span class="badge badge-mira text-[10px] text-sky-400 bg-sky-400/10 px-1.5 py-0.5 rounded">Preview R&D</span></div>
+                <div class="text-slate-400 text-[10px]">Offline Multimodal Terminal</div>
+              </div>
+            </a>
           </div>
-          <a href="about.html" class="nav-link">About Us</a>
-          <a href="contact.html" class="nav-link active">Contact Us</a>
         </div>
-      </nav>
-
-      <div class="header-actions">
-        <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
-        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
+        <a href="about.html" class="nav-link font-label-interface text-slate-300 hover:text-white transition-colors py-2">About Us</a>
+        <a href="contact.html" class="nav-link font-label-interface px-4 py-1.5 rounded-full bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 transition-all active" aria-current="page">Contact Us</a>
       </div>
-    </div>
-  </header>
+    </nav>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-drawer-overlay"></div>
-  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
-    <div>
-      <div class="drawer-header">
-        <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya Technolabs" style="height: 34px; width: auto;">
-        <button class="drawer-close" aria-label="Close menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <nav class="drawer-nav">
-        <a href="index.html" class="drawer-link">Home</a>
-        <a href="solutions.html" class="drawer-link">Solutions</a>
-        <a href="products.html" class="drawer-link">Products</a>
-        <a href="about.html" class="drawer-link">About Us</a>
-        <a href="contact.html" class="drawer-link active">Contact Us</a>
-      </nav>
+    <!-- Mobile Navigation Toggle Button -->
+    <div class="flex items-center md:hidden">
+      <button class="mobile-toggle w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
     </div>
-    <div>
-      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Us</a>
-    </div>
-  </aside>
+  </div>
+</header>
 
-  <main id="main-content">
-    <!-- Contact Hero (OLED Dark Gradient) -->
-    <section class="section hero-inner-dark">
-      <div class="container container-narrow" style="text-align: center;" data-reveal>
-        <span class="section-label">Direct Correspondence</span>
-        <h1 style="font-size: clamp(2.25rem, 4.5vw, 3.25rem); font-weight: 800; letter-spacing: -0.035em; margin-bottom: 1.25rem;">
-          Connect with Jaitraya Technolabs
-        </h1>
-        <p class="lead" style="margin-left: auto; margin-right: auto; max-width: 680px;">
-          Reach out to our leadership, product engineers, or institutional evaluation specialists. We welcome university pilot requests, technology discussions, and research inquiries.
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-drawer-overlay fixed inset-0 bg-black/60 z-50 hidden"></div>
+<aside class="mobile-drawer fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#0a0f1d] border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300" aria-label="Mobile Navigation Drawer">
+  <div>
+    <div class="drawer-header flex items-center justify-between pb-6 border-b border-white/10">
+      <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya TechnoLabs" class="h-8 w-auto">
+      <button class="drawer-close w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav flex flex-col gap-4 pt-6">
+      <a href="index.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium">Home</a>
+      <a href="solutions.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium">Solutions</a>
+      <a href="products.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium">Products</a>
+      <a href="about.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium">About Us</a>
+      <a href="contact.html" class="drawer-link text-slate-300 hover:text-white text-base py-2 font-medium active">Contact Us</a>
+    </nav>
+  </div>
+  <div class="pt-6 border-t border-white/10">
+    <a href="contact.html" class="w-full py-3 bg-white text-primary rounded-xl font-medium text-center block">Contact Us</a>
+  </div>
+</aside>
+<script>
+  (function() {
+    const nav = document.getElementById('main-nav');
+    const brandTitle = document.getElementById('nav-brand-title');
+    const brandSub = document.getElementById('nav-brand-subtitle');
+    const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+    const toggle = document.querySelector('.mobile-toggle');
+    const drawer = document.querySelector('.mobile-drawer');
+    const overlay = document.querySelector('.mobile-drawer-overlay');
+    const closeBtn = document.querySelector('.drawer-close');
+
+    if (toggle && drawer && overlay && closeBtn) {
+      function openDrawer() {
+        drawer.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+      function closeDrawer() {
+        drawer.classList.add('translate-x-full');
+        overlay.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+      toggle.addEventListener('click', openDrawer);
+      closeBtn.addEventListener('click', closeDrawer);
+      overlay.addEventListener('click', closeDrawer);
+    }
+
+    function updateNavScroll() {
+      if (!nav) return;
+      if (window.scrollY > 80) {
+        nav.classList.remove('bg-[#030712]', 'border-white/10');
+        nav.classList.add('bg-white/95', 'border-slate-200', 'shadow-sm');
+        if (brandTitle) { brandTitle.classList.remove('text-white'); brandTitle.classList.add('text-slate-900'); }
+        if (brandSub) { brandSub.classList.remove('text-slate-400'); brandSub.classList.add('text-slate-500'); }
+        navLinks.forEach(link => {
+          if (!link.classList.contains('bg-white/10') && !link.classList.contains('bg-primary')) {
+            link.classList.remove('text-slate-300', 'hover:text-white');
+            link.classList.add('text-slate-600', 'hover:text-slate-900');
+          }
+        });
+      } else {
+        nav.classList.remove('bg-white/95', 'border-slate-200', 'shadow-sm');
+        nav.classList.add('bg-[#030712]', 'border-white/10');
+        if (brandTitle) { brandTitle.classList.remove('text-slate-900'); brandTitle.classList.add('text-white'); }
+        if (brandSub) { brandSub.classList.remove('text-slate-500'); brandSub.classList.add('text-slate-400'); }
+        navLinks.forEach(link => {
+          link.classList.remove('text-slate-600', 'hover:text-slate-900');
+          link.classList.add('text-slate-300', 'hover:text-white');
+        });
+      }
+    }
+    window.addEventListener('scroll', updateNavScroll, { passive: true });
+    updateNavScroll();
+  })();
+</script>
+<main class="w-full bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Technical Datum / Telemetry Header Line -->
+<section class="w-full bg-[#030712] text-white pt-24 pb-space-xl border-b border-white/10"><div class="max-w-7xl mx-auto px-gutter"><div class="flex flex-col items-start gap-space-md pt-6 pb-space-lg"><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span class="font-label-structural text-[10px] uppercase tracking-widest text-slate-300 font-medium">SECURE DISCLOSURE CHANNELS // DIRECT ARCHITECT ACCESS</span></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-baseline w-full"><div class="lg:col-span-8"><h1 class="font-display-hero text-display-hero text-white tracking-tight">Structured Inquiry &amp; Institutional Deployment Pipeline.</h1></div><div class="lg:col-span-4 flex flex-col justify-end"><p class="font-body-lead text-body-lead text-slate-300">Connect directly with our systems architects, initiate mutual NDA clearance, or schedule on-premise verification of our physical hardware and offline intelligence suites.</p></div></div><div class="flex flex-wrap items-center gap-space-md pt-2"><a class="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary font-label-interface text-label-interface font-medium rounded-xl hover:bg-slate-300 transition-colors shadow-sm" href="#contactForm"><span>Initialize Briefing</span><span class="material-symbols-outlined text-[18px]">arrow_downward</span></a><a class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white font-label-interface text-label-interface font-medium rounded-xl hover:bg-white/10 hover:border-white transition-all" href="#contactForm"><span>View Cryptographic Keys</span><span class="material-symbols-outlined text-[18px]">key</span></a></div></div><div class="w-full bg-white/[0.04] border border-white/10 p-space-md shadow-sm rounded-xl backdrop-blur-sm mt-space-md"><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-center"><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded bg-white/10 border border-white/15 flex items-center justify-center shrink-0 shadow-sm text-white"><span class="material-symbols-outlined text-[20px]">timer</span></div><div class="flex flex-col"><span class="font-label-structural text-[10px] uppercase tracking-widest text-slate-400">Guaranteed Turnaround</span><span class="font-label-interface text-label-interface text-white font-semibold">Response SLA &lt; 4 hrs</span></div></div><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded bg-white/10 border border-white/15 flex items-center justify-center shrink-0 shadow-sm text-white"><span class="material-symbols-outlined text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-label-structural text-[10px] uppercase tracking-widest text-slate-400">Data Boundary</span><span class="font-label-interface text-label-interface text-white font-semibold">Mutual NDA Enforced</span></div></div><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded bg-white/10 border border-white/15 flex items-center justify-center shrink-0 shadow-sm text-white"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-label-structural text-[10px] uppercase tracking-widest text-slate-400">Direct Channel</span><span class="font-label-interface text-label-interface text-white font-semibold">Air-gapped Comms Ready</span></div></div></div></div></div></section>
+<!-- Interactive Intake & Specification Chamber -->
+<section class="w-full bg-surface-bright py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Editorial Column: Specification Methodology -->
+<div class="lg:col-span-4 flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Intake Vector</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Structured Inquiry Pipeline</h2>
+<p class="font-body-default text-body-default text-on-surface-variant">
+              Inquiries are parsed directly by our systems architects, robotics principals, or institutional deployment leads. We do not maintain a marketing triage queue.
+            </p>
+<!-- Mini Spec Matrix Card -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm mt-space-md flex flex-col gap-space-md rounded-2xl">
+<div class="flex items-center justify-between">
+<span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Active Nodes</span>
+<span class="font-label-structural text-[10px] text-primary font-medium bg-surface-container px-2 py-0.5 rounded">2 Prototyping Sites</span>
+</div>
+<div class="flex flex-col gap-space-xs text-body-muted font-body-muted text-on-surface-variant">
+<div class="flex items-center justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span>Backend Cloud Architecture</span>
+<span class="font-label-structural text-primary">NCR-01</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span>Kinematics &amp; Sensors</span>
+<span class="font-label-structural text-primary">BLR-02</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span>Mulyankan Core Engine</span>
+<span class="font-label-structural text-primary">AI-LAB</span>
+</div>
+</div>
+</div>
+<!-- Architectural Blueprint Accent -->
+<div class="relative w-full h-36 overflow-hidden bg-primary p-space-md text-on-primary flex flex-col justify-between shadow-md rounded-2xl">
+<div class="flex justify-between items-start">
+<span class="font-label-structural text-[10px] uppercase tracking-widest text-primary-fixed-dim">Transmission Engine</span>
+<span class="material-symbols-outlined text-[20px] text-primary-fixed-dim">lock_open</span>
+</div>
+<div class="font-label-structural text-[11px] text-surface-container leading-relaxed">
+                SHA-256 Digest // Auto-provisioned temporary room upon dispatch. PGP keys exchanged automatically for secure artifact handoff.
+              </div>
+</div>
+</div>
+<!-- Micro Footnote -->
+<div class="pt-space-lg">
+<span class="font-label-structural text-[11px] text-secondary">
+              Direct telemetry inquiries: <span class="text-primary font-medium select-all">desk@jaitraya.com</span>
+</span>
+</div>
+</div>
+<!-- Right Column: Clean Form Surface -->
+<div class="lg:col-span-8">
+<div class="bg-surface-container-lowest p-space-xl shadow-md rounded-2xl">
+<div id="contactForm"></div>
+<form class="flex flex-col gap-space-lg contact-form" id="contact-form" name="contactForm" onsubmit="event.preventDefault(); handleDispatch();">
+<!-- Scope Selector Chips -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-structural text-label-structural uppercase tracking-wider text-secondary">
+                  01 // Primary Scope of Engagement
+                </label>
+<div class="flex flex-wrap gap-space-xs pt-1" id="scopeContainer"><button class="scope-chip px-3 py-2 font-label-interface text-label-interface bg-primary text-on-primary shadow-sm transition-all text-left rounded-xl" data-scope="enterprise" onclick="selectScope(this)" type="button">Enterprise Software &amp; Cloud</button><button class="scope-chip px-3 py-2 font-label-interface text-label-interface bg-surface-container-low border border-outline-variant/50 text-secondary hover:text-primary hover:bg-surface-container transition-all text-left rounded-xl" data-scope="robotics" onclick="selectScope(this)" type="button">Robotics &amp; Hardware R&amp;D</button><button class="scope-chip px-3 py-2 font-label-interface text-label-interface bg-surface-container-low border border-outline-variant/50 text-secondary hover:text-primary hover:bg-surface-container transition-all text-left rounded-xl" data-scope="mulyankan" onclick="selectScope(this)" type="button">Mulyankan AI University Pilot</button><button class="scope-chip px-3 py-2 font-label-interface text-label-interface bg-surface-container-low border border-outline-variant/50 text-secondary hover:text-primary hover:bg-surface-container transition-all text-left rounded-xl" data-scope="mira" onclick="selectScope(this)" type="button">MIRA Offline Appliance</button><button class="scope-chip px-3 py-2 font-label-interface text-label-interface bg-surface-container-low border border-outline-variant/50 text-secondary hover:text-primary hover:bg-surface-container transition-all text-left rounded-xl" data-scope="strategic" onclick="selectScope(this)" type="button">General &amp; Strategic</button></div>
+</div>
+<!-- Input Fields Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Full Name & Title -->
+<div class="flex flex-col gap-1">
+<label class="font-label-structural text-[11px] uppercase tracking-wider text-secondary" for="fullName">
+                    Full Name &amp; Role Title <span class="text-primary">*</span>
+</label>
+<input class="h-11 px-3 bg-surface-container-low text-on-surface font-body-default text-body-default placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm focus:ring-1 focus:ring-primary transition-all rounded-xl duration-200" id="fullName" placeholder="e.g. Dr. Aris Thorne, VP Infrastructure" required="" type="text">
+</div>
+<!-- Organization Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-structural text-[11px] uppercase tracking-wider text-secondary" for="orgName">
+                    Organization / University <span class="text-primary">*</span>
+</label>
+<input class="h-11 px-3 bg-surface-container-low text-on-surface font-body-default text-body-default placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm focus:ring-1 focus:ring-primary transition-all rounded-xl duration-200" id="organization" name="organization" placeholder="e.g. National Institute of Tech or Acme Corp" required="" type="text">
+</div>
+<!-- Work Email -->
+<div class="flex flex-col gap-1">
+<label class="font-label-structural text-[11px] uppercase tracking-wider text-secondary" for="workEmail">
+                    Work / Institutional Email <span class="text-primary">*</span>
+</label>
+<input class="h-11 px-3 bg-surface-container-low text-on-surface font-body-default text-body-default placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm focus:ring-1 focus:ring-primary transition-all rounded-xl duration-200" id="workEmail" placeholder="a.thorne@organization.edu" required="" type="email">
+</div>
+<!-- Direct Phone -->
+<div class="flex flex-col gap-1">
+<label class="font-label-structural text-[11px] uppercase tracking-wider text-secondary" for="phoneNumber">
+                    Direct Phone <span class="text-secondary/70 font-normal">(Optional)</span>
+</label>
+<input class="h-11 px-3 bg-surface-container-low text-on-surface font-body-default text-body-default placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm focus:ring-1 focus:ring-primary transition-all rounded-xl duration-200" id="phoneNumber" placeholder="+91 (0) 98765 43210" type="tel">
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-structural text-[11px] uppercase tracking-wider text-secondary" for="inquiryType">
+Inquiry Classification <span class="text-primary">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 px-3 bg-surface-container-low text-on-surface font-body-default text-body-default focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm focus:ring-1 focus:ring-primary appearance-none cursor-pointer pr-10 transition-all rounded-xl" id="inquiryType" name="inquiryType">
+<option value="enterprise">Enterprise Software &amp; Cloud</option>
+<option value="mulyankan-pilot">Mulyankan AI University Pilot</option>
+<option value="mira-pilot">MIRA Offline Workstation Pilot</option>
+<option value="robotics">Robotics &amp; Physical Systems</option>
+<option value="careers">Engineering Talent &amp; Careers</option>
+<option value="strategic">General Strategic Partnership</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-secondary">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Target Rollout Timeline -->
+<div class="flex flex-col gap-1">
+<label class="font-label-structural text-[11px] uppercase tracking-wider text-secondary" for="timelineSelect">
+                  Target Deployment / Proof of Concept Timeline
+                </label>
+<div class="relative">
+<select class="w-full h-11 px-3 bg-surface-container-low text-on-surface font-body-default text-body-default focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm focus:ring-1 focus:ring-primary appearance-none cursor-pointer pr-10 transition-all rounded-xl" id="timelineSelect"><option value="mulyankan-pilot">Mulyankan University Pilot (< 30 Days)</option><option value="mira-pilot">MIRA Workstation Evaluation</option>
+<option value="immediate">Immediate Pilot / Q2 Evaluation (&lt; 30 Days)</option>
+<option value="q3">Mid-Term Deployment (30 - 90 Days)</option>
+<option value="academic-semester">Upcoming Academic Semester Cycle</option>
+<option value="fiscal-year">Next Fiscal Year Infrastructure Scoping</option>
+<option value="exploratory">Exploratory Architecture Briefing</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-secondary">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Project Scope Textarea -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-structural text-[11px] uppercase tracking-wider text-secondary" for="message">
+                    Project Scope &amp; Technical Requirements <span class="text-primary">*</span>
+</label>
+<span class="font-label-structural text-[10px] text-secondary">Min. 50 characters</span>
+</div>
+<textarea class="w-full p-3 bg-surface-container-low text-on-surface font-body-default text-body-default placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm focus:ring-1 focus:ring-primary transition-all resize-y rounded-xl duration-200" id="message" name="message" placeholder="Outline your architectural parameters, anticipated concurrent throughput, physical hardware test requirements, or institutional scale (e.g. 15,000 answer scripts / semester)..." required="" rows="4"></textarea>
+</div>
+<!-- Confidentiality Assurance Bar -->
+<div class="flex items-start gap-space-sm p-space-sm rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">verified</span>
+<p class="font-body-muted text-body-muted text-secondary">
+<strong class="text-on-surface font-medium">Confidentiality Assurance:</strong> Strict NDA &amp; data sovereignty protocols applied to all inquiries upon transmission. Hardware telemetry and institution data remain isolated within zero-egress memory boundaries.
+                </p>
+</div>
+<!-- Actions Area -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 text-primary focus:ring-primary border-none bg-surface-container-high cursor-pointer rounded-xl" id="ndaConsent" type="checkbox">
+<label class="font-body-muted text-body-muted text-secondary cursor-pointer select-none" for="ndaConsent">
+                    Transmit under bilateral non-disclosure agreement
+                  </label>
+</div>
+<button class="inline-flex items-center justify-center gap-space-xs px-6 py-3 font-label-interface text-label-interface bg-primary hover:bg-primary-container text-on-primary transition-colors shadow-md rounded-xl duration-200" id="submitBtn" type="submit">
+<span>Dispatch Technical Briefing</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Submission Feedback State Container (Hidden initially) -->
+<div class="hidden p-space-md rounded bg-surface-container text-primary font-body-default" id="form-alert">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-medium">Transmission confirmed. Inbound ticket ID: <code class="font-label-structural">JT-ENG-9821</code> routed to Systems Desk.</span>
+</div>
+</div>
+<div id="form-alert" class="hidden alert-box p-space-md rounded bg-surface-container text-primary font-body-default"><span class="font-medium">Transmission confirmed. Inbound ticket ID: <code class="font-label-structural">JT-ENG-9821</code>.</span></div></form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Direct Operating Coordinates & Engineering Hubs -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col gap-space-xs pb-space-lg">
+<span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Physical &amp; Digital Nodes</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Direct Operating Coordinates</h2>
+</div>
+<!-- Hubs Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Lab 1: Delhi NCR -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between shadow-sm rounded-2xl">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-structural text-[11px] uppercase tracking-wider text-secondary">Corporate &amp; AI Foundry</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Headquarters &amp; Software Lab</h3>
+<p class="font-body-default text-body-default text-on-surface-variant">
+              Delhi NCR, India
+            </p>
+<div class="font-body-muted text-body-muted text-secondary mt-space-xs">
+              Architectural orchestration, enterprise cloud platforms, and Mulyankan AI model evaluation operations.
+            </div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-lowest/60 rounded p-space-sm flex flex-col gap-1">
+<span class="font-label-structural text-[10px] text-secondary uppercase tracking-wider">Coordinates</span>
+<span class="font-label-structural text-[12px] text-primary">28.4595° N, 77.0266° E // REGION-IN-NORTH</span>
+</div>
+</div>
+<!-- Lab 2: Bengaluru -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between shadow-sm rounded-2xl">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-structural text-[11px] uppercase tracking-wider text-secondary">Physical Systems</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Mechatronics &amp; Hardware Lab</h3>
+<p class="font-body-default text-body-default text-on-surface-variant">
+              Bengaluru, Karnataka, India
+            </p>
+<div class="font-body-muted text-body-muted text-secondary mt-space-xs">
+              Kinematics prototyping, sensor fusion verification, autonomous mobility rigs, and edge-silicon benchmarks.
+            </div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-lowest/60 rounded p-space-sm flex flex-col gap-1">
+<span class="font-label-structural text-[10px] text-secondary uppercase tracking-wider">Coordinates</span>
+<span class="font-label-structural text-[12px] text-primary">12.9716° N, 77.5946° E // REGION-IN-SOUTH</span>
+</div>
+</div>
+<!-- Lab 3: Digital Ingestion Channels -->
+<div class="bg-surface-container-low p-space-lg flex flex-col justify-between shadow-sm rounded-2xl">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-structural text-[11px] uppercase tracking-wider text-secondary">Direct Channels</span>
+<span class="material-symbols-outlined text-[18px] text-primary">alternate_email</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Dedicated Desks</h3>
+<div class="flex flex-col gap-space-xs pt-1">
+<div class="p-2 rounded bg-surface-container-lowest">
+<span class="font-label-structural text-[10px] uppercase text-secondary block">Enterprise Software &amp; Core Labs</span>
+<span class="font-label-interface text-primary font-medium select-all">projects@jaitraya.com</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest">
+<span class="font-label-structural text-[10px] uppercase text-secondary block">Mulyankan Academic Pilots</span>
+<span class="font-label-interface text-primary font-medium select-all">support@mulyankanai.in</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-secondary font-label-structural text-[11px]">
+<span>Encrypted SMTPS</span>
+<span class="text-primary font-semibold">TLS 1.3 Strict</span>
+</div>
+</div>
+</div>
+<!-- Cryptographic Key Fingerprint Block -->
+<div class="mt-space-lg bg-surface-container-lowest p-space-lg shadow-sm rounded-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-center">
+<div class="lg:col-span-4 flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">key</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] font-semibold text-primary">Cryptographic PGP Fingerprint</span>
+<span class="font-body-muted text-body-muted text-secondary">Use for sensitive codebases &amp; unreleased IP</span>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="bg-surface-container-low px-3 py-2 rounded font-label-structural text-[11px] text-on-surface-variant overflow-x-auto whitespace-nowrap select-all tracking-wider">
+              B981 443C 90FE D211 A709 8E92 481E C82A 001B 77FA
+            </div>
+</div>
+<div class="lg:col-span-2 flex lg:justify-end">
+<button class="w-full lg:w-auto px-4 py-2 bg-surface-container-high text-primary hover:bg-secondary-container transition-colors font-label-interface text-label-interface flex items-center justify-center gap-1 rounded-xl" onclick="copyFingerprint(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Copy Key</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function selectScope(btn) {
+    const chips = document.querySelectorAll('.scope-chip');
+    chips.forEach(chip => {
+      chip.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+      chip.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+    btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+    btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+  }
+
+  function handleDispatch() {
+    const btn = document.getElementById('submitBtn');
+    const notice = document.getElementById('statusNotification');
+    
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Encrypting & Dispatching...</span>`;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = `<span>Briefing Dispatched</span><span class="material-symbols-outlined text-[18px]">done</span>`;
+      btn.classList.add('opacity-75');
+      notice.classList.remove('hidden');
+    }, 850);
+  }
+
+  function copyFingerprint(btn) {
+    const key = "B981 443C 90FE D211 A709 8E92 481E C82A 001B 77FA";
+    navigator.clipboard.writeText(key).then(() => {
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">check</span><span>Copied</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 2000);
+    });
+  }
+</script><script>
+  (function() {
+    const nav = document.getElementById('main-nav');
+    const logo = document.getElementById('nav-logo');
+    const brandTitle = document.getElementById('nav-brand-title');
+    const brandSubtitle = document.getElementById('nav-brand-subtitle');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const contactPill = document.getElementById('nav-contact-pill');
+
+    const darkLogoSrc = 'assets/images/stitch/stitch_asset_04.jpg';
+    const lightLogoSrc = 'assets/images/stitch/stitch_asset_20.jpg';
+
+    function updateNavScroll() {
+      if (!nav) return;
+      const isScrolled = window.scrollY > 80;
+
+      if (isScrolled) {
+        nav.classList.remove('bg-[#030712]', 'border-white/10');
+        nav.classList.add('bg-white/90', 'border-slate-200', 'shadow-sm');
+        if (logo) logo.src = lightLogoSrc;
+        if (brandTitle) {
+          brandTitle.classList.remove('text-white');
+          brandTitle.classList.add('text-primary');
+        }
+        if (brandSubtitle) {
+          brandSubtitle.classList.remove('text-slate-400');
+          brandSubtitle.classList.add('text-secondary');
+        }
+        navLinks.forEach(link => {
+          link.classList.remove('text-slate-300', 'hover:text-white');
+          link.classList.add('text-secondary', 'hover:text-primary');
+        });
+        if (contactPill) {
+          contactPill.classList.remove('bg-white/10', 'text-white', 'border-white/20');
+          contactPill.classList.add('bg-primary', 'text-white', 'border-transparent');
+        }
+      } else {
+        nav.classList.remove('bg-white/90', 'border-slate-200', 'shadow-sm');
+        nav.classList.add('bg-[#030712]', 'border-white/10');
+        if (logo) logo.src = darkLogoSrc;
+        if (brandTitle) {
+          brandTitle.classList.remove('text-primary');
+          brandTitle.classList.add('text-white');
+        }
+        if (brandSubtitle) {
+          brandSubtitle.classList.remove('text-secondary');
+          brandSubtitle.classList.add('text-slate-400');
+        }
+        navLinks.forEach(link => {
+          link.classList.remove('text-secondary', 'hover:text-primary');
+          link.classList.add('text-slate-300', 'hover:text-white');
+        });
+        if (contactPill) {
+          contactPill.classList.remove('bg-primary', 'border-transparent');
+          contactPill.classList.add('bg-white/10', 'text-white', 'border-white/20');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', updateNavScroll, { passive: true });
+    updateNavScroll();
+  })();
+</script></main>
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/60">
+  <div class="max-w-7xl mx-auto px-gutter pt-space-xl pb-space-lg">
+    <div class="footer-grid footer-col grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl mb-space-xl">
+      <div class="lg:col-span-5 flex flex-col items-start">
+        <div class="flex items-center gap-space-sm mb-space-md">
+          <img alt="Jaitraya TechnoLabs Logo" class="h-9 w-auto object-contain shrink-0" src="assets/images/logos/jaitraya-icon-darkmode.png">
+          <div class="flex flex-col justify-center">
+            <span class="font-headline-sm text-[14px] font-semibold tracking-tight text-primary leading-tight">JAITRAYA TECHNOLABS</span>
+            <span class="font-label-structural text-[9px] uppercase tracking-widest text-secondary leading-none mt-1">Executive Systems Architecture</span>
+          </div>
+        </div>
+        <p class="font-body-muted text-body-muted text-on-surface-variant max-w-sm mb-space-md">
+          Parent technology company engineering intelligent software systems, physical robotics, and applied artificial intelligence.
         </p>
-      </div>
-    </section>
-
-    <!-- Minimalist Contact Layout -->
-    <section class="section section-surface">
-      <div class="container">
-        <div class="contact-layout">
-          <!-- Information Column -->
-          <div data-reveal>
-            <span class="section-label">Communication Channels</span>
-            <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--color-text-primary); font-weight: 700; letter-spacing: -0.025em;">Direct Inquiries</h2>
-            <p style="color: var(--color-text-secondary); margin-bottom: 2.5rem; line-height: 1.65;">
-              All inquiries are reviewed directly by our engineering and product leadership.
-            </p>
-
-            <div style="display: flex; flex-direction: column; gap: 1.75rem; margin-bottom: 2.5rem;">
-              <div>
-                <div style="font-size: 0.8rem; color: var(--color-brand); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Corporate &amp; General</div>
-                <a href="mailto:contact@jaitraya.com" style="color: var(--color-text-primary); font-weight: 600; font-size: 1.15rem; text-decoration: none;">
-                  contact@jaitraya.com
-                </a>
-              </div>
-
-              <div>
-                <div style="font-size: 0.8rem; color: var(--color-brand); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Mulyankan AI Pilots</div>
-                <a href="mailto:pilots@jaitraya.com" style="color: var(--color-text-primary); font-weight: 600; font-size: 1.15rem; text-decoration: none;">
-                  pilots@jaitraya.com
-                </a>
-              </div>
-
-              <div>
-                <div style="font-size: 0.8rem; color: var(--color-brand); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Careers &amp; Research</div>
-                <a href="mailto:careers@jaitraya.com" style="color: var(--color-text-primary); font-weight: 600; font-size: 1.15rem; text-decoration: none;">
-                  careers@jaitraya.com
-                </a>
-              </div>
-
-              <div>
-                <div style="font-size: 0.8rem; color: var(--color-brand); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Operations Base</div>
-                <div style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.6;">
-                  Headquartered in India with a global-first digital service footprint.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Clean Minimalist Form Column -->
-          <div class="card card-hover glass-card" style="padding: 2.75rem; border-radius: var(--radius-xl);" data-reveal data-reveal-delay="150">
-            <h3 style="font-size: 1.4rem; color: var(--color-text-primary); margin-bottom: 0.5rem; font-weight: 700;">Send an Inquiry</h3>
-            <p style="font-size: 0.92rem; color: var(--color-text-secondary); margin-bottom: 1.75rem;">
-              Fill in your details and our team will respond within 1 business day.
-            </p>
-
-            <div id="form-alert" class="form-alert" role="alert"></div>
-
-            <form id="contact-form" novalidate>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
-                <div>
-                  <label for="fullName" class="form-label">Full Name *</label>
-                  <input type="text" id="fullName" class="form-input" placeholder="e.g. Dr. Rajesh Sharma" required>
-                </div>
-                <div>
-                  <label for="workEmail" class="form-label">Institutional / Work Email *</label>
-                  <input type="email" id="workEmail" class="form-input" placeholder="e.g. dean@university.edu" required>
-                </div>
-              </div>
-
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
-                <div>
-                  <label for="organization" class="form-label">Organization / University *</label>
-                  <input type="text" id="organization" class="form-input" placeholder="e.g. State Technical University" required>
-                </div>
-                <div>
-                  <label for="inquiryType" class="form-label">Inquiry Purpose *</label>
-                  <select id="inquiryType" class="form-select" required>
-                    <option value="software-solution">Custom Software &amp; Web Applications</option>
-                    <option value="hardware-robotics">Hardware &amp; Robotics Engineering</option>
-                    <option value="mulyankan-pilot">Mulyankan AI Institutional Pilot</option>
-                    <option value="mira-pilot">MIRA Research Lab Pilot (Offline RAG)</option>
-                    <option value="tech-collab">Technology Partnership</option>
-                    <option value="careers">Careers Inquiry</option>
-                    <option value="general">General Inquiries</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="message" class="form-label">Message / Collaboration Context *</label>
-                <textarea id="message" class="form-textarea" placeholder="Please outline your institution's requirements, estimated examination volume, or collaboration scope..." required></textarea>
-              </div>
-
-              <button type="submit" id="submit-btn" class="btn btn-primary btn-lg" style="width: 100%;">
-                Send Inquiry
-              </button>
-            </form>
-          </div>
+        <div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+          <span class="font-label-structural text-[10px] tracking-wider uppercase px-2 py-0.5 rounded border border-outline-variant/80 bg-surface-container-lowest text-secondary">ISO-27001 Certified</span>
+          <span class="font-label-structural text-[10px] tracking-wider uppercase px-2 py-0.5 rounded border border-outline-variant/80 bg-surface-container-lowest text-secondary">SOC-2 Type II Aligned</span>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <a href="index.html" class="brand-link" aria-label="Jaitraya TechnoLabs Home">
-            <img src="assets/images/logos/jaitraya-logo-light.png" alt="Jaitraya TechnoLabs" class="brand-logo-img">
-          </a>
-          <p class="footer-brand-desc">
-            Technology product development company engineering intelligent software systems, computer vision, and integrated hardware technology.
-          </p>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Platforms &amp; Solutions</h4>
-          <ul class="footer-links">
-            <li><a href="mulyankan-ai.html" class="footer-link">Mulyankan AI (Live Beta)</a></li>
-            <li><a href="mira.html" class="footer-link">MIRA Platform (Preview)</a></li>
-            <li><a href="solutions.html" class="footer-link">Solutions &amp; Services</a></li>
-            <li><a href="projects.html" class="footer-link">Projects &amp; R&amp;D</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Technology</h4>
-          <ul class="footer-links">
-            <li><a href="technology.html#computer-vision" class="footer-link">Computer Vision &amp; OCR</a></li>
-            <li><a href="technology.html#applied-ai" class="footer-link">Applied AI Alignment</a></li>
-            <li><a href="technology.html#vector-rag" class="footer-link">Offline Vector RAG</a></li>
-            <li><a href="technology.html#human-in-loop" class="footer-link">Human-in-the-Loop</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Company</h4>
-          <ul class="footer-links">
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="technology.html" class="footer-link">Technology &amp; Architecture</a></li>
-            <li><a href="about.html#team" class="footer-link">Leadership &amp; Team</a></li>
-            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-          </ul>
-        </div>
+      <div class="lg:col-span-2 lg:col-start-7 flex flex-col gap-space-sm">
+        <span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Solutions &amp; Platforms</span>
+        <ul class="flex flex-col gap-space-xs font-body-muted text-body-muted">
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="solutions.html#software">Software &amp; IT Solutions</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="solutions.html#hardware">Hardware &amp; Robotics</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="products.html#mulyankan-deep-dive">Mulyankan AI</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="products.html#mira-deep-dive">MIRA Engine</a></li>
+        </ul>
       </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 Jaitraya TechnoLabs. All rights reserved.</div>
-        <div class="footer-legal-links">
-          <a href="legal/compliance.html" class="footer-legal-link">Compliance</a>
-          <a href="legal/privacy.html" class="footer-legal-link">Privacy Policy</a>
-          <a href="legal/terms.html" class="footer-legal-link">Terms of Service</a>
-          <a href="legal/cookies.html" class="footer-legal-link">Cookie Notice</a>
-        </div>
+      <div class="lg:col-span-2 flex flex-col gap-space-sm">
+        <span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Technology</span>
+        <ul class="flex flex-col gap-space-xs font-body-muted text-body-muted">
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="technology.html#computer-vision">Computer Vision</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="technology.html#applied-ai">Applied AI</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="technology.html#vector-rag">Vector RAG</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="technology.html#human-in-loop">Human-in-the-Loop</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-2 flex flex-col gap-space-sm">
+        <span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Company</span>
+        <ul class="flex flex-col gap-space-xs font-body-muted text-body-muted">
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html#team">Team Roster</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html#geo-nodes">Research Labs</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="pt-space-md border-t border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+      <span class="font-label-structural text-[11px] text-secondary">© 2026 Jaitraya TechnoLabs. All rights reserved.</span>
+      <div class="flex items-center gap-space-md font-label-structural text-[11px] text-secondary">
+        <a class="hover:text-primary transition-colors" href="legal/compliance.html">Compliance</a>
+        <span class="text-outline-variant">|</span>
+        <a class="hover:text-primary transition-colors" href="legal/privacy.html">Privacy Policy (Zero-Egress Commitment)</a>
+        <span class="text-outline-variant">|</span>
+        <a class="hover:text-primary transition-colors" href="legal/terms.html">Terms of Service</a>
+        <span class="text-outline-variant">|</span>
+        <a class="hover:text-primary transition-colors" href="legal/cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/contact.js"></script>
 </body>
 </html>
