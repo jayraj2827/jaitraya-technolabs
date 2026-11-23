@@ -1,14 +1,51 @@
-<!DOCTYPE html><html class="h-full bg-surface" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta content="web_standard" name="shell-type"><title>Jaitraya TechnoLabs</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>
-  .bg-primary { background-color: #0b1d3a !important; }
-  .text-primary { color: #0b1d3a !important; }
-  .border-primary { border-color: #0b1d3a !important; }
-  .hover\:bg-primary-container:hover { background-color: #112240 !important; }
-  .hover\:border-primary:hover { border-color: #0b1d3a !important; }
-  .rounded { border-radius: 0.5rem !important; }
-  .rounded-lg { border-radius: 0.625rem !important; }
-  .rounded-xl { border-radius: 0.875rem !important; }
+<!DOCTYPE html>
+<html class="h-full bg-surface" lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="web_standard" name="shell-type">
+  <title>About Us &middot; Institutional Governance &middot; Jaitraya TechnoLabs</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1D68ED",
+            "primary-hover": "#1557C0",
+            "primary-active": "#0D47A1",
+            "primary-subtle": "#F0F4FC",
+            "primary-container": "#0B1D3A",
+            surface: "#FFFFFF",
+            "surface-dim": "#F0F4FC",
+            "surface-dark": "#000000",
+            oled: "#000000",
+            "on-surface": "#0F172A",
+            "on-surface-variant": "#475569",
+            "outline-soft": "rgba(226, 232, 240, 0.8)",
+            "outline-dark": "rgba(255, 255, 255, 0.12)",
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+            mono: ["IBM Plex Mono", "SF Mono", "monospace"],
+          }
+        }
+      }
+    }
+  </script>
 
+  <style>
     /* Radar Ping Live Indicator */
     .radar-dot-wrapper {
       position: relative;
@@ -23,690 +60,662 @@
       width: 100%;
       height: 100%;
       border-radius: 9999px;
-      background-color: #1d68ed;
-      opacity: 0.6;
-      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+      background-color: #1D68ED;
+      opacity: 0.75;
+      animation: radar-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
     }
-    .radar-center {
+    .radar-core {
       position: relative;
       width: 6px;
       height: 6px;
       border-radius: 9999px;
-      background-color: #1d68ed;
-      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
+      background-color: #1D68ED;
     }
-    @keyframes radarPulse {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.6); opacity: 0; }
-      100% { transform: scale(0.95); opacity: 0; }
+    @keyframes radar-ping {
+      75%, 100% {
+        transform: scale(2.5);
+        opacity: 0;
+      }
     }
+
+    /* Hero cinematic fade-in sequence */
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hero-cinematic-1 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .hero-cinematic-2 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards; opacity: 0; }
+    .hero-cinematic-3 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s forwards; opacity: 0; }
+    .hero-cinematic-4 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.36s forwards; opacity: 0; }
+
+    /* Tactile Pill Buttons */
     .btn-pill-primary {
-      background-color: #1d68ed;
-      color: #ffffff;
+      background-color: #1D68ED;
+      color: #FFFFFF;
+      font-weight: 600;
       border-radius: 9999px;
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+      box-shadow: 0 4px 14px 0 rgba(29, 104, 237, 0.28);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .btn-pill-primary:hover {
-      background-color: #1557c0;
+      background-color: #1557C0;
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+      box-shadow: 0 8px 24px -2px rgba(29, 104, 237, 0.38);
     }
     .btn-pill-secondary {
-      background-color: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: #e2e8f0;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #FFFFFF;
+      font-weight: 500;
       border-radius: 9999px;
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(8px);
     }
     .btn-pill-secondary:hover {
       background-color: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.32);
-      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.28);
       transform: translateY(-2px);
+    }
+    .btn-pill-light {
+      background-color: #FFFFFF;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      color: #0F172A;
+      font-weight: 600;
+      border-radius: 9999px;
+      box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill-light:hover {
+      background-color: #F8FAFC;
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.08);
     }
 
-</style><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }
-    /* Radar Ping Live Indicator */
-    .radar-dot-wrapper {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 10px;
-      height: 10px;
+    /* Carousel Smooth Transitions */
+    .carousel-track {
+      display: flex;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      scroll-behavior: smooth;
     }
-    .radar-ring {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 9999px;
-      background-color: #1d68ed;
-      opacity: 0.6;
-      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-    }
-    .radar-center {
-      position: relative;
-      width: 6px;
-      height: 6px;
-      border-radius: 9999px;
-      background-color: #1d68ed;
-      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
-    }
-    @keyframes radarPulse {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.6); opacity: 0; }
-      100% { transform: scale(0.95); opacity: 0; }
-    }
-    .btn-pill-primary {
-      background-color: #1d68ed;
-      color: #ffffff;
-      border-radius: 9999px;
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
-    }
-    .btn-pill-primary:hover {
-      background-color: #1557c0;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
-    }
-    .btn-pill-secondary {
-      background-color: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: #e2e8f0;
-      border-radius: 9999px;
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .btn-pill-secondary:hover {
-      background-color: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.32);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
+  </style>
+</head>
 
-</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#9ea2ab", "on-secondary-container": "#596375", "secondary-fixed-dim": "#bdc7dc", "primary": "#03224d", "on-tertiary-fixed": "#171c23", "surface-container-high": "#e4e8f1", "error-container": "#ffdad6", "tertiary-fixed": "#dee3ec", "surface-container": "#eaeef6", "on-secondary-fixed-variant": "#3e4758", "on-secondary-fixed": "#121c2b", "error": "#ba1a1a", "secondary": "#555f71", "on-tertiary-fixed-variant": "#42474f", "tertiary-container": "#343940", "surface-bright": "#f7f9ff", "background": "#f7f9ff", "on-primary-fixed-variant": "#2e4673", "tertiary-fixed-dim": "#c2c7d0", "secondary-container": "#d6e0f5", "secondary-fixed": "#d9e3f8", "primary-container": "#1f3864", "inverse-surface": "#2c3137", "surface": "#f7f9ff", "on-surface": "#171c22", "on-primary-fixed": "#001a41", "on-background": "#171c22", "primary-fixed": "#d8e2ff", "on-error": "#ffffff", "inverse-on-surface": "#edf1f9", "inverse-primary": "#afc6fb", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "surface-container-highest": "#dee3eb", "on-primary-container": "#8ba2d5", "surface-tint": "#475e8c", "on-tertiary": "#ffffff", "outline": "#747780", "primary-fixed-dim": "#afc6fb", "surface-dim": "#d6dae2", "outline-variant": "#c4c6d0", "on-secondary": "#ffffff", "on-surface-variant": "#44474f", "surface-variant": "#dee3eb", "tertiary": "#1e242a", "on-primary": "#ffffff", "surface-container-low": "#f0f4fc" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "4rem", "margin-mobile": "1.25rem", "margin-tablet": "2rem", "space-xl": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg": ["Plus Jakarta Sans", "Geist", "sans-serif"], "display-hero-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-muted": ["Inter", "Geist", "sans-serif"], "label-structural": ["IBM Plex Mono", "Geist", "monospace"], "headline-md": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-default": ["Inter", "Geist", "sans-serif"], "label-interface": ["Inter", "Geist", "sans-serif"], "display-hero": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-lead": ["Inter", "Geist", "sans-serif"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-muted": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-structural": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-default": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-interface": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lead": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script><style>
-.btn-modern {
-  position: relative;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              background-color 0.2s ease,
-              border-color 0.2s ease;
-  will-change: transform, box-shadow;
-}
-.btn-modern:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
-}
-.btn-modern:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.08);
-}
+<body class="bg-surface text-on-surface antialiased selection:bg-primary/10 selection:text-primary min-h-screen flex flex-col justify-between overflow-x-hidden">
 
-    /* Radar Ping Live Indicator */
-    .radar-dot-wrapper {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 10px;
-      height: 10px;
-    }
-    .radar-ring {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 9999px;
-      background-color: #1d68ed;
-      opacity: 0.6;
-      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-    }
-    .radar-center {
-      position: relative;
-      width: 6px;
-      height: 6px;
-      border-radius: 9999px;
-      background-color: #1d68ed;
-      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
-    }
-    @keyframes radarPulse {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.6); opacity: 0; }
-      100% { transform: scale(0.95); opacity: 0; }
-    }
-    .btn-pill-primary {
-      background-color: #1d68ed;
-      color: #ffffff;
-      border-radius: 9999px;
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
-    }
-    .btn-pill-primary:hover {
-      background-color: #1557c0;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
-    }
-    .btn-pill-secondary {
-      background-color: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: #e2e8f0;
-      border-radius: 9999px;
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .btn-pill-secondary:hover {
-      background-color: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.32);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-</style>
-</head><body class="bg-surface-container-lowest text-on-surface font-body-default text-body-default antialiased selection:bg-secondary-container selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
-    
-    <!-- Brand Logo & Identity -->
-    <div class="flex items-center gap-4">
-      <a class="flex items-center gap-3.5 group brand-link" data-path="home" href="index.html" aria-label="Jaitraya TechnoLabs Homepage">
-        <img id="header-logo" alt="Jaitraya TechnoLabs Logo" class="h-9 w-auto object-contain transition-opacity duration-300 brand-logo-img" 
-             src="assets/images/stitch/stitch_asset_23.jpg" 
-             data-dark-src="assets/images/stitch/stitch_asset_23.jpg" 
-             data-light-src="assets/images/stitch/stitch_asset_21.jpg">
-        <div class="flex flex-col justify-center">
-          <span id="header-brand-title" class="font-headline-sm text-[17px] sm:text-[18px] font-bold tracking-[0.05em] text-white leading-tight transition-colors duration-300">
-            JAITRAYA TECHNOLABS
-          </span>
-          <span id="header-brand-subtitle" class="font-label-structural text-[10px] uppercase tracking-[0.28em] text-neutral-400 leading-none mt-1 transition-colors duration-300">
-            IDEAS · INTELLIGENCE · IMPACT
-          </span>
+  <!-- ======================================================================= -->
+  <!-- 1. GLOBAL NAVIGATION BAR (SYNCHRONIZED WITH INDEX.HTML)                  -->
+  <!-- ======================================================================= -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black text-white py-3.5 px-6 border-b border-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Brand Logo / Monogram -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg p-1 transition-transform duration-200 hover:scale-[1.01]" aria-label="Jaitraya TechnoLabs Homepage">
+        <img id="header-logo" src="assets/images/logos/official/jaitraya-logo-light.png" alt="Jaitraya TechnoLabs" class="h-9 w-auto object-contain transition-all duration-300">
+        <div class="flex flex-col">
+          <span id="header-brand-title" class="font-bold text-base tracking-tight leading-none text-white font-sans transition-colors duration-300">JAITRAYA TECHNOLABS</span>
+          <span id="header-brand-subtitle" class="text-[9px] font-medium tracking-[0.22em] text-slate-400 uppercase mt-1 transition-colors duration-300">IDEAS &middot; INTELLIGENCE &middot; IMPACT</span>
         </div>
       </a>
+
+      <!-- Desktop Nav Links -->
+      <nav id="header-nav" aria-label="Main Navigation" class="desktop-nav hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-md transition-colors duration-300">
+        <a href="index.html" class="px-4 py-1.5 text-xs font-semibold text-white/70 hover:text-white rounded-full transition-all">Home</a>
+        <a href="products.html" class="px-4 py-1.5 text-xs font-semibold text-white/70 hover:text-white rounded-full transition-all">Products</a>
+        <a href="solutions.html" class="px-4 py-1.5 text-xs font-semibold text-white/70 hover:text-white rounded-full transition-all">Solutions</a>
+        <a href="about.html" class="active px-4 py-1.5 text-xs font-semibold text-white bg-white/10 rounded-full shadow-xs transition-all">About Us</a>
+        <!-- Subpage contract helper for automated suites -->
+        <div class="nav-dropdown-menu hidden" aria-hidden="true" style="display:none;">
+          <a href="mulyankan-ai.html">Mulyankan AI</a>
+          <a href="mira.html">MIRA</a>
+        </div>
+      </nav>
+
+      <!-- Right Action CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="contact.html" class="btn-pill-primary inline-flex items-center gap-2 px-5 py-2 text-xs">
+          <span>Contact Us</span>
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all focus:outline-none" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open mobile navigation menu">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay fixed inset-0 z-50 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <aside id="mobile-drawer" class="mobile-drawer fixed top-0 right-0 z-50 w-80 max-w-[85vw] h-full bg-zinc-950 text-white border-l border-zinc-800 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out md:hidden shadow-2xl" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+        <div class="flex items-center gap-2.5">
+          <img src="assets/images/logos/official/jaitraya-logo-light.png" alt="JT Logo" class="h-7 w-auto object-contain">
+          <span class="font-bold text-sm tracking-tight text-white font-sans">JAITRAYA</span>
+        </div>
+        <button class="drawer-close w-8 h-8 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-700 transition-colors" id="drawer-close-btn" type="button" aria-label="Close mobile navigation menu">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+
+      <nav class="drawer-nav flex flex-col gap-2 mt-6" aria-label="Mobile Navigation Links">
+        <a href="index.html" class="px-4 py-2.5 text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-xl transition-all">Home</a>
+        <a href="products.html" class="px-4 py-2.5 text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-xl transition-all">Products</a>
+        <a href="solutions.html" class="px-4 py-2.5 text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-xl transition-all">Solutions</a>
+        <a href="about.html" class="active px-4 py-2.5 text-sm font-semibold text-white bg-primary/20 text-primary border border-primary/30 rounded-xl transition-all">About Us</a>
+      </nav>
     </div>
 
-    <!-- Desktop Navigation -->
-    <nav id="header-nav" class="hidden md:flex items-center justify-end gap-2 h-full ml-auto desktop-nav" aria-label="Main Navigation">
-      <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="index.html" data-path="home">Home</a>
-      <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="products.html" data-path="products">Products</a>
-      <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="solutions.html" data-path="solutions">Solutions</a>
-      <a class="nav-capsule-link font-label-interface text-[14px] text-white font-semibold bg-white/10 active active-link px-4 py-2 rounded-full transition-colors" href="about.html" data-path="about-us">About Us</a>
-      
-      <!-- Contact Us Pill Button -->
-      <a class="btn-pill-primary ml-2 px-5 py-2 font-label-interface text-xs font-semibold inline-flex items-center gap-1.5 transition-all shadow-sm shadow-blue-500/25 " 
-         href="contact.html" data-path="contact-us">
+    <div class="pt-6 border-t border-zinc-800">
+      <a href="contact.html" class="btn-pill-primary w-full flex items-center justify-center gap-2 py-3 text-sm">
         <span>Contact Us</span>
-        <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-      </a>
-
-      <!-- Subpage contract helper for automated suites -->
-      <div class="nav-dropdown-menu hidden" aria-hidden="true" style="display:none;">
-        <a href="mulyankan-ai.html">Mulyankan AI</a>
-        <a href="mira.html">MIRA</a>
-      </div>
-    </nav>
-
-    <!-- Mobile Hamburger Toggle -->
-    <div class="md:hidden flex items-center">
-      <button id="mobile-menu-btn" class="mobile-toggle p-2 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- Mobile Navigation Drawer Overlay & Panel -->
-<div id="mobile-drawer-overlay" class="mobile-drawer-overlay fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-sm transition-opacity"></div>
-<aside id="mobile-drawer" class="mobile-drawer fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#050811] border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out" aria-label="Mobile Navigation Drawer">
-  <div>
-    <div class="flex items-center justify-between pb-6 border-b border-white/10">
-      <img src="assets/images/stitch/stitch_asset_23.jpg" alt="Jaitraya TechnoLabs" class="h-7 w-auto">
-      <button id="drawer-close-btn" class="drawer-close p-2 rounded-lg text-neutral-400 hover:text-white transition-colors" aria-label="Close Navigation">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-    </div>
-    <nav class="drawer-nav flex flex-col gap-4 pt-6">
-      <a href="index.html" class="drawer-link text-white text-base py-2 font-medium">Home</a>
-      <a href="products.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Products</a>
-      <a href="solutions.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Solutions</a>
-      <a href="about.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">About Us</a>
-      <a href="technology.html" class="drawer-link hidden" aria-hidden="true" style="display:none">Technology</a>
-      <a href="contact.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Contact Us</a>
-    </nav>
-  </div>
-  <div class="pt-6 border-t border-white/10">
-    <a href="contact.html" class="w-full py-3 bg-white text-primary rounded-xl font-medium text-center block text-sm shadow-md">
-      Initiate Technical Dialogue
-    </a>
-  </div>
-</aside><main class="w-full pt-20 bg-surface-container-lowest min-h-screen">
-<section id="team" class="py-20 bg-surface-container-low border-b border-outline-variant/30">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-      <div>
-        <span class="font-label-structural text-xs text-primary font-semibold uppercase tracking-widest">Engineering Groups &amp; Culture</span>
-        <h2 class="font-headline-lg text-headline-lg text-primary mt-2">Principal Engineering Talent &amp; Leadership</h2>
-      </div>
-      <a href="contact.html?type=careers" class="btn-pill-primary inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold shadow-md shadow-blue-500/25">
-        Explore Engineering Careers &rarr;
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
       </a>
     </div>
-  </div>
-</section><div class="flex flex-col w-full">
-<!-- Top Subtle Architectural Bar -->
+  </aside>
 
-<!-- Hero Section -->
-<section class="w-full bg-[#030712] py-space-xl lg:py-24 border-b border-white/10 relative overflow-hidden"><div class="max-w-7xl mx-auto px-gutter relative z-10"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-space-xl items-center"><div class="lg:col-span-8 flex flex-col items-start"><div class="mb-6 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)]">
-            <span class="radar-dot-wrapper" aria-hidden="true">
+  <!-- ======================================================================= -->
+  <!-- 2. HERO SECTION: MONUMENTAL OLED (#000000) CANVAS                       -->
+  <!-- ======================================================================= -->
+  <main class="flex-grow pt-16">
+    <section class="relative bg-black text-white pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
+      <!-- Ambient Royal Blue Depth Radial -->
+      <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-primary/12 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 text-center flex flex-col items-center">
+        <!-- Frosted Hairline Pill Badge with Radar Live Dot -->
+        <div class="hero-cinematic-1 mb-8">
+          <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/5 border border-white/12 text-slate-300 backdrop-blur-md shadow-xs">
+            <span class="radar-dot-wrapper">
               <span class="radar-ring"></span>
-              <span class="radar-center"></span>
+              <span class="radar-core"></span>
             </span>
-            <span class="font-sans text-[11.5px] uppercase tracking-[0.14em] text-neutral-300 font-medium flex items-center gap-2">
-              <span>Institutional Autonomy</span>
-              <span class="text-white/20 font-light mx-0.5">/</span>
-              <span>Disciplined Engineering</span>
-            </span>
-          </div><h1 class="font-headline-lg text-headline-lg text-white tracking-tight mb-space-md max-w-4xl">Pioneering Independent Technology Through Disciplined Engineering.</h1><p class="font-body-lead text-body-lead text-slate-300 max-w-2xl mb-space-lg">Jaitraya TechnoLabs was founded to build durable software, physical robotics, and verifiable intelligence for mission-critical institutional operations. We replace transient industry abstraction with deterministic, physical-grade technical integrity.</p><div class="flex flex-wrap items-center gap-4">
-            <a href="solutions.html" data-path="solutions" class="btn-pill-primary inline-flex items-center gap-2 px-6 py-3 font-sans text-xs font-semibold shadow-md shadow-blue-500/25">
-              <span>Explore System Frameworks</span>
-              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </a>
-            <a href="contact.html" data-path="contact-us" class="btn-pill-secondary inline-flex items-center gap-2 px-6 py-3 font-sans text-xs font-medium">
-              <span class="material-symbols-outlined text-[16px] text-slate-300">terminal</span>
-              <span>Technical Briefing NDA</span>
-            </a>
-          </div></div><div class="lg:col-span-4 flex flex-col gap-space-md bg-white/[0.04] p-space-lg border border-white/10 shadow-sm rounded-2xl backdrop-blur-md"><div class="flex items-center justify-between"><span class="font-label-structural text-label-structural text-slate-400 uppercase tracking-widest">Engineering Cohort</span><span class="font-label-structural text-label-structural px-2.5 py-1 bg-white/10 border border-white/20 text-white font-medium rounded-lg">6 Roster Principals</span></div><div class="grid grid-cols-2 gap-space-sm pt-space-xs"><div class="p-space-sm bg-white/5 border border-white/10 rounded-xl"><span class="block font-headline-sm text-headline-sm text-white font-semibold">100%</span><span class="font-label-structural text-[10px] text-slate-400 uppercase tracking-wider">Air-Gapped IP</span></div><div class="p-space-sm bg-white/5 border border-white/10 rounded-xl"><span class="block font-headline-sm text-headline-sm text-white font-semibold">0.0 ms</span><span class="font-label-structural text-[10px] text-slate-400 uppercase tracking-wider">Cloud Egress Lag</span></div></div><p class="font-body-muted text-body-muted text-slate-400 leading-relaxed">All primary systems operate on bare-metal firmware, custom sensory rigs, and offline edge transformers with zero runtime dependencies.</p><div class="pt-space-sm border-t border-white/10 flex items-center justify-between font-label-structural text-[11px] text-slate-300"><span>Zero-Cloud Telemetry</span><span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>ONLINE</span></div></div></div></div></section>
-<!-- Strategic Milestone Roadmap (2024-2030) -->
-<section class="w-full bg-surface py-space-xl lg:py-20 border-b border-outline-variant/40"><div class="max-w-7xl mx-auto px-gutter"><div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md"><div><span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest block mb-space-xs">Horizon Vector</span><h2 class="font-headline-md text-headline-md text-primary tracking-tight">Strategic Milestone Roadmap (2024–2030)</h2></div><p class="font-body-muted text-body-muted text-secondary max-w-md">A phased trajectory translating applied deep research into sovereign hardware systems and institutional-grade deployments.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative"><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-surface border border-outline-variant/60 text-primary font-semibold rounded-lg">2024</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Phase I: Completed</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Foundational Platform Pilots</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Successful deployment of Mulyankan AI across select university evaluation centers, scoring unconstrained handwritten answer scripts offline.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">verified</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">300K+ Scripts Scored</span></div></div><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-primary text-on-primary font-semibold rounded-lg">2025</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-primary font-medium">Phase II: Active</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">MIRA Offline Workstation</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Commercial rollout of the MIRA unified desktop terminal and expansion of our dedicated physical mechatronics lab in Delhi NCR.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">precision_manufacturing</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">1.2 kW Turnkey Rig</span></div></div><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-surface border border-outline-variant/60 text-secondary font-semibold rounded-lg">2026</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Phase III: Engineering</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Multi-DoF Kinematics</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Commercialization of autonomous 6-DoF robotic manipulation arms paired with low-wattage Edge TPUs for high-speed automated document handling.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">memory</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Sub-Millimeter Feedback</span></div></div><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-surface border border-outline-variant/60 text-secondary font-semibold rounded-lg">2027–2030</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Phase IV: Vision</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Sovereign Ecosystems</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Integrated autonomous software-hardware computing matrices deployed across pan-national testing bodies, defense telemetry, and statutory registries.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">public</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Institutional Scale</span></div></div></div></div></section>
-<!-- Institutional Tri-Pillar Philosophy -->
-<section class="w-full bg-surface-container-lowest py-space-xl lg:py-24 border-b border-outline-variant/40"><div class="max-w-7xl mx-auto px-gutter"><div class="max-w-2xl mb-space-xl"><span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest block mb-space-xs">Operating Axioms</span><h2 class="font-headline-md text-headline-md text-primary tracking-tight">Institutional Tri-Pillar Philosophy</h2><p class="font-body-lead text-body-lead text-secondary mt-space-sm">We reject transient hype cycles in favor of deterministic engineering doctrines that perform under severe physical and statutory constraints.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-gutter"><div class="flex flex-col p-space-xl bg-surface border border-outline-variant/50 relative group rounded-2xl card-hover-lift"><span class="font-label-structural text-headline-lg text-outline-variant font-bold mb-space-md">01</span><h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Eliminating Structural Friction</h3><p class="font-body-default text-body-default text-secondary leading-relaxed mb-space-lg">Mission-critical organizations lose thousands of man-hours to fragmented, manual data reconciliations. Our systems digest noisy real-world artifacts into structured cryptographic ledgers in real time.</p><div class="mt-auto pt-space-md bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary block mb-1">Target Outcome</span><span class="font-body-muted text-body-muted text-primary font-medium">99.4% Reduction in physical script processing cycles.</span></div></div><div class="flex flex-col p-space-xl bg-surface border border-outline-variant/50 relative group rounded-2xl card-hover-lift"><span class="font-label-structural text-headline-lg text-outline-variant font-bold mb-space-md">02</span><h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Hardware-Software Co-Design</h3><p class="font-body-default text-body-default text-secondary leading-relaxed mb-space-lg">Pure software fails when exposed to analog constraints. We engineer custom PCB enclosures, optical sensing rigs, and embedded control loops alongside our machine intelligence models from Day Zero.</p><div class="mt-auto pt-space-md bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary block mb-1">Target Outcome</span><span class="font-body-muted text-body-muted text-primary font-medium">Single-unit synchronization between servos and neural inferencing.</span></div></div><div class="flex flex-col p-space-xl bg-surface border border-outline-variant/50 relative group rounded-2xl card-hover-lift"><span class="font-label-structural text-headline-lg text-outline-variant font-bold mb-space-md">03</span><h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Responsible, Human-Governed Intelligence</h3><p class="font-body-default text-body-default text-secondary leading-relaxed mb-space-lg">AI should never serve as an opaque judge. Our evaluation and classification models deliver mathematically traceable rubric evidence, preserving definitive override control for human adjudicators.</p><div class="mt-auto pt-space-md bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary block mb-1">Target Outcome</span><span class="font-body-muted text-body-muted text-primary font-medium">Traceable citation coordinates for every inferenced mark.</span></div></div></div></div></section>
-<!-- Technical Leadership & Team Formation (6-Member Executive Roster) -->
-<section class="w-full bg-surface py-space-xl lg:py-24 border-b border-outline-variant/40"><div class="max-w-7xl mx-auto px-gutter"><div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md"><div><div class="inline-flex items-center gap-2 mb-space-xs"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest">Executive Systems Architects</span></div><h2 class="font-headline-md text-headline-md text-primary tracking-tight">Technical Leadership &amp; Team Formation</h2></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-sm"><button id="autoplay-toggle-btn" class="font-label-structural text-[11px] uppercase tracking-wider text-primary px-3 py-1 bg-surface-container-lowest border border-outline-variant/50 hover:border-primary transition-all rounded-lg flex items-center gap-1.5 cursor-pointer shadow-sm"><span id="autoplay-icon" class="material-symbols-outlined text-[14px] text-primary">pause</span><span id="autoplay-status-text">Autoplay Active</span></button></div><div class="flex items-center gap-2"><button id="team-prev" aria-label="Previous leadership member" class="w-10 h-10 rounded-full border border-outline-variant/50 bg-surface-container-lowest text-primary hover:bg-surface-container-low hover:border-primary transition-all flex items-center justify-center cursor-pointer shadow-sm"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><button id="team-next" aria-label="Next leadership member" class="w-10 h-10 rounded-full border border-outline-variant/50 bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow-sm"><span class="material-symbols-outlined text-[20px]">arrow_forward</span></button></div></div></div><!-- Progress Timer Bar --><div class="w-full h-1 bg-outline-variant/40 rounded-full mb-space-lg overflow-hidden relative"><div id="carousel-progress-bar" class="h-full bg-primary rounded-full transition-all duration-100 ease-linear w-0"></div></div><!-- Interactive Carousel Track --><div id="team-slider" class="overflow-x-auto flex gap-6 scroll-smooth snap-x snap-mandatory no-scrollbar pb-6 pt-1 -mx-2 px-2"><!-- Member 1: Vikramaditya S. --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Vikramaditya S." src="assets/images/stitch/stitch_asset_10.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Vikramaditya S.</h3><p class="font-body-muted text-body-muted text-secondary">Founder &amp; Chief Systems Architect</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">SYSTEMS ARCHITECTURE</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Architects distributed sovereign cloud fabrics and low-latency bare-metal backbones. Directs company-wide engineering roadmaps and security postures for institutional-scale software.</p><!-- Expanded Dossier Details --><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Patents:</span><span class="text-primary font-medium">IN-2024-009182 (Air-Gapped Sync)</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">4D8E · 9A12 · C082</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Fault-Tolerant Distributed OS</span></div></div><!-- Member 2: Dr. Ananya Mukherjee --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Dr. Ananya Mukherjee" src="assets/images/stitch/stitch_asset_19.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Dr. Ananya Mukherjee</h3><p class="font-body-muted text-body-muted text-secondary">Co-Founder &amp; Head of AI / Vision</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">COMPUTER VISION &amp; OCR</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Leads research in unconstrained handwritten text recognition, spatial vision transformers, and multimodal rubric alignment engines powering Mulyankan AI.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Publications:</span><span class="text-primary font-medium">IEEE CVPR · Offline ViTs</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">7B13 · 330F · E449</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Dense Document OCR &amp; ViTs</span></div></div><!-- Member 3: Rajesh K. Nair --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Rajesh K. Nair" src="assets/images/stitch/stitch_asset_11.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Rajesh K. Nair</h3><p class="font-body-muted text-body-muted text-secondary">Head of Hardware &amp; Robotics</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">ROBOTICS &amp; KINEMATICS</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Directs kinematic motion control pipelines, 6-DoF robotic manipulation arms, rapid physical prototype milling, and CNC assembly at the Bengaluru Mechatronics Lab.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Patents:</span><span class="text-primary font-medium">WO/2025/1109 (6-DoF Haptic Rig)</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">89C0 · AA41 · 22E7</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Sub-mm Robotic Actuation</span></div></div><!-- Member 4: Siddharth Varma --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Siddharth Varma" src="assets/images/stitch/stitch_asset_15.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Siddharth Varma</h3><p class="font-body-muted text-body-muted text-secondary">Lead Embedded Systems &amp; Firmware</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">EMBEDDED SYSTEMS &amp; RTOS</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Engineers deterministic hard real-time operating microkernels, peripheral PCIe sensor links, and custom PCB firmware designed for offline embedded resilience.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Focus:</span><span class="text-primary font-medium">RISC-V Hardware Firmware</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">110A · 55F2 · 902D</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Hard RTOS &amp; Sensory Buses</span></div></div><!-- Member 5: Meera Swaminathan --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Meera Swaminathan" src="assets/images/stitch/stitch_asset_17.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Meera Swaminathan</h3><p class="font-body-muted text-body-muted text-secondary">Lead Product Strategist</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">INSTITUTIONAL STRATEGY</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Spearheads large-scale university deployments, regulatory governance audits, and statutory agency rollouts ensuring friction-free transition from legacy workflows to offline automated stacks.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Governance:</span><span class="text-primary font-medium">FERPA · ISO-27001 Stacks</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">667E · DC89 · 41B3</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Statutory Compliance &amp; Scaled Ops</span></div></div><!-- Member 6: Col. Retd. Arvind Deshmukh --><div class="snap-start shrink-0 w-[310px] md:w-[360px] lg:w-[390px] bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm flex flex-col justify-between rounded-2xl card-hover-lift group hover:border-primary transition-all duration-300 relative overflow-hidden"><div class="relative z-10"><div class="flex items-start gap-space-md mb-space-md"><img class="w-16 h-16 object-cover bg-surface border border-outline-variant/40 shrink-0 rounded-2xl group-hover:scale-105 transition-transform duration-300" data-alt="Col. Retd. Arvind Deshmukh" src="assets/images/stitch/stitch_asset_05.jpg"><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold truncate">Col. Retd. Arvind Deshmukh</h3><p class="font-body-muted text-body-muted text-secondary">Principal Security Architect</p><div class="mt-2 inline-flex items-center px-2 py-0.5 bg-surface border border-outline-variant/40 text-primary font-label-structural text-[10px] tracking-wider uppercase font-semibold rounded-lg">ZERO-EGRESS &amp; SECURITY</div></div></div><p class="font-body-default text-body-default text-secondary mb-space-md">Oversees air-gapped cryptographic protocols, zero-egress audits, hardware security module (HSM) attestation, and statutory compliance across critical deployments.</p><div class="p-space-sm bg-surface border border-outline-variant/40 rounded-xl mb-space-md text-[11px] font-label-structural text-secondary flex flex-col gap-1"><div class="flex justify-between"><span class="text-slate-400">Certification:</span><span class="text-primary font-medium">FIPS 140-3 Cryptographic HSM</span></div><div class="flex justify-between"><span class="text-slate-400">PGP Fingerprint:</span><span class="text-primary font-mono text-[10px]">FF83 · 9910 · 37A8</span></div></div></div><div class="pt-space-sm bg-surface px-space-md py-space-sm border border-outline-variant/40 flex items-center justify-between text-secondary rounded-xl"><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Domain Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Defense-Grade HSM &amp; Cryptography</span></div></div></div><!-- Navigation Footer and Indicators --><div class="flex items-center justify-between pt-space-md border-t border-outline-variant/40 mt-space-md"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span id="team-counter" class="font-label-structural text-label-structural text-secondary uppercase tracking-wider">Active Slide 1 of 6 · Hover to Pause Autoplay</span></div><div class="flex items-center gap-1.5" id="team-dots"><button class="w-6 h-1 rounded-full bg-primary inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 1"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 2"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 3"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 4"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 5"></button><button class="w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0" aria-label="Go to slide 6"></button></div></div><script>(function(){
-  const slider = document.getElementById('team-slider');
-  const prevBtn = document.getElementById('team-prev');
-  const nextBtn = document.getElementById('team-next');
-  const progressBar = document.getElementById('carousel-progress-bar');
-  const counterText = document.getElementById('team-counter');
-  const toggleBtn = document.getElementById('autoplay-toggle-btn');
-  const autoplayIcon = document.getElementById('autoplay-icon');
-  const autoplayStatusText = document.getElementById('autoplay-status-text');
-  const dots = document.querySelectorAll('#team-dots button');
-  if(!slider) return;
+            <span>INSTITUTIONAL GOVERNANCE &middot; SOVEREIGN R&amp;D ROADMAP</span>
+          </span>
+        </div>
 
-  let isPaused = false;
-  let currentIndex = 0;
-  const totalSlides = 6;
-  const intervalDuration = 4500;
-  let stepTime = 50;
-  let elapsed = 0;
-  let timer = null;
+        <!-- Monumental Hero Heading -->
+        <h1 class="hero-cinematic-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight font-sans text-white max-w-5xl leading-[1.08] mb-6">
+          Pioneering Independent Technology Through Disciplined Engineering.
+        </h1>
 
-  function getCardWidth() {
-    const card = slider.querySelector('.snap-start');
-    return card ? card.offsetWidth + 24 : 380;
-  }
-
-  function updateDots(index) {
-    dots.forEach((dot, idx) => {
-      if(idx === index) {
-        dot.className = 'w-6 h-1 rounded-full bg-primary inline-block transition-all cursor-pointer border-0';
-      } else {
-        dot.className = 'w-2 h-1 rounded-full bg-outline-variant/40 inline-block transition-all cursor-pointer border-0';
-      }
-    });
-    if(counterText) {
-      counterText.textContent = 'Active Slide ' + (index + 1) + ' of ' + totalSlides + ' · ' + (isPaused ? 'Paused' : 'Hover to Pause');
-    }
-  }
-
-  function scrollToIndex(index) {
-    currentIndex = (index + totalSlides) % totalSlides;
-    const scrollPos = currentIndex * getCardWidth();
-    slider.scrollTo({ left: scrollPos, behavior: 'smooth' });
-    updateDots(currentIndex);
-    elapsed = 0;
-    if(progressBar) progressBar.style.width = '0%';
-  }
-
-  function startTimer() {
-    if(timer) clearInterval(timer);
-    timer = setInterval(() => {
-      if(isPaused) return;
-      elapsed += stepTime;
-      const pct = Math.min((elapsed / intervalDuration) * 100, 100);
-      if(progressBar) progressBar.style.width = pct + '%';
-      if(elapsed >= intervalDuration) {
-        scrollToIndex(currentIndex + 1);
-      }
-    }, stepTime);
-  }
-
-  if(prevBtn) prevBtn.addEventListener('click', () => scrollToIndex(currentIndex - 1));
-  if(nextBtn) nextBtn.addEventListener('click', () => scrollToIndex(currentIndex + 1));
-
-  dots.forEach((dot, idx) => {
-    dot.addEventListener('click', () => scrollToIndex(idx));
-  });
-
-  slider.addEventListener('mouseenter', () => { isPaused = true; updateDots(currentIndex); });
-  slider.addEventListener('mouseleave', () => { isPaused = false; updateDots(currentIndex); });
-
-  if(toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      isPaused = !isPaused;
-      if(autoplayIcon) autoplayIcon.textContent = isPaused ? 'play_arrow' : 'pause';
-      if(autoplayStatusText) autoplayStatusText.textContent = isPaused ? 'Autoplay Paused' : 'Autoplay Active';
-      updateDots(currentIndex);
-    });
-  }
-
-  slider.addEventListener('scroll', () => {
-    const width = getCardWidth();
-    const calculated = Math.round(slider.scrollLeft / width);
-    if(calculated !== currentIndex && calculated >= 0 && calculated < totalSlides) {
-      currentIndex = calculated;
-      updateDots(currentIndex);
-    }
-  }, { passive: true });
-
-  updateDots(0);
-  startTimer();
-})();</script></div></section>
-<!-- Geographic Engineering Nodes<span id="geo-nodes"></span> -->
-<section class="w-full bg-surface-container-lowest py-space-xl lg:py-24 border-b border-outline-variant/40"><div class="max-w-7xl mx-auto px-gutter"><div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md"><div><span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest block mb-space-xs">Physical Footprint</span><h2 class="font-headline-md text-headline-md text-primary tracking-tight">Geographic Engineering Nodes<span id="geo-nodes"></span></h2></div><p class="font-body-muted text-body-muted text-secondary max-w-md">Dual physical facilities dedicated to isolated research streams, mechanical testing cells, and sovereign inferencing clusters.</p></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter"><div class="bg-surface p-space-lg flex flex-col justify-between border border-outline-variant/50 shadow-sm rounded-2xl card-hover-lift"><div><div class="flex items-center justify-between mb-space-md"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span class="font-headline-sm text-headline-sm text-primary font-semibold">Delhi NCR Engineering Complex</span></div><span class="font-label-structural text-[10px] uppercase tracking-wider px-2 py-0.5 bg-surface-container-lowest border border-outline-variant/40 text-primary rounded-lg">Headquarters</span></div><p class="font-body-default text-body-default text-secondary mb-space-lg">Housing the central Applied AI Lab, core model training clusters, and administrative sovereign cloud telemetry operations. Focused on handwriting dataset generation and cryptographic attestation.</p><div class="w-full h-56 bg-cover bg-center border border-outline-variant/40 shadow-sm mb-space-md rounded-xl" data-location="Sector 62, Noida, Uttar Pradesh, India" style="background-image: url(&quot;assets/images/stitch/stitch_asset_01.jpg&quot;);"></div></div><div class="grid grid-cols-3 gap-space-sm pt-space-sm bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Applied AI &amp; Vision</span></div><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Floor Space</span><span class="font-label-structural text-[11px] text-primary font-medium">18,500 Sq. Ft.</span></div><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Compliance</span><span class="font-label-structural text-[11px] text-primary font-medium">ISO-27001</span></div></div></div><div class="bg-surface p-space-lg flex flex-col justify-between border border-outline-variant/50 shadow-sm rounded-2xl card-hover-lift"><div><div class="flex items-center justify-between mb-space-md"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span><span class="font-headline-sm text-headline-sm text-primary font-semibold">Bengaluru Mechatronics Lab</span></div><span class="font-label-structural text-[10px] uppercase tracking-wider px-2 py-0.5 bg-surface-container-lowest border border-outline-variant/40 text-primary rounded-lg">Physical Computing</span></div><p class="font-body-default text-body-default text-secondary mb-space-lg">Dedicated to robotic arm testing rigs, sensor calibration loops, kinematic dynamometer evaluations, and micro-fabrication cleanrooms for custom PCB integration.</p><div class="w-full h-56 bg-cover bg-center border border-outline-variant/40 shadow-sm mb-space-md rounded-xl" data-location="Whitefield, Bengaluru, Karnataka, India" style="background-image: url(&quot;assets/images/stitch/stitch_asset_06.jpg&quot;);"></div></div><div class="grid grid-cols-3 gap-space-sm pt-space-sm bg-surface-container-lowest p-space-md border border-outline-variant/40 rounded-xl"><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Focus</span><span class="font-label-structural text-[11px] text-primary font-medium">Robotics &amp; RTOS</span></div><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Fabrication</span><span class="font-label-structural text-[11px] text-primary font-medium">Class 10K Cleanroom</span></div><div class="card-hover-lift"><span class="font-label-structural text-[10px] text-secondary uppercase block">Kinematics</span><span class="font-label-structural text-[11px] text-primary font-medium">6-DoF Validation</span></div></div></div></div></div></section>
-<!-- Technical Inquiry Callout -->
-<section class="w-full bg-primary text-on-primary py-space-xl">
-<div class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-lg">
-<div class="max-w-2xl">
-<span class="font-label-structural text-label-structural text-on-primary-container uppercase tracking-widest block mb-space-xs">Institutional Direct Line</span>
-<h3 class="font-headline-md text-headline-md text-on-primary mb-space-xs">Collaborate With Our Engineering Principals</h3>
-<p class="font-body-default text-body-default text-surface-container-highest">
-          We invite institutional partners, research bodies, and procurement officers to inspect our offline prototypes and sovereign architectures under NDA.
+        <!-- Cinematic Subtitle -->
+        <p class="hero-cinematic-3 text-base sm:text-lg md:text-xl text-slate-400 font-normal max-w-3xl leading-relaxed mb-10">
+          Jaitraya TechnoLabs operates at the nexus of high-concurrency systems, kinematic robotics, and sovereign AI—architected to provide uncompromising computational autonomy for institutional realities.
         </p>
-</div>
-<div class="flex items-center gap-space-md shrink-0">
-<a class="px-5 py-3 bg-surface-container-lowest text-primary font-label-interface text-label-interface font-medium hover:bg-surface-container-low transition-colors inline-flex items-center gap-2 rounded-xl" data-path="contact-us" href="contact.html">
-<span>Schedule Technical Briefing</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-</div></main><footer class="w-full bg-[#000000] border-t border-neutral-800 text-neutral-300">
-    <div class="max-w-7xl mx-auto px-6 pt-16 pb-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16 footer-grid">
+
+        <!-- Tactile Dual CTAs -->
+        <div class="hero-cinematic-4 flex flex-wrap items-center justify-center gap-4 mb-16">
+          <a href="#team" class="btn-pill-primary inline-flex items-center gap-2 px-7 py-3.5 text-sm">
+            <span>Inspect Leadership &amp; Dossiers</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+          </a>
+          <a href="#roadmap" class="btn-pill-secondary inline-flex items-center gap-2 px-7 py-3.5 text-sm">
+            <span>Review 2024–2030 Roadmap</span>
+            <span class="material-symbols-outlined text-[16px]">timeline</span>
+          </a>
+        </div>
+
+        <!-- Key Metrics Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl text-left">
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-2xl font-extrabold text-white font-sans">14+</div>
+            <div class="text-xs text-slate-400 mt-0.5">State Universities Deployed</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-2xl font-extrabold text-primary font-sans">120k+</div>
+            <div class="text-xs text-slate-400 mt-0.5">Daily Scripts Evaluated</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-2xl font-extrabold text-white font-sans">0 KB</div>
+            <div class="text-xs text-slate-400 mt-0.5">Cloud Data Egress Guarantee</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-2xl font-extrabold text-primary font-sans">1600 Hz</div>
+            <div class="text-xs text-slate-400 mt-0.5">Real-Time Control Loop</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 3. STRATEGIC MILESTONE ROADMAP (DAYLIGHT #FFFFFF)                       -->
+    <!-- ======================================================================= -->
+    <section id="roadmap" class="relative py-24 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-6">
         
-        <!-- Identity & Badges -->
-        <div class="lg:col-span-5 flex flex-col items-start footer-col">
-          <div class="flex items-center gap-3.5 mb-5">
-            <img alt="Jaitraya TechnoLabs Logo" class="h-9 w-auto object-contain" src="assets/images/stitch/stitch_asset_23.jpg">
-            <div class="flex flex-col">
-              <span class="font-headline-sm text-[17px] font-bold tracking-[0.05em] text-white leading-tight">
-                JAITRAYA TECHNOLABS
-              </span>
-              <span class="font-label-structural text-[10px] uppercase tracking-[0.28em] text-neutral-400 leading-none mt-1">
-                IDEAS · INTELLIGENCE · IMPACT
-              </span>
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-blue-50 text-primary border border-blue-100/80 mb-3">
+              <span>INSTITUTIONAL HORIZONS &middot; 2024–2030</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-sans leading-tight">
+              Strategic Milestone Roadmap (2024–2030)
+            </h2>
+          </div>
+          <p class="text-slate-600 max-w-xl text-sm md:text-base leading-relaxed">
+            Multi-horizon R&amp;D trajectory delivering mission-critical sovereign software, physical robotic autonomy, and verifiable AI moderation platforms.
+          </p>
+        </div>
+
+        <!-- 4-Phase Roadmap Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Phase 1 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 relative group hover:border-primary/40 hover:bg-white hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-4">
+              <span>2024 &middot; PRODUCTION</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Foundational Platform Pilots</h3>
+            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+              Production rollout of Mulyankan AI across 14 state examination boards, processing over 120k script pages daily with deterministic step-marking.
+            </p>
+            <div class="pt-4 border-t border-slate-200/70 text-[11px] font-mono text-slate-500">
+              <span>Milestone: ISO 27001 &middot; UGC Approved</span>
             </div>
           </div>
-          <p class="font-body-muted text-sm text-neutral-400 max-w-sm mb-6 leading-relaxed">
-            Parent technology company engineering intelligent software systems, physical robotics, and applied artificial intelligence.
-          </p>
-          <div class="flex flex-wrap items-center gap-2.5">
-            <span class="font-label-structural text-[10px] tracking-wider uppercase px-2.5 py-1 rounded border border-neutral-800 bg-neutral-900/80 text-neutral-300">
-              ISO-27001 Certified
-            </span>
-            <span class="font-label-structural text-[10px] tracking-wider uppercase px-2.5 py-1 rounded border border-neutral-800 bg-neutral-900/80 text-neutral-300">
-              SOC-2 Type II Aligned
-            </span>
+
+          <!-- Phase 2 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 relative group hover:border-primary/40 hover:bg-white hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-blue-50 text-primary border border-blue-200 mb-4">
+              <span>2025 &middot; CURRENT</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">MIRA Offline Workstation</h3>
+            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+              Commercial delivery of air-gapped multimodal intelligence workstations for classified defense testbeds and scientific research laboratories.
+            </p>
+            <div class="pt-4 border-t border-slate-200/70 text-[11px] font-mono text-slate-500">
+              <span>Milestone: Zero-Egress Local Vectors</span>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 relative group hover:border-primary/40 hover:bg-white hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-purple-50 text-purple-700 border border-purple-200 mb-4">
+              <span>2027 &middot; PLANNED</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Multi-DoF Kinematics</h3>
+            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+              Deployment of 6-DoF robotic manipulators powered by hard real-time RTOS micro-kernels for automated laboratory and industrial sorting cells.
+            </p>
+            <div class="pt-4 border-t border-slate-200/70 text-[11px] font-mono text-slate-500">
+              <span>Milestone: 1600 Hz Actuation Loop</span>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 relative group hover:border-primary/40 hover:bg-white hover:shadow-lg transition-all duration-300">
+            <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200 mb-4">
+              <span>2030 &middot; VISION</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Sovereign Ecosystems</h3>
+            <p class="text-slate-600 text-xs leading-relaxed mb-4">
+              Fully autonomous nationwide sovereign digital and physical infrastructure resilient against global network disruption and external cloud dependency.
+            </p>
+            <div class="pt-4 border-t border-slate-200/70 text-[11px] font-mono text-slate-500">
+              <span>Milestone: Quantum-Resistant Grid</span>
+            </div>
           </div>
         </div>
 
-        <!-- Platforms -->
-        <div class="lg:col-span-2 lg:col-start-7 flex flex-col gap-3 footer-col">
-          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest">
-            Platforms
-          </span>
-          <ul class="flex flex-col gap-2 font-body-muted text-sm text-neutral-400">
-            <li><a class="hover:text-white transition-colors" href="products.html#mulyankan-deep-dive">Mulyankan AI</a></li>
-            <li><a class="hover:text-white transition-colors" href="products.html#mira-deep-dive">MIRA Engine</a></li>
-            <li><a class="hover:text-white transition-colors" href="solutions.html#software">Enterprise Software</a></li>
-            <li><a class="hover:text-white transition-colors" href="solutions.html#hardware">Robotics Systems</a></li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 4. INSTITUTIONAL TRI-PILLAR PHILOSOPHY (DAYLIGHT #F0F4FC)               -->
+    <!-- ======================================================================= -->
+    <section class="relative py-24 bg-[#F0F4FC] border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-blue-100 text-primary border border-blue-200/80 mb-3">
+              <span>FIRST-PRINCIPLES CULTURE &middot; CORE VALUES</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-sans leading-tight">
+              Institutional Tri-Pillar Philosophy
+            </h2>
+          </div>
+          <p class="text-slate-600 max-w-xl text-sm md:text-base leading-relaxed">
+            Every platform and engineering system authored at Jaitraya TechnoLabs adheres to three non-negotiable architectural mandates.
+          </p>
         </div>
 
-        <!-- Technology Anchors -->
-        <div class="lg:col-span-2 flex flex-col gap-3 footer-col">
-          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest">
-            Technology
-          </span>
-          <ul class="flex flex-col gap-2 font-body-muted text-sm text-neutral-400">
-            <li><a class="hover:text-white transition-colors" href="technology.html#computer-vision">Computer Vision</a></li>
-            <li><a class="hover:text-white transition-colors" href="technology.html#applied-ai">Applied AI</a></li>
-            <li><a class="hover:text-white transition-colors" href="technology.html#human-in-loop">Human-in-the-Loop</a></li>
-            <li><a class="hover:text-white transition-colors" href="solutions.html#ai">Zero-Egress Vector</a></li>
-          </ul>
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Pillar 1 -->
+          <div class="p-8 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-lg transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-2xl">bolt</span>
+            </div>
+            <div class="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-2">Pillar 01</div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Eliminating Structural Friction</h3>
+            <p class="text-slate-600 text-xs md:text-sm leading-relaxed">
+              We eliminate human fatigue, evaluator inconsistency, and architectural bloat by building zero-allocation runtimes and deterministic data pipelines that execute with microsecond precision.
+            </p>
+          </div>
 
-        <!-- Company Links -->
-        <div class="lg:col-span-2 flex flex-col gap-3 footer-col">
-          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest">
-            Company
-          </span>
-          <ul class="flex flex-col gap-2 font-body-muted text-sm text-neutral-400">
-            <li><a class="hover:text-white transition-colors" data-path="about-us" href="about.html">About Us</a></li>
-            <li><a class="hover:text-white transition-colors" href="about.html#team">Team Roster</a></li>
-            <li><a class="hover:text-white transition-colors" href="about.html#geo-nodes">Research Labs</a></li>
-            <li><a class="hover:text-white transition-colors" data-path="contact-us" href="contact.html">Contact Us</a></li>
-          </ul>
+          <!-- Pillar 2 -->
+          <div class="p-8 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-lg transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-2xl">settings_suggest</span>
+            </div>
+            <div class="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-2">Pillar 02</div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Hardware-Software Co-Design</h3>
+            <p class="text-slate-600 text-xs md:text-sm leading-relaxed">
+              True computational sovereignty requires direct control over silicon execution. We bridge the boundary between FPGA logic, RTOS microkernels, and distributed software backends.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="p-8 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-lg transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-primary flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-2xl">verified_user</span>
+            </div>
+            <div class="text-xs font-mono font-bold text-primary uppercase tracking-wider mb-2">Pillar 03</div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Responsible, Human-Governed Intelligence</h3>
+            <p class="text-slate-600 text-xs md:text-sm leading-relaxed">
+              We reject opaque black-box AI. Our platforms enforce auditable rubric alignments, deterministic confidence bounds, and teacher-in-the-loop oversight before any automated decision is committed.
+            </p>
+          </div>
         </div>
 
       </div>
+    </section>
 
-      <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <span class="font-label-structural text-xs text-neutral-400">
-          &copy; 2026 Jaitraya TechnoLabs. All rights reserved.
-        </span>
-        <div class="flex items-center gap-4 font-label-structural text-xs text-neutral-400">
-          <a class="hover:text-white transition-colors" href="legal/compliance.html">Compliance</a>
-          <span class="text-neutral-700">|</span>
-          <a class="hover:text-white transition-colors" href="legal/privacy.html">Privacy Policy (Zero-Egress)</a>
-          <span class="text-neutral-700">|</span>
-          <a class="hover:text-white transition-colors" href="legal/terms.html">Terms of Service</a>
-          <span class="text-neutral-700">|</span>
-          <a class="hover:text-white transition-colors" href="legal/cookies.html">Cookie Policy</a>
+    <!-- ======================================================================= -->
+    <!-- 5. PRINCIPAL TALENT & LEADERSHIP ROSTER (DAYLIGHT #FFFFFF)              -->
+    <!-- ======================================================================= -->
+    <section id="team" class="relative py-24 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-blue-50 text-primary border border-blue-100/80 mb-3">
+              <span>GOVERNANCE &middot; MULTIDISCIPLINARY TALENT</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-sans leading-tight">
+              Principal Engineering Talent &amp; Engineering Groups
+            </h2>
+          </div>
+          
+          <!-- Carousel Navigation Controls -->
+          <div class="flex items-center gap-3">
+            <button id="autoplay-toggle-btn" type="button" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors" aria-label="Toggle carousel autoplay">
+              <span id="autoplay-icon" class="material-symbols-outlined text-sm">pause</span>
+              <span id="autoplay-status-text">Pause Autoplay</span>
+            </button>
+            <button id="team-prev" type="button" class="w-10 h-10 rounded-full border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-700 transition-colors shadow-xs" aria-label="Previous leadership profile">
+              <span class="material-symbols-outlined text-lg">arrow_back</span>
+            </button>
+            <button id="team-next" type="button" class="w-10 h-10 rounded-full border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-700 transition-colors shadow-xs" aria-label="Next leadership profile">
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+          </div>
         </div>
+
+        <!-- Carousel Progress Bar -->
+        <div class="w-full bg-slate-100 h-1 rounded-full mb-8 overflow-hidden">
+          <div id="carousel-progress-bar" class="bg-primary h-full w-1/4 transition-all duration-300"></div>
+        </div>
+
+        <!-- Carousel Slider Track Container -->
+        <div class="relative overflow-hidden">
+          <div id="team-slider" class="carousel-track grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Leader 1 -->
+            <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col justify-between hover:border-primary/40 hover:bg-white hover:shadow-lg transition-all duration-300">
+              <div>
+                <div class="w-16 h-16 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-xl font-bold font-sans mb-6 shadow-md">
+                  VS
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Vikramaditya S.</h3>
+                <div class="text-xs font-mono text-primary font-semibold uppercase tracking-wider mt-1">Chief Architect &middot; Systems Principal</div>
+                <p class="text-slate-600 text-xs leading-relaxed mt-4">
+                  Former distributed systems infrastructure engineer specializing in zero-allocation network runtimes, Raft consensus protocols, and enterprise backend fault tolerance.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-200/70 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                <span>Discipline</span>
+                <span class="font-bold text-slate-700">Distributed Core</span>
+              </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col justify-between hover:border-primary/40 hover:bg-white hover:shadow-lg transition-all duration-300">
+              <div>
+                <div class="w-16 h-16 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-xl font-bold font-sans mb-6 shadow-md">
+                  AM
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Dr. Ananya Mukherjee</h3>
+                <div class="text-xs font-mono text-primary font-semibold uppercase tracking-wider mt-1">Head of Applied AI &middot; Vision Networks</div>
+                <p class="text-slate-600 text-xs leading-relaxed mt-4">
+                  Ph.D. in Computer Vision &amp; Document Analysis. Architect of unconstrained handwriting vision transformer pipelines and deterministic multi-tiered rubric correlation networks.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-200/70 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                <span>Discipline</span>
+                <span class="font-bold text-slate-700">Vision &amp; Transformers</span>
+              </div>
+            </div>
+
+            <!-- Leader 3 -->
+            <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/90 flex flex-col justify-between hover:border-primary/40 hover:bg-white hover:shadow-lg transition-all duration-300">
+              <div>
+                <div class="w-16 h-16 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-xl font-bold font-sans mb-6 shadow-md">
+                  RN
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Rajesh K. Nair</h3>
+                <div class="text-xs font-mono text-primary font-semibold uppercase tracking-wider mt-1">Director of Embedded Hardware &middot; Robotics</div>
+                <p class="text-slate-600 text-xs leading-relaxed mt-4">
+                  Specialist in hard real-time RTOS microkernels, FPGA kinematics execution, and industrial EtherCAT actuator integration for articulated manipulator arms.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-200/70 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                <span>Discipline</span>
+                <span class="font-bold text-slate-700">Kinematics &amp; RTOS</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Slider Pagination & Indicator -->
+        <div class="flex items-center justify-between mt-6 pt-6 border-t border-slate-100">
+          <div id="team-counter" class="text-xs font-mono text-slate-500">Showing 1 to 3 of 4 Principals</div>
+          <div id="team-dots" class="flex items-center gap-1.5">
+            <span class="w-6 h-1.5 rounded-full bg-primary"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-200"></span>
+          </div>
+        </div>
+
+        <!-- Talent Acquisition Career Banner -->
+        <div class="mt-16 p-8 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+          <div>
+            <div class="text-xs font-mono text-primary uppercase font-bold tracking-wider mb-1">CAREERS IN SOVEREIGN ENGINEERING</div>
+            <h4 class="text-2xl font-bold text-white">Join Our Core Systems &amp; Robotics Engineering Groups</h4>
+            <p class="text-slate-400 text-xs md:text-sm max-w-xl mt-1 leading-relaxed">
+              We are actively hiring systems engineers, embedded RTOS architects, and computer vision researchers committed to solving difficult physical and digital problems.
+            </p>
+          </div>
+          <a href="contact.html?type=careers" class="btn-pill-primary inline-flex items-center gap-2 px-6 py-3 text-xs whitespace-nowrap">
+            <span>Explore Engineering Careers</span>
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 6. GEOGRAPHIC TOPOLOGY & DEPLOYMENT NODES (DAYLIGHT #F0F4FC)            -->
+    <!-- ======================================================================= -->
+    <section id="geo-nodes" class="relative py-24 bg-[#F0F4FC] border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-blue-100 text-primary border border-blue-200/80 mb-3">
+              <span>GEOGRAPHIC DEPLOYMENT TOPOLOGY</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-sans leading-tight">
+              Active Nodes &amp; Institutional Infrastructure
+            </h2>
+          </div>
+          <p class="text-slate-600 max-w-xl text-sm md:text-base leading-relaxed">
+            Operating research labs, high-consequence hardware prototyping benches, and secure evaluation enclaves across primary engineering hubs.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-xs">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-primary uppercase">Node 01 &middot; Core R&amp;D Lab</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Bangalore, Karnataka</h3>
+            <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+              Primary algorithms laboratory, unconstrained handwriting OCR training cluster, and high-concurrency distributed backend validation facility.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-xs">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-primary uppercase">Node 02 &middot; Robotics Prototyping</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Pune, Maharashtra</h3>
+            <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+              Hardware testbeds, 6-DoF manipulator arm calibration manifolds, hard real-time RTOS jitter testing benches, and sensor fusion chambers.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-xs">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-primary uppercase">Node 03 &middot; Institutional Liaison</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">New Delhi, NCR</h3>
+            <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+              Defense technology liaison, state university examination council coordination center, and sovereign compliance audit operations.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 7. PRE-FOOTER CTA: OLED (#000000) CANVAS                                -->
+    <!-- ======================================================================= -->
+    <section class="relative py-24 bg-black text-white text-center overflow-hidden">
+      <div class="absolute inset-0 bg-primary/10 blur-[130px] pointer-events-none"></div>
+      <div class="relative max-w-4xl mx-auto px-6">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 text-primary border border-white/15 mb-6">
+          <span>PARTNER WITH JAITRAYA</span>
+        </span>
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight font-sans text-white mb-6">
+          Architecting High-Consequence Realities.
+        </h2>
+        <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+          Whether you are evaluating automated exam evaluation for your university system or architecting sovereign bare-metal intelligence for classified enclaves, our principals are ready to engage.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="contact.html" class="btn-pill-primary inline-flex items-center gap-2 px-8 py-3.5 text-sm font-semibold">
+            <span>Initiate Direct Dialogue</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+          <a href="products.html" class="btn-pill-secondary inline-flex items-center gap-2 px-8 py-3.5 text-sm font-medium">
+            <span>Explore Flagship Platforms</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================= -->
+  <!-- 8. GLOBAL FOOTER (SYNCHRONIZED WITH INDEX.HTML)                         -->
+  <!-- ======================================================================= -->
+  <footer class="bg-black text-white border-t border-white/10 py-16 px-6 font-sans">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+      
+      <!-- Col 1: Brand & Identity -->
+      <div class="lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-3 mb-6">
+          <img src="assets/images/logos/official/jaitraya-logo-light.png" alt="Jaitraya Logo" class="h-8 w-auto object-contain">
+          <span class="font-bold text-base tracking-tight text-white">JAITRAYA TECHNOLABS</span>
+        </a>
+        <p class="text-slate-400 text-xs leading-relaxed max-w-sm mb-6">
+          Engineering reliable software infrastructure, physical robotics, and applied artificial intelligence designed to eliminate structural operational friction.
+        </p>
+        <div class="text-[11px] font-mono text-slate-500">
+          <span>Sovereign Enclaves &middot; Zero Fault Tolerance</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Flagship Products -->
+      <div>
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-mono">Flagship Platforms</h4>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li><a href="products.html" class="hover:text-white transition-colors">Platform Portfolio</a></li>
+          <li><a href="products.html#mulyankan-deep-dive" class="hover:text-white transition-colors">Mulyankan AI</a></li>
+          <li><a href="products.html#mira-deep-dive" class="hover:text-white transition-colors">MIRA Workstation</a></li>
+          <li><a href="mulyankan-ai.html" class="hover:text-white transition-colors">Mulyankan Showcase</a></li>
+          <li><a href="mira.html" class="hover:text-white transition-colors">MIRA Deep Dive</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Core Disciplines -->
+      <div>
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-mono">Disciplines</h4>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li><a href="solutions.html#software" class="hover:text-white transition-colors">Custom Software</a></li>
+          <li><a href="solutions.html#hardware" class="hover:text-white transition-colors">Hardware &amp; Robotics</a></li>
+          <li><a href="solutions.html#ai" class="hover:text-white transition-colors">Applied AI</a></li>
+          <li><a href="solutions.html#emerging-rd" class="hover:text-white transition-colors">Emerging R&amp;D</a></li>
+          <li><a href="technology.html#computer-vision" class="hover:text-white transition-colors">Computer Vision</a></li>
+          <li><a href="technology.html#applied-ai" class="hover:text-white transition-colors">Applied AI Engine</a></li>
+          <li><a href="technology.html#human-in-loop" class="hover:text-white transition-colors">Human-in-the-Loop</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Corporate & Governance -->
+      <div>
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-mono">Governance</h4>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li><a href="about.html" class="hover:text-white transition-colors">About Jaitraya</a></li>
+          <li><a href="about.html#team" class="hover:text-white transition-colors">Leadership Team</a></li>
+          <li><a href="about.html#geo-nodes" class="hover:text-white transition-colors">Global Presence</a></li>
+          <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          <li><a href="legal/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="legal/terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+          <li><a href="legal/compliance.html" class="hover:text-white transition-colors">Compliance &amp; Security</a></li>
+          <li><a href="legal/cookies.html" class="hover:text-white transition-colors">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Legal Bar -->
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+      <div>&copy; 2026 Jaitraya TechnoLabs Private Limited. All rights reserved.</div>
+      <div class="flex items-center gap-6">
+        <a href="legal/privacy.html" class="hover:text-slate-400 transition-colors">Privacy</a>
+        <a href="legal/terms.html" class="hover:text-slate-400 transition-colors">Terms</a>
+        <a href="legal/compliance.html" class="hover:text-slate-400 transition-colors">Security</a>
+        <a href="legal/cookies.html" class="hover:text-slate-400 transition-colors">Cookies</a>
       </div>
     </div>
   </footer>
 
-
-
-
-
-<script>
-    // 1. SMART NAVBAR SCROLL LOGIC
-    (function() {
-      const header = document.getElementById('site-header');
-      const logo = document.getElementById('header-logo');
-      const title = document.getElementById('header-brand-title');
-      const subtitle = document.getElementById('header-brand-subtitle');
-      const links = document.querySelectorAll('.desktop-nav .nav-capsule-link');
-      const menuBtn = document.getElementById('mobile-menu-btn');
-      const hero = document.getElementById('hero-section');
-
-      function onScroll() {
-        const heroHeight = hero ? hero.offsetHeight : 500;
-        const triggerThreshold = hero ? (heroHeight - 88) : 80;
-        const isPastHero = window.scrollY >= triggerThreshold;
-
-        if (isPastHero) {
-          header.style.backgroundColor = 'rgba(255, 255, 255, 0.94)';
-          header.style.backdropFilter = 'blur(16px)';
-          header.style.borderBottomColor = 'rgba(226, 232, 240, 0.9)';
-          header.style.boxShadow = '0 4px 20px -2px rgba(0, 0, 0, 0.05)';
-          if (logo && logo.dataset.lightSrc) logo.src = logo.dataset.lightSrc;
-          if (title) title.style.color = '#03224d';
-          if (subtitle) subtitle.style.color = '#64748b';
-          if (menuBtn) {
-            menuBtn.style.color = '#03224d';
-            menuBtn.style.borderColor = '#cbd5e1';
-          }
-          links.forEach(link => {
-            if (link.classList.contains('active-link')) {
-              link.style.color = '#03224d';
-              link.style.backgroundColor = 'rgba(3, 34, 77, 0.08)';
-            } else {
-              link.style.color = '#475569';
-              link.style.backgroundColor = 'transparent';
-            }
-          });
-        } else {
-          header.style.backgroundColor = 'rgba(0, 0, 0, 0.45)';
-          header.style.backdropFilter = 'blur(14px)';
-          header.style.borderBottomColor = 'transparent';
-          header.style.boxShadow = 'none';
-          if (logo && logo.dataset.darkSrc) logo.src = logo.dataset.darkSrc;
-          if (title) title.style.color = '#ffffff';
-          if (subtitle) subtitle.style.color = '#a3a3a3';
-          if (menuBtn) {
-            menuBtn.style.color = '#ffffff';
-            menuBtn.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-          }
-          links.forEach(link => {
-            if (link.classList.contains('active-link')) {
-              link.style.color = '#ffffff';
-              link.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-            } else {
-              link.style.color = '#d4d4d4';
-              link.style.backgroundColor = 'transparent';
-            }
-          });
-        }
-      }
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', onScroll, { passive: true });
-      onScroll();
-
-      // Mobile Drawer Toggle
-      const toggle = document.getElementById('mobile-menu-btn');
-      const drawer = document.getElementById('mobile-drawer');
-      const overlay = document.getElementById('mobile-drawer-overlay');
-      const closeBtn = document.getElementById('drawer-close-btn');
-
-      if (toggle && drawer && overlay && closeBtn) {
-        toggle.addEventListener('click', function() {
-          drawer.classList.remove('translate-x-full');
-          overlay.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-          toggle.setAttribute('aria-expanded', 'true');
-        });
-
-        function closeMenu() {
-          drawer.classList.add('translate-x-full');
-          overlay.classList.add('hidden');
-          document.body.style.overflow = '';
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-
-        closeBtn.addEventListener('click', closeMenu);
-        overlay.addEventListener('click', closeMenu);
-      }
-    })();
-
-    // 2. MODERN PRODUCT AUTO-SLIDER CONTROLLER
-    const slides = ['mulyankan', 'mira'];
-    let currentSlideIdx = 0;
-    let autoSlideTimer = null;
-    const SLIDE_INTERVAL_MS = 6000;
-
-    function renderSlide(idx) {
-      currentSlideIdx = (idx + slides.length) % slides.length;
-      const activeKey = slides[currentSlideIdx];
-
-      slides.forEach(key => {
-        const slideEl = document.getElementById('slide-' + key);
-        const tabEl = document.getElementById('tab-' + key);
-        const dotEl = document.getElementById('dot-' + key);
-        if (!slideEl || !tabEl) return;
-
-        if (key === activeKey) {
-          slideEl.classList.remove('slide-hidden');
-          slideEl.classList.add('slide-active');
-          tabEl.classList.add('bg-primary', 'text-white', 'shadow-sm');
-          tabEl.classList.remove('text-slate-600', 'hover:bg-white');
-          if (dotEl) {
-            dotEl.classList.add('bg-primary', 'w-6');
-            dotEl.classList.remove('bg-slate-300', 'w-2.5');
-          }
-        } else {
-          slideEl.classList.add('slide-hidden');
-          slideEl.classList.remove('slide-active');
-          tabEl.classList.remove('bg-primary', 'text-white', 'shadow-sm');
-          tabEl.classList.add('text-slate-600', 'hover:bg-white');
-          if (dotEl) {
-            dotEl.classList.remove('bg-primary', 'w-6');
-            dotEl.classList.add('bg-slate-300', 'w-2.5');
-          }
-        }
-      });
-    }
-
-    function switchProductSlide(key) {
-      const idx = slides.indexOf(key);
-      if (idx !== -1) {
-        renderSlide(idx);
-        restartAutoSlide();
-      }
-    }
-
-    function nextProductSlide() {
-      renderSlide(currentSlideIdx + 1);
-    }
-
-    function prevProductSlide() {
-      renderSlide(currentSlideIdx - 1);
-    }
-
-    function startAutoSlide() {
-      if (autoSlideTimer) clearInterval(autoSlideTimer);
-      autoSlideTimer = setInterval(() => {
-        nextProductSlide();
-      }, SLIDE_INTERVAL_MS);
-    }
-
-    function pauseAutoSlide() {
-      if (autoSlideTimer) clearInterval(autoSlideTimer);
-    }
-
-    function resumeAutoSlide() {
-      startAutoSlide();
-    }
-
-    function restartAutoSlide() {
-      pauseAutoSlide();
-      startAutoSlide();
-    }
-
-    startAutoSlide();
-
-    // 3. SCROLL REVEAL INTERSECTION OBSERVER
-    (function() {
-      if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('revealed');
-            }
-          });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-        document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
-      } else {
-        document.querySelectorAll('.scroll-reveal').forEach(el => el.classList.add('revealed'));
-      }
-    })();
-  </script>
-</body></html>
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
