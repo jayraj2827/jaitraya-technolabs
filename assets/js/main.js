@@ -598,4 +598,17 @@ document.addEventListener('DOMContentLoaded', () => {
       card.addEventListener('mouseleave', onMouseLeave, { passive: true });
     });
   }
+
+  // ==========================================================================
+  // 12. Live Telemetry Counter Controller (Stitch Precision)
+  // ==========================================================================
+  const counterEl = document.getElementById('active-nodes-counter');
+  if (counterEl) {
+    let count = 14820;
+    setInterval(() => {
+      const delta = Math.floor(Math.random() * 5) - 2;
+      count = Math.max(14800, count + delta);
+      counterEl.textContent = count.toLocaleString();
+    }, 3200);
+  }
 });
