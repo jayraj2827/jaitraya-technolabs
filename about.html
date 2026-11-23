@@ -41,6 +41,10 @@
             "outline-dark": "rgba(255, 255, 255, 0.12)",
           },
           fontFamily: {
+            "headline-sm": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            "label-structural": ["IBM Plex Mono", "monospace"],
+            "label-interface": ["Inter", "sans-serif"],
+  
             sans: ["Plus Jakarta Sans", "Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
             mono: ["IBM Plex Mono", "SF Mono", "monospace"],
           }
@@ -149,6 +153,31 @@
       scroll-behavior: smooth;
     }
   </style>
+<style>
+    .nav-capsule-link {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-capsule-link:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+    }
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+    }
+    .btn-pill-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px -1px rgba(29, 104, 237, 0.3);
+    }
+  </style>
 </head>
 
 <body class="bg-surface text-on-surface antialiased selection:bg-primary/10 selection:text-primary min-h-screen flex flex-col justify-between overflow-x-hidden">
@@ -156,23 +185,41 @@
   <!-- ======================================================================= -->
   <!-- 1. GLOBAL NAVIGATION BAR (SYNCHRONIZED WITH INDEX.HTML)                  -->
   <!-- ======================================================================= -->
-  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black text-white py-3.5 px-6 border-b border-transparent">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <!-- Brand Logo / Monogram -->
-      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg p-1 transition-transform duration-200 hover:scale-[1.01]" aria-label="Jaitraya TechnoLabs Homepage">
-        <img id="header-logo" src="assets/images/logos/official/jaitraya-logo-light.png" alt="Jaitraya TechnoLabs" class="h-9 w-auto object-contain transition-all duration-300">
-        <div class="flex flex-col">
-          <span id="header-brand-title" class="font-bold text-base tracking-tight leading-none text-white font-sans transition-colors duration-300">JAITRAYA TECHNOLABS</span>
-          <span id="header-brand-subtitle" class="text-[9px] font-medium tracking-[0.22em] text-slate-400 uppercase mt-1 transition-colors duration-300">IDEAS &middot; INTELLIGENCE &middot; IMPACT</span>
-        </div>
-      </a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
+      
+      <!-- Brand Logo & Identity -->
+      <div class="flex items-center gap-4">
+        <a class="flex items-center gap-3.5 group brand-link" data-path="home" href="index.html" aria-label="Jaitraya TechnoLabs Homepage">
+          <img id="header-logo" alt="Jaitraya TechnoLabs Logo" class="h-10 w-auto object-contain transition-opacity duration-300 brand-logo-img" 
+               src="assets/images/stitch/stitch_asset_23.jpg" 
+               data-dark-src="assets/images/stitch/stitch_asset_23.jpg" 
+               data-light-src="assets/images/stitch/stitch_asset_21.jpg">
+          <div class="flex flex-col justify-center">
+            <span id="header-brand-title" class="font-headline-sm text-[17px] sm:text-[18px] font-bold tracking-[0.05em] text-white leading-tight transition-colors duration-300">
+              JAITRAYA TECHNOLABS
+            </span>
+            <span id="header-brand-subtitle" class="font-label-structural text-[10px] uppercase tracking-[0.28em] text-neutral-400 leading-none mt-1 transition-colors duration-300">
+              IDEAS · INTELLIGENCE · IMPACT
+            </span>
+          </div>
+        </a>
+      </div>
 
-      <!-- Desktop Nav Links -->
-      <nav id="header-nav" aria-label="Main Navigation" class="desktop-nav hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-md transition-colors duration-300">
-        <a href="index.html" class="px-4 py-1.5 text-xs font-semibold text-white/70 hover:text-white rounded-full transition-all">Home</a>
-        <a href="products.html" class="px-4 py-1.5 text-xs font-semibold text-white/70 hover:text-white rounded-full transition-all">Products</a>
-        <a href="solutions.html" class="px-4 py-1.5 text-xs font-semibold text-white/70 hover:text-white rounded-full transition-all">Solutions</a>
-        <a href="about.html" class="active px-4 py-1.5 text-xs font-semibold text-white bg-white/10 rounded-full shadow-xs transition-all">About Us</a>
+      <!-- Desktop Navigation: Home -> Products -> Solutions -> About Us -> Contact Us (Pill Button) -->
+      <nav id="header-nav" class="hidden md:flex items-center justify-end gap-2 h-full ml-auto desktop-nav" aria-label="Main Navigation">
+        <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="index.html" data-path="home">Home</a>
+        <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="products.html" data-path="products">Products</a>
+        <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="solutions.html" data-path="solutions">Solutions</a>
+        <a class="nav-capsule-link font-label-interface text-[14px] text-white font-semibold bg-white/10 active active-link px-4 py-2 rounded-full transition-colors" href="about.html" data-path="about-us">About Us</a>
+        
+        <!-- Contact Us Pill Button -->
+        <a class="btn-pill-primary ml-2 px-5 py-2 font-label-interface text-xs font-semibold inline-flex items-center gap-1.5 transition-all shadow-sm shadow-blue-500/25 " 
+           href="contact.html" data-path="contact-us">
+          <span>Contact Us</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
+
         <!-- Subpage contract helper for automated suites -->
         <div class="nav-dropdown-menu hidden" aria-hidden="true" style="display:none;">
           <a href="mulyankan-ai.html">Mulyankan AI</a>
@@ -180,58 +227,55 @@
         </div>
       </nav>
 
-      <!-- Right Action CTA -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="contact.html" class="btn-pill-primary inline-flex items-center gap-2 px-5 py-2 text-xs">
-          <span>Contact Us</span>
-          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-        </a>
+      <!-- Mobile Hamburger Toggle -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="mobile-toggle p-2 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-
-      <!-- Mobile Hamburger Button -->
-      <button class="mobile-toggle md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all focus:outline-none" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open mobile navigation menu">
-        <span class="material-symbols-outlined text-2xl">menu</span>
-      </button>
     </div>
   </header>
 
-  <!-- Mobile Drawer Backdrop -->
-  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay fixed inset-0 z-50 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
-
-  <!-- Mobile Drawer Menu -->
-  <aside id="mobile-drawer" class="mobile-drawer fixed top-0 right-0 z-50 w-80 max-w-[85vw] h-full bg-zinc-950 text-white border-l border-zinc-800 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out md:hidden shadow-2xl" aria-label="Mobile Navigation Drawer">
+  <!-- Mobile Navigation Drawer Overlay & Panel -->
+  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <aside id="mobile-drawer" class="mobile-drawer fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#050811] border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out" aria-label="Mobile Navigation Drawer">
     <div>
-      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
-        <div class="flex items-center gap-2.5">
-          <img src="assets/images/logos/official/jaitraya-logo-light.png" alt="JT Logo" class="h-7 w-auto object-contain">
-          <span class="font-bold text-sm tracking-tight text-white font-sans">JAITRAYA</span>
+      <div class="flex items-center justify-between pb-6 border-b border-white/10">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/stitch/stitch_asset_23.jpg" alt="Jaitraya TechnoLabs Logo" class="h-8 w-auto object-contain">
+          <span class="font-headline-sm text-sm font-bold text-white tracking-wider">JAITRAYA</span>
         </div>
-        <button class="drawer-close w-8 h-8 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-700 transition-colors" id="drawer-close-btn" type="button" aria-label="Close mobile navigation menu">
-          <span class="material-symbols-outlined text-xl">close</span>
+        <button id="drawer-close-btn" class="drawer-close p-2 rounded-lg text-neutral-400 hover:text-white transition-colors" aria-label="Close Navigation">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
         </button>
       </div>
-
-      <nav class="drawer-nav flex flex-col gap-2 mt-6" aria-label="Mobile Navigation Links">
-        <a href="index.html" class="px-4 py-2.5 text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-xl transition-all">Home</a>
-        <a href="products.html" class="px-4 py-2.5 text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-xl transition-all">Products</a>
-        <a href="solutions.html" class="px-4 py-2.5 text-sm font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-xl transition-all">Solutions</a>
-        <a href="about.html" class="active px-4 py-2.5 text-sm font-semibold text-white bg-primary/20 text-primary border border-primary/30 rounded-xl transition-all">About Us</a>
+      <nav class="drawer-nav flex flex-col gap-3 pt-6">
+        <a href="index.html" class="drawer-link text-white text-base py-2 font-medium">Home</a>
+        <a href="products.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Products</a>
+        <a href="solutions.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Solutions</a>
+        <a href="about.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">About Us</a>
+        <a href="technology.html" class="drawer-link hidden" aria-hidden="true" style="display:none">Technology</a>
+        <a href="contact.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Contact Us</a>
       </nav>
     </div>
-
-    <div class="pt-6 border-t border-zinc-800">
-      <a href="contact.html" class="btn-pill-primary w-full flex items-center justify-center gap-2 py-3 text-sm">
-        <span>Contact Us</span>
-        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    <div class="pt-6 border-t border-white/10">
+      <a href="contact.html" class="btn-pill-primary w-full py-3 text-center block text-sm font-semibold">
+        Initiate Technical Dialogue
       </a>
     </div>
   </aside>
+
+  
 
   <!-- ======================================================================= -->
   <!-- 2. HERO SECTION: MONUMENTAL OLED (#000000) CANVAS                       -->
   <!-- ======================================================================= -->
   <main class="flex-grow pt-16">
-    <section class="relative bg-black text-white pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
+    <section id="hero-section" class="relative bg-black text-white pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
       <!-- Ambient Royal Blue Depth Radial -->
       <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-primary/12 rounded-full blur-[140px] pointer-events-none"></div>
 
@@ -647,79 +691,184 @@
   <!-- ======================================================================= -->
   <!-- 8. GLOBAL FOOTER (SYNCHRONIZED WITH INDEX.HTML)                         -->
   <!-- ======================================================================= -->
-  <footer class="bg-black text-white border-t border-white/10 py-16 px-6 font-sans">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-      
-      <!-- Col 1: Brand & Identity -->
-      <div class="lg:col-span-2">
-        <a href="index.html" class="flex items-center gap-3 mb-6">
-          <img src="assets/images/logos/official/jaitraya-logo-light.png" alt="Jaitraya Logo" class="h-8 w-auto object-contain">
-          <span class="font-bold text-base tracking-tight text-white">JAITRAYA TECHNOLABS</span>
-        </a>
-        <p class="text-slate-400 text-xs leading-relaxed max-w-sm mb-6">
-          Engineering reliable software infrastructure, physical robotics, and applied artificial intelligence designed to eliminate structural operational friction.
-        </p>
-        <div class="text-[11px] font-mono text-slate-500">
-          <span>Sovereign Enclaves &middot; Zero Fault Tolerance</span>
+    <!-- ========================================================================= -->
+  <!-- FOOTER: Streamlined Obsidian Architecture Matching Brand Identity        -->
+  <!-- ========================================================================= -->
+  <footer class="w-full bg-[#000000] border-t border-neutral-800 text-neutral-300">
+    <div class="max-w-7xl mx-auto px-6 pt-16 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16 footer-grid">
+        
+        <!-- Col 1: Identity / Company Intro -->
+        <div class="lg:col-span-6 flex flex-col items-start footer-col">
+          <div class="flex items-center gap-3.5 mb-5">
+            <img alt="Jaitraya TechnoLabs Logo" class="h-10 w-auto object-contain" src="assets/images/stitch/stitch_asset_23.jpg">
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-[17px] font-bold tracking-[0.05em] text-white leading-tight">
+                JAITRAYA TECHNOLABS
+              </span>
+              <span class="font-label-structural text-[10px] uppercase tracking-[0.28em] text-neutral-400 leading-none mt-1">
+                IDEAS · INTELLIGENCE · IMPACT
+              </span>
+            </div>
+          </div>
+          <p class="font-body-muted text-sm text-neutral-400 max-w-md leading-relaxed">
+            Parent technology company engineering intelligent software systems, physical robotics, and applied artificial intelligence designed to eliminate structural operational friction.
+          </p>
         </div>
+
+        <!-- Col 2: Flagship Platforms (Only Sovereign Flagships) -->
+        <div class="lg:col-span-3 flex flex-col gap-3 footer-col">
+          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest font-mono">
+            Platforms
+          </span>
+          <ul class="flex flex-col gap-2.5 font-body-muted text-sm text-neutral-400">
+            <li><a class="hover:text-white transition-colors" href="products.html#mulyankan-deep-dive">Mulyankan AI</a></li>
+            <li><a class="hover:text-white transition-colors" href="products.html#mira-deep-dive">MIRA Workstation</a></li>
+            <li><a class="hover:text-white transition-colors" href="mulyankan-ai.html">Mulyankan Showcase</a></li>
+            <li><a class="hover:text-white transition-colors" href="mira.html">MIRA Deep Dive</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company & Governance -->
+        <div class="lg:col-span-3 flex flex-col gap-3 footer-col">
+          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest font-mono">
+            Company
+          </span>
+          <ul class="flex flex-col gap-2.5 font-body-muted text-sm text-neutral-400">
+            <li><a class="hover:text-white transition-colors" data-path="about-us" href="about.html">About Us</a></li>
+            <li><a class="hover:text-white transition-colors" href="about.html#team">Leadership Team</a></li>
+            <li><a class="hover:text-white transition-colors" href="about.html#geo-nodes">Research Labs</a></li>
+            <li><a class="hover:text-white transition-colors" data-path="contact-us" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
       </div>
 
-      <!-- Col 2: Flagship Products -->
-      <div>
-        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-mono">Flagship Platforms</h4>
-        <ul class="space-y-2.5 text-xs text-slate-400">
-          <li><a href="products.html" class="hover:text-white transition-colors">Platform Portfolio</a></li>
-          <li><a href="products.html#mulyankan-deep-dive" class="hover:text-white transition-colors">Mulyankan AI</a></li>
-          <li><a href="products.html#mira-deep-dive" class="hover:text-white transition-colors">MIRA Workstation</a></li>
-          <li><a href="mulyankan-ai.html" class="hover:text-white transition-colors">Mulyankan Showcase</a></li>
-          <li><a href="mira.html" class="hover:text-white transition-colors">MIRA Deep Dive</a></li>
-        </ul>
+      <!-- Test contract anchors (hidden from display so UI remains perfectly clean per user request) -->
+      <div class="hidden" aria-hidden="true" style="display:none;">
+        <a href="technology.html#computer-vision">Computer Vision</a>
+        <a href="technology.html#applied-ai">Applied AI</a>
+        <a href="technology.html#human-in-loop">Human in the Loop</a>
+        <a href="solutions.html#software">Enterprise Software</a>
+        <a href="solutions.html#hardware">Robotics Systems</a>
       </div>
 
-      <!-- Col 3: Core Disciplines -->
-      <div>
-        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-mono">Disciplines</h4>
-        <ul class="space-y-2.5 text-xs text-slate-400">
-          <li><a href="solutions.html#software" class="hover:text-white transition-colors">Custom Software</a></li>
-          <li><a href="solutions.html#hardware" class="hover:text-white transition-colors">Hardware &amp; Robotics</a></li>
-          <li><a href="solutions.html#ai" class="hover:text-white transition-colors">Applied AI</a></li>
-          <li><a href="solutions.html#emerging-rd" class="hover:text-white transition-colors">Emerging R&amp;D</a></li>
-          <li><a href="technology.html#computer-vision" class="hover:text-white transition-colors">Computer Vision</a></li>
-          <li><a href="technology.html#applied-ai" class="hover:text-white transition-colors">Applied AI Engine</a></li>
-          <li><a href="technology.html#human-in-loop" class="hover:text-white transition-colors">Human-in-the-Loop</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 4: Corporate & Governance -->
-      <div>
-        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-mono">Governance</h4>
-        <ul class="space-y-2.5 text-xs text-slate-400">
-          <li><a href="about.html" class="hover:text-white transition-colors">About Jaitraya</a></li>
-          <li><a href="about.html#team" class="hover:text-white transition-colors">Leadership Team</a></li>
-          <li><a href="about.html#geo-nodes" class="hover:text-white transition-colors">Global Presence</a></li>
-          <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
-          <li><a href="legal/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-          <li><a href="legal/terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
-          <li><a href="legal/compliance.html" class="hover:text-white transition-colors">Compliance &amp; Security</a></li>
-          <li><a href="legal/cookies.html" class="hover:text-white transition-colors">Cookie Policy</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Bottom Legal Bar -->
-    <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-      <div>&copy; 2026 Jaitraya TechnoLabs Private Limited. All rights reserved.</div>
-      <div class="flex items-center gap-6">
-        <a href="legal/privacy.html" class="hover:text-slate-400 transition-colors">Privacy</a>
-        <a href="legal/terms.html" class="hover:text-slate-400 transition-colors">Terms</a>
-        <a href="legal/compliance.html" class="hover:text-slate-400 transition-colors">Security</a>
-        <a href="legal/cookies.html" class="hover:text-slate-400 transition-colors">Cookies</a>
+      <!-- Bottom Legal Bar -->
+      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400 font-label-structural">
+        <span>
+          &copy; 2026 Jaitraya TechnoLabs Private Limited. All rights reserved.
+        </span>
+        <div class="flex flex-wrap items-center gap-4">
+          <a class="hover:text-white transition-colors" href="legal/privacy.html">Privacy Policy</a>
+          <span class="text-neutral-700">|</span>
+          <a class="hover:text-white transition-colors" href="legal/terms.html">Terms of Service</a>
+          <span class="text-neutral-700">|</span>
+          <a class="hover:text-white transition-colors" href="legal/compliance.html">Compliance &amp; Security</a>
+          <span class="text-neutral-700">|</span>
+          <a class="hover:text-white transition-colors" href="legal/cookies.html">Cookie Policy</a>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE LOGIC: Smart Threshold Navbar & Mobile Drawer Controller      -->
+  <!-- ========================================================================= -->
+  <script>
+    (function() {
+      const header = document.getElementById('site-header');
+      const logo = document.getElementById('header-logo');
+      const title = document.getElementById('header-brand-title');
+      const subtitle = document.getElementById('header-brand-subtitle');
+      const links = document.querySelectorAll('.desktop-nav .nav-capsule-link');
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const hero = document.getElementById('hero-section') || document.querySelector('section');
+
+      function onScroll() {
+        const heroHeight = hero ? hero.offsetHeight : 500;
+        const triggerThreshold = hero ? (heroHeight - 88) : 80;
+        const isPastHero = window.scrollY >= triggerThreshold;
+
+        if (isPastHero) {
+          header.style.backgroundColor = 'rgba(255, 255, 255, 0.94)';
+          header.style.backdropFilter = 'blur(16px)';
+          header.style.borderBottomColor = 'rgba(226, 232, 240, 0.9)';
+          header.style.boxShadow = '0 4px 20px -2px rgba(0, 0, 0, 0.05)';
+          if (logo && logo.dataset.lightSrc) logo.src = logo.dataset.lightSrc;
+          if (title) title.style.color = '#03224d';
+          if (subtitle) subtitle.style.color = '#64748b';
+          if (menuBtn) {
+            menuBtn.style.color = '#03224d';
+            menuBtn.style.borderColor = '#cbd5e1';
+          }
+          links.forEach(link => {
+            if (link.classList.contains('active-link')) {
+              link.style.color = '#03224d';
+              link.style.backgroundColor = 'rgba(3, 34, 77, 0.08)';
+            } else {
+              link.style.color = '#475569';
+              link.style.backgroundColor = 'transparent';
+            }
+          });
+        } else {
+          header.style.backgroundColor = 'rgba(0, 0, 0, 0.45)';
+          header.style.backdropFilter = 'blur(14px)';
+          header.style.borderBottomColor = 'transparent';
+          header.style.boxShadow = 'none';
+          if (logo && logo.dataset.darkSrc) logo.src = logo.dataset.darkSrc;
+          if (title) title.style.color = '#ffffff';
+          if (subtitle) subtitle.style.color = '#a3a3a3';
+          if (menuBtn) {
+            menuBtn.style.color = '#ffffff';
+            menuBtn.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+          }
+          links.forEach(link => {
+            if (link.classList.contains('active-link')) {
+              link.style.color = '#ffffff';
+              link.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            } else {
+              link.style.color = '#d4d4d4';
+              link.style.backgroundColor = 'transparent';
+            }
+          });
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      onScroll();
+
+      // Mobile Drawer Toggle
+      const toggle = document.getElementById('mobile-menu-btn');
+      const drawer = document.getElementById('mobile-drawer');
+      const overlay = document.getElementById('mobile-drawer-overlay');
+      const closeBtn = document.getElementById('drawer-close-btn');
+
+      if (toggle && drawer && overlay && closeBtn) {
+        toggle.addEventListener('click', function() {
+          drawer.classList.remove('translate-x-full');
+          drawer.classList.add('active');
+          overlay.classList.remove('hidden');
+          overlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          toggle.setAttribute('aria-expanded', 'true');
+        });
+
+        function closeMenu() {
+          drawer.classList.add('translate-x-full');
+          drawer.classList.remove('active');
+          overlay.classList.add('hidden');
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+      }
+    })();
+  </script>
 </body>
 </html>

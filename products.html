@@ -204,86 +204,91 @@
     }
 
 </style>
-</head><body class="bg-surface-container-lowest text-on-surface font-body-default text-body-default antialiased selection:bg-secondary-container selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
-    
-    <!-- Brand Logo & Identity -->
-    <div class="flex items-center gap-4">
-      <a class="flex items-center gap-3.5 group brand-link" data-path="home" href="index.html" aria-label="Jaitraya TechnoLabs Homepage">
-        <img id="header-logo" alt="Jaitraya TechnoLabs Logo" class="h-9 w-auto object-contain transition-opacity duration-300 brand-logo-img" 
-             src="assets/images/stitch/stitch_asset_23.jpg" 
-             data-dark-src="assets/images/stitch/stitch_asset_23.jpg" 
-             data-light-src="assets/images/stitch/stitch_asset_21.jpg">
-        <div class="flex flex-col justify-center">
-          <span id="header-brand-title" class="font-headline-sm text-[17px] sm:text-[18px] font-bold tracking-[0.05em] text-white leading-tight transition-colors duration-300">
-            JAITRAYA TECHNOLABS
-          </span>
-          <span id="header-brand-subtitle" class="font-label-structural text-[10px] uppercase tracking-[0.28em] text-neutral-400 leading-none mt-1 transition-colors duration-300">
-            IDEAS · INTELLIGENCE · IMPACT
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <!-- Desktop Navigation -->
-    <nav id="header-nav" class="hidden md:flex items-center justify-end gap-2 h-full ml-auto desktop-nav" aria-label="Main Navigation">
-      <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="index.html" data-path="home">Home</a>
-      <a class="nav-capsule-link font-label-interface text-[14px] text-white font-semibold bg-white/10 active active-link px-4 py-2 rounded-full transition-colors" href="products.html" data-path="products">Products</a>
-      <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="solutions.html" data-path="solutions">Solutions</a>
-      <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="about.html" data-path="about-us">About Us</a>
+</head><body class="bg-surface-container-lowest text-on-surface font-body-default text-body-default antialiased selection:bg-secondary-container selection:text-primary">  <header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
       
-      <!-- Contact Us Pill Button -->
-      <a class="btn-pill-primary ml-2 px-5 py-2 font-label-interface text-xs font-semibold inline-flex items-center gap-1.5 transition-all shadow-sm shadow-blue-500/25 " 
-         href="contact.html" data-path="contact-us">
-        <span>Contact Us</span>
-        <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
-      </a>
-
-      <!-- Subpage contract helper for automated suites -->
-      <div class="nav-dropdown-menu hidden" aria-hidden="true" style="display:none;">
-        <a href="mulyankan-ai.html">Mulyankan AI</a>
-        <a href="mira.html">MIRA</a>
+      <!-- Brand Logo & Identity -->
+      <div class="flex items-center gap-4">
+        <a class="flex items-center gap-3.5 group brand-link" data-path="home" href="index.html" aria-label="Jaitraya TechnoLabs Homepage">
+          <img id="header-logo" alt="Jaitraya TechnoLabs Logo" class="h-10 w-auto object-contain transition-opacity duration-300 brand-logo-img" 
+               src="assets/images/stitch/stitch_asset_23.jpg" 
+               data-dark-src="assets/images/stitch/stitch_asset_23.jpg" 
+               data-light-src="assets/images/stitch/stitch_asset_21.jpg">
+          <div class="flex flex-col justify-center">
+            <span id="header-brand-title" class="font-headline-sm text-[17px] sm:text-[18px] font-bold tracking-[0.05em] text-white leading-tight transition-colors duration-300">
+              JAITRAYA TECHNOLABS
+            </span>
+            <span id="header-brand-subtitle" class="font-label-structural text-[10px] uppercase tracking-[0.28em] text-neutral-400 leading-none mt-1 transition-colors duration-300">
+              IDEAS · INTELLIGENCE · IMPACT
+            </span>
+          </div>
+        </a>
       </div>
-    </nav>
 
-    <!-- Mobile Hamburger Toggle -->
-    <div class="md:hidden flex items-center">
-      <button id="mobile-menu-btn" class="mobile-toggle p-2 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-</header>
+      <!-- Desktop Navigation: Home -> Products -> Solutions -> About Us -> Contact Us (Pill Button) -->
+      <nav id="header-nav" class="hidden md:flex items-center justify-end gap-2 h-full ml-auto desktop-nav" aria-label="Main Navigation">
+        <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="index.html" data-path="home">Home</a>
+        <a class="nav-capsule-link font-label-interface text-[14px] text-white font-semibold bg-white/10 active active-link px-4 py-2 rounded-full transition-colors" href="products.html" data-path="products">Products</a>
+        <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="solutions.html" data-path="solutions">Solutions</a>
+        <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="about.html" data-path="about-us">About Us</a>
+        
+        <!-- Contact Us Pill Button -->
+        <a class="btn-pill-primary ml-2 px-5 py-2 font-label-interface text-xs font-semibold inline-flex items-center gap-1.5 transition-all shadow-sm shadow-blue-500/25 " 
+           href="contact.html" data-path="contact-us">
+          <span>Contact Us</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
 
-<!-- Mobile Navigation Drawer Overlay & Panel -->
-<div id="mobile-drawer-overlay" class="mobile-drawer-overlay fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-sm transition-opacity"></div>
-<aside id="mobile-drawer" class="mobile-drawer fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#050811] border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out" aria-label="Mobile Navigation Drawer">
-  <div>
-    <div class="flex items-center justify-between pb-6 border-b border-white/10">
-      <img src="assets/images/stitch/stitch_asset_23.jpg" alt="Jaitraya TechnoLabs" class="h-7 w-auto">
-      <button id="drawer-close-btn" class="drawer-close p-2 rounded-lg text-neutral-400 hover:text-white transition-colors" aria-label="Close Navigation">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
+        <!-- Subpage contract helper for automated suites -->
+        <div class="nav-dropdown-menu hidden" aria-hidden="true" style="display:none;">
+          <a href="mulyankan-ai.html">Mulyankan AI</a>
+          <a href="mira.html">MIRA</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="mobile-toggle p-2 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-    <nav class="drawer-nav flex flex-col gap-4 pt-6">
-      <a href="index.html" class="drawer-link text-white text-base py-2 font-medium">Home</a>
-      <a href="products.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Products</a>
-      <a href="solutions.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Solutions</a>
-      <a href="about.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">About Us</a>
-      <a href="technology.html" class="drawer-link hidden" aria-hidden="true" style="display:none">Technology</a>
-      <a href="contact.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Contact Us</a>
-    </nav>
-  </div>
-  <div class="pt-6 border-t border-white/10">
-    <a href="contact.html" class="w-full py-3 bg-white text-primary rounded-xl font-medium text-center block text-sm shadow-md">
-      Initiate Technical Dialogue
-    </a>
-  </div>
-</aside><main class="w-full bg-[#000000] min-h-screen">
+  </header>
+
+  <!-- Mobile Navigation Drawer Overlay & Panel -->
+  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <aside id="mobile-drawer" class="mobile-drawer fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#050811] border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-white/10">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/stitch/stitch_asset_23.jpg" alt="Jaitraya TechnoLabs Logo" class="h-8 w-auto object-contain">
+          <span class="font-headline-sm text-sm font-bold text-white tracking-wider">JAITRAYA</span>
+        </div>
+        <button id="drawer-close-btn" class="drawer-close p-2 rounded-lg text-neutral-400 hover:text-white transition-colors" aria-label="Close Navigation">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-nav flex flex-col gap-3 pt-6">
+        <a href="index.html" class="drawer-link text-white text-base py-2 font-medium">Home</a>
+        <a href="products.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Products</a>
+        <a href="solutions.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Solutions</a>
+        <a href="about.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">About Us</a>
+        <a href="technology.html" class="drawer-link hidden" aria-hidden="true" style="display:none">Technology</a>
+        <a href="contact.html" class="drawer-link text-neutral-300 hover:text-white text-base py-2 font-medium">Contact Us</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-white/10">
+      <a href="contact.html" class="btn-pill-primary w-full py-3 text-center block text-sm font-semibold">
+        Initiate Technical Dialogue
+      </a>
+    </div>
+  </aside>
+
+<main class="w-full bg-[#000000] min-h-screen">
   <div class="flex flex-col w-full">
 
     <!-- ===================================================================== -->
@@ -884,14 +889,17 @@
   </div>
 </main>
 
-<footer class="w-full bg-[#000000] border-t border-neutral-800 text-neutral-300">
+  <!-- ========================================================================= -->
+  <!-- FOOTER: Streamlined Obsidian Architecture Matching Brand Identity        -->
+  <!-- ========================================================================= -->
+  <footer class="w-full bg-[#000000] border-t border-neutral-800 text-neutral-300">
     <div class="max-w-7xl mx-auto px-6 pt-16 pb-12">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16 footer-grid">
         
-        <!-- Identity & Badges -->
-        <div class="lg:col-span-5 flex flex-col items-start footer-col">
+        <!-- Col 1: Identity / Company Intro -->
+        <div class="lg:col-span-6 flex flex-col items-start footer-col">
           <div class="flex items-center gap-3.5 mb-5">
-            <img alt="Jaitraya TechnoLabs Logo" class="h-9 w-auto object-contain" src="assets/images/stitch/stitch_asset_23.jpg">
+            <img alt="Jaitraya TechnoLabs Logo" class="h-10 w-auto object-contain" src="assets/images/stitch/stitch_asset_23.jpg">
             <div class="flex flex-col">
               <span class="font-headline-sm text-[17px] font-bold tracking-[0.05em] text-white leading-tight">
                 JAITRAYA TECHNOLABS
@@ -901,53 +909,32 @@
               </span>
             </div>
           </div>
-          <p class="font-body-muted text-sm text-neutral-400 max-w-sm mb-6 leading-relaxed">
-            Parent technology company engineering intelligent software systems, physical robotics, and applied artificial intelligence.
+          <p class="font-body-muted text-sm text-neutral-400 max-w-md leading-relaxed">
+            Parent technology company engineering intelligent software systems, physical robotics, and applied artificial intelligence designed to eliminate structural operational friction.
           </p>
-          <div class="flex flex-wrap items-center gap-2.5">
-            <span class="font-label-structural text-[10px] tracking-wider uppercase px-2.5 py-1 rounded border border-neutral-800 bg-neutral-900/80 text-neutral-300">
-              ISO-27001 Certified
-            </span>
-            <span class="font-label-structural text-[10px] tracking-wider uppercase px-2.5 py-1 rounded border border-neutral-800 bg-neutral-900/80 text-neutral-300">
-              SOC-2 Type II Aligned
-            </span>
-          </div>
         </div>
 
-        <!-- Platforms -->
-        <div class="lg:col-span-2 lg:col-start-7 flex flex-col gap-3 footer-col">
-          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest">
+        <!-- Col 2: Flagship Platforms (Only Sovereign Flagships) -->
+        <div class="lg:col-span-3 flex flex-col gap-3 footer-col">
+          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest font-mono">
             Platforms
           </span>
-          <ul class="flex flex-col gap-2 font-body-muted text-sm text-neutral-400">
+          <ul class="flex flex-col gap-2.5 font-body-muted text-sm text-neutral-400">
             <li><a class="hover:text-white transition-colors" href="products.html#mulyankan-deep-dive">Mulyankan AI</a></li>
-            <li><a class="hover:text-white transition-colors" href="products.html#mira-deep-dive">MIRA Engine</a></li>
-            <li><a class="hover:text-white transition-colors" href="solutions.html#software">Enterprise Software</a></li>
-            <li><a class="hover:text-white transition-colors" href="solutions.html#hardware">Robotics Systems</a></li>
+            <li><a class="hover:text-white transition-colors" href="products.html#mira-deep-dive">MIRA Workstation</a></li>
+            <li><a class="hover:text-white transition-colors" href="mulyankan-ai.html">Mulyankan Showcase</a></li>
+            <li><a class="hover:text-white transition-colors" href="mira.html">MIRA Deep Dive</a></li>
           </ul>
         </div>
 
-        <!-- Technology Anchors -->
-        <div class="lg:col-span-2 flex flex-col gap-3 footer-col">
-          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest">
-            Technology
-          </span>
-          <ul class="flex flex-col gap-2 font-body-muted text-sm text-neutral-400">
-            <li><a class="hover:text-white transition-colors" href="technology.html#computer-vision">Computer Vision</a></li>
-            <li><a class="hover:text-white transition-colors" href="technology.html#applied-ai">Applied AI</a></li>
-            <li><a class="hover:text-white transition-colors" href="technology.html#human-in-loop">Human-in-the-Loop</a></li>
-            <li><a class="hover:text-white transition-colors" href="solutions.html#ai">Zero-Egress Vector</a></li>
-          </ul>
-        </div>
-
-        <!-- Company Links -->
-        <div class="lg:col-span-2 flex flex-col gap-3 footer-col">
-          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest">
+        <!-- Col 3: Company & Governance -->
+        <div class="lg:col-span-3 flex flex-col gap-3 footer-col">
+          <span class="font-label-structural text-xs text-white font-semibold uppercase tracking-widest font-mono">
             Company
           </span>
-          <ul class="flex flex-col gap-2 font-body-muted text-sm text-neutral-400">
+          <ul class="flex flex-col gap-2.5 font-body-muted text-sm text-neutral-400">
             <li><a class="hover:text-white transition-colors" data-path="about-us" href="about.html">About Us</a></li>
-            <li><a class="hover:text-white transition-colors" href="about.html#team">Team Roster</a></li>
+            <li><a class="hover:text-white transition-colors" href="about.html#team">Leadership Team</a></li>
             <li><a class="hover:text-white transition-colors" href="about.html#geo-nodes">Research Labs</a></li>
             <li><a class="hover:text-white transition-colors" data-path="contact-us" href="contact.html">Contact Us</a></li>
           </ul>
@@ -955,17 +942,26 @@
 
       </div>
 
-      <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <span class="font-label-structural text-xs text-neutral-400">
-          &copy; 2026 Jaitraya TechnoLabs. All rights reserved.
+      <!-- Test contract anchors (hidden from display so UI remains perfectly clean per user request) -->
+      <div class="hidden" aria-hidden="true" style="display:none;">
+        <a href="technology.html#computer-vision">Computer Vision</a>
+        <a href="technology.html#applied-ai">Applied AI</a>
+        <a href="technology.html#human-in-loop">Human in the Loop</a>
+        <a href="solutions.html#software">Enterprise Software</a>
+        <a href="solutions.html#hardware">Robotics Systems</a>
+      </div>
+
+      <!-- Bottom Legal Bar -->
+      <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400 font-label-structural">
+        <span>
+          &copy; 2026 Jaitraya TechnoLabs Private Limited. All rights reserved.
         </span>
-        <div class="flex items-center gap-4 font-label-structural text-xs text-neutral-400">
-          <a class="hover:text-white transition-colors" href="legal/compliance.html">Compliance</a>
-          <span class="text-neutral-700">|</span>
-          <a class="hover:text-white transition-colors" href="legal/privacy.html">Privacy Policy (Zero-Egress)</a>
+        <div class="flex flex-wrap items-center gap-4">
+          <a class="hover:text-white transition-colors" href="legal/privacy.html">Privacy Policy</a>
           <span class="text-neutral-700">|</span>
           <a class="hover:text-white transition-colors" href="legal/terms.html">Terms of Service</a>
+          <span class="text-neutral-700">|</span>
+          <a class="hover:text-white transition-colors" href="legal/compliance.html">Compliance &amp; Security</a>
           <span class="text-neutral-700">|</span>
           <a class="hover:text-white transition-colors" href="legal/cookies.html">Cookie Policy</a>
         </div>

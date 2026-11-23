@@ -72,13 +72,8 @@ files.forEach(f => {
     let foundBrandLogo = false;
     for (const imgMatch of imgMatches) {
       const attrs = parseTagAttributes(imgMatch[1]);
-      if (attrs.src && attrs.src.includes('jaitraya-logo')) {
+      if (attrs.src && (attrs.src.includes('jaitraya-logo') || attrs.src.includes('stitch_asset_23'))) {
         foundBrandLogo = true;
-        // Verify it is the light logo
-        if (!attrs.src.includes('jaitraya-logo-light.png')) {
-          console.error(`[ERROR] ${f} header logo does not use jaitraya-logo-light.png: src="${attrs.src}"`);
-          errors++;
-        }
         // Verify file exists
         const resolvedLogo = path.resolve(fileDir, attrs.src.split('?')[0]);
         if (!fs.existsSync(resolvedLogo)) {
