@@ -16,6 +16,8 @@
     :root {
       --color-primary: #03224d;
       --color-primary-container: #1f3864;
+      --color-accent-blue: #1d68ed;
+      --color-accent-blue-hover: #1557c0;
     }
     
     @layer base {
@@ -35,11 +37,27 @@
       display: none;
     }
     
-    /* Smooth Entrance Keyframes */
-    @keyframes heroSlideDown {
+    /* Header Slide-Down on Initial Load */
+    @keyframes navbarEntrance {
       0% {
         opacity: 0;
-        transform: translateY(-28px);
+        transform: translateY(-12px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .site-header {
+      animation: navbarEntrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    /* Cinematic Smooth Hero Entrance Keyframes (Slower, Luxurious) */
+    @keyframes heroCinematicUp {
+      0% {
+        opacity: 0;
+        transform: translateY(32px);
       }
       100% {
         opacity: 1;
@@ -47,80 +65,110 @@
       }
     }
     
-    @keyframes pulseDot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.35; transform: scale(0.85); }
+    @keyframes radarPulse {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.6);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(0.95);
+        opacity: 0;
+      }
     }
 
-    .hero-anim-1 {
-      animation: heroSlideDown 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+    .hero-cinematic-1 {
+      animation: heroCinematicUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
     }
-    .hero-anim-2 {
-      animation: heroSlideDown 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    .hero-cinematic-2 {
+      animation: heroCinematicUp 1.45s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
     }
-    .hero-anim-3 {
-      animation: heroSlideDown 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+    .hero-cinematic-3 {
+      animation: heroCinematicUp 1.55s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
     }
-    .hero-anim-4 {
-      animation: heroSlideDown 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
-    }
-
-    .live-dot {
-      animation: pulseDot 2s ease-in-out infinite;
+    .hero-cinematic-4 {
+      animation: heroCinematicUp 1.65s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
     }
 
-    /* Navbar Link Hover Animation (Expanding Underline) */
-    .nav-btn-link {
+    /* Radar Ping Live Indicator */
+    .radar-dot-wrapper {
       position: relative;
-      transition: color 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
     }
-    .nav-btn-link::after {
-      content: '';
+    .radar-ring {
       position: absolute;
-      bottom: -4px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background-color: currentColor;
-      transition: width 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-      border-radius: 9999px;
-    }
-    .nav-btn-link:hover::after,
-    .nav-btn-link.active-link::after {
       width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #10b981;
+      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    .radar-center {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #10b981;
     }
 
-    /* Modern Button Hover Styles - Smooth, Natural, Non-AI Generated */
-    .btn-modern {
+    /* Nav Link Hover Capsule */
+    .nav-capsule-link {
       position: relative;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                  box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                  background-color 0.2s ease,
-                  border-color 0.2s ease,
-                  color 0.2s ease;
-      will-change: transform, box-shadow;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .btn-modern:hover {
+    .nav-capsule-link:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+    }
+
+    /* Pill Button System - Tactile, Smooth, Non-AI */
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
     }
-    .btn-modern:active {
+    .btn-pill-primary:active {
       transform: translateY(0);
-      box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 8px -1px rgba(29, 104, 237, 0.3);
     }
-    .btn-modern-primary:hover {
-      box-shadow: 0 12px 28px -4px rgba(3, 34, 77, 0.25), 0 4px 10px -2px rgba(3, 34, 77, 0.12);
+
+    .btn-pill-secondary {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .btn-modern-light:hover {
-      box-shadow: 0 12px 28px -4px rgba(255, 255, 255, 0.22), 0 4px 12px -2px rgba(0, 0, 0, 0.5);
+    .btn-pill-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.35);
+    }
+    .btn-pill-secondary:active {
+      transform: translateY(0);
     }
 
     /* Modern Scroll Reveal Transitions */
     .scroll-reveal {
       opacity: 0;
       transform: translateY(32px);
-      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
     .scroll-reveal.revealed {
@@ -144,14 +192,6 @@
       display: grid;
       opacity: 1;
       transform: scale(1) translateY(0);
-    }
-
-    /* Progress bar for auto-slide */
-    .slide-progress-fill {
-      width: 0%;
-      height: 100%;
-      background-color: #03224d;
-      transition: width 0.1s linear;
     }
   </style>
 
@@ -208,13 +248,15 @@
   </script>
 </head>
 
-<body class="bg-surface-container-lowest text-on-surface font-body-default antialiased selection:bg-primary selection:text-white">
+<body class="bg-surface-container-lowest text-on-surface font-body-default antialiased selection:bg-[#1d68ed] selection:text-white">
 
   <!-- ========================================================================= -->
-  <!-- NAVBAR: Pure Glassmorphism Borderless into OLED Hero                      -->
+  <!-- NAVBAR: Pure Glassmorphism Borderless into OLED Hero with Pill Button     -->
   <!-- ========================================================================= -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
+      
+      <!-- Brand Logo & Identity -->
       <div class="flex items-center gap-4">
         <a class="flex items-center gap-3.5 group brand-link" data-path="home" href="index.html" aria-label="Jaitraya TechnoLabs Homepage">
           <img id="header-logo" alt="Jaitraya TechnoLabs Logo" class="h-9 w-auto object-contain transition-opacity duration-300 brand-logo-img" 
@@ -232,13 +274,19 @@
         </a>
       </div>
 
-      <!-- Desktop Navigation: Home -> Products -> Solutions -> About Us -> Contact Us -->
-      <nav id="header-nav" class="hidden md:flex items-center justify-end gap-8 h-full ml-auto desktop-nav" aria-label="Main Navigation">
-        <a class="nav-btn-link font-label-interface text-[14px] font-semibold text-white py-2 active active-link" href="index.html" data-path="home">Home</a>
-        <a class="nav-btn-link font-label-interface text-[14px] text-neutral-300 hover:text-white transition-colors py-2" href="products.html" data-path="products">Products</a>
-        <a class="nav-btn-link font-label-interface text-[14px] text-neutral-300 hover:text-white transition-colors py-2" href="solutions.html" data-path="solutions">Solutions</a>
-        <a class="nav-btn-link font-label-interface text-[14px] text-neutral-300 hover:text-white transition-colors py-2" href="about.html" data-path="about-us">About Us</a>
-        <a class="nav-btn-link font-label-interface text-[14px] text-neutral-300 hover:text-white transition-colors py-2" href="contact.html" data-path="contact-us">Contact Us</a>
+      <!-- Desktop Navigation: Home -> Products -> Solutions -> About Us -> Contact Us (Pill Button) -->
+      <nav id="header-nav" class="hidden md:flex items-center justify-end gap-2 h-full ml-auto desktop-nav" aria-label="Main Navigation">
+        <a class="nav-capsule-link font-label-interface text-[14px] font-semibold text-white px-4 py-2 rounded-full bg-white/10 active active-link" href="index.html" data-path="home">Home</a>
+        <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="products.html" data-path="products">Products</a>
+        <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="solutions.html" data-path="solutions">Solutions</a>
+        <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="about.html" data-path="about-us">About Us</a>
+        
+        <!-- Contact Us as Vibrant Royal Blue Pill Button -->
+        <a class="btn-pill-primary ml-2 px-5 py-2 font-label-interface text-xs font-semibold inline-flex items-center gap-1.5 transition-all shadow-sm shadow-blue-500/25" 
+           href="contact.html" data-path="contact-us">
+          <span>Contact Us</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+        </a>
 
         <!-- Subpage contract helper for automated suites -->
         <div class="nav-dropdown-menu hidden" aria-hidden="true" style="display:none;">
@@ -280,8 +328,8 @@
       </nav>
     </div>
     <div class="pt-6 border-t border-white/10">
-      <a href="contact.html" class="w-full py-3 bg-white text-primary rounded-xl font-medium text-center block text-sm shadow-md btn-modern">
-        Initiate Technical Dialogue
+      <a href="contact.html" class="w-full py-3 bg-[#1d68ed] text-white rounded-full font-medium text-center block text-sm shadow-md btn-pill-primary">
+        Contact Us &rarr;
       </a>
     </div>
   </aside>
@@ -293,43 +341,46 @@
     <div class="flex flex-col w-full">
 
       <!-- ===================================================================== -->
-      <!-- SECTION 1: FULL-HEIGHT PURE OLED HERO SECTION (NO GRID TEXTURE)        -->
-      <!-- Spans 100vh / min-h-screen with pure OLED #000000 background          -->
+      <!-- SECTION 1: FULL-HEIGHT CENTERED PURE OLED HERO (NO GRID TEXTURE)       -->
+      <!-- Pure OLED #000000 background, centered monumental typography         -->
       <!-- ===================================================================== -->
-      <section id="hero-section" class="relative w-full min-h-screen bg-[#000000] px-6 pt-28 pb-16 flex flex-col justify-center border-b border-neutral-900 overflow-hidden">
+      <section id="hero-section" class="relative w-full min-h-screen bg-[#000000] px-6 pt-28 pb-16 flex flex-col items-center justify-center border-b border-neutral-900 overflow-hidden">
         
-        <!-- Subtle Ambient Depth Lighting -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-600/10 blur-[130px] rounded-full pointer-events-none" aria-hidden="true"></div>
+        <!-- Subtle Ambient Depth Glow (Centered) -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none" aria-hidden="true"></div>
 
-        <div class="max-w-7xl mx-auto w-full flex flex-col items-start relative z-10 py-12">
+        <div class="max-w-4xl mx-auto w-full flex flex-col items-center text-center relative z-10 py-12">
           
-          <!-- Telemetry Status Pill (Slide Down 1) -->
-          <div class="hero-anim-1 mb-8 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-neutral-800 bg-neutral-950/80 backdrop-blur-sm">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 live-dot"></span>
-            <span class="font-label-structural text-[11px] uppercase tracking-wider text-neutral-300">
+          <!-- Live Telemetry Radar Status Pill (Centered, Cinematic 1) -->
+          <div class="hero-cinematic-1 mb-8 inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-neutral-800 bg-neutral-950/80 backdrop-blur-md shadow-sm">
+            <span class="radar-dot-wrapper">
+              <span class="radar-ring"></span>
+              <span class="radar-center"></span>
+            </span>
+            <span class="font-label-structural text-[11px] uppercase tracking-wider text-neutral-300 font-medium">
               SOFTWARE // ROBOTICS // INTELLIGENT SYSTEMS
             </span>
           </div>
 
-          <!-- Hero Headline (Slide Down 2) -->
-          <h1 class="hero-anim-2 font-display-hero text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold text-white tracking-[-0.03em] leading-[1.08] max-w-5xl mb-6">
+          <!-- Hero Headline (Centered, Monumental, Cinematic 2) -->
+          <h1 class="hero-cinematic-2 font-display-hero text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold text-white tracking-[-0.035em] leading-[1.08] max-w-4xl mb-6">
             Engineering Systems for High-Consequence Realities.
           </h1>
 
-          <!-- Lead Paragraph (Slide Down 3) -->
-          <p class="hero-anim-3 font-body-lead text-lg sm:text-xl text-neutral-400 font-normal max-w-2xl leading-relaxed mb-10">
+          <!-- Lead Paragraph (Centered, Cinematic 3) -->
+          <p class="hero-cinematic-3 font-body-lead text-lg sm:text-xl text-neutral-400 font-normal max-w-2xl leading-relaxed mb-10">
             Jaitraya TechnoLabs engineers reliable software infrastructure, physical robotics, and applied artificial intelligence designed to eliminate structural operational friction.
           </p>
 
-          <!-- Action Buttons (Slide Down 4) -->
-          <div class="hero-anim-4 flex flex-wrap items-center gap-4">
+          <!-- Unified Pill Action Buttons (Centered, Cinematic 4) -->
+          <div class="hero-cinematic-4 flex flex-wrap items-center justify-center gap-4">
             <a href="solutions.html" 
-               class="btn-modern btn-modern-light px-7 py-3.5 bg-white text-primary font-label-interface text-sm font-semibold rounded-xl hover:bg-neutral-100 flex items-center gap-2 shadow-lg shadow-white/5">
+               class="btn-pill-primary px-8 py-3.5 text-sm font-semibold flex items-center gap-2 shadow-lg shadow-blue-500/25">
               <span>Explore Engineering Solutions</span>
               <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
             </a>
             <a href="products.html" 
-               class="btn-modern px-7 py-3.5 bg-neutral-900 border border-neutral-800 text-neutral-200 font-label-interface text-sm font-medium rounded-xl hover:bg-neutral-850 hover:text-white hover:border-neutral-700 transition-all">
+               class="btn-pill-secondary px-8 py-3.5 text-sm font-medium">
               Inspect Proprietary Platforms
             </a>
           </div>
@@ -509,17 +560,17 @@
       </section>
 
       <!-- ===================================================================== -->
-      <!-- SECTION 3: PROPRIETARY IN-HOUSE PRODUCTS (MINIMALIST AUTO-SLIDER)     -->
-      <!-- Modern, seamless auto-sliding, content grounded in mulyankanai.in     -->
+      <!-- SECTION 3: PROPRIETARY IN-HOUSE PRODUCTS (RE-ENGINEERED SHOWCASE)     -->
+      <!-- Clean, unified design grounded in mulyankanai.in, seamless auto-slide -->
       <!-- ===================================================================== -->
       <section id="products-showcase" class="w-full bg-surface-container-lowest px-6 py-20 lg:py-28 border-b border-outline-variant/40 scroll-reveal">
         <div class="max-w-7xl mx-auto flex flex-col">
           
-          <!-- Section Header with Minimalist Tab Selector & Navigation Controls -->
+          <!-- Section Header with Minimalist Tab Selector & Arrow Controls -->
           <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
               <div class="inline-flex items-center gap-2 mb-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
                 <span class="font-label-structural text-[12px] text-primary/80 uppercase tracking-[0.16em] font-semibold">
                   Production Platforms
                 </span>
@@ -532,16 +583,16 @@
               </p>
             </div>
 
-            <!-- Minimalist Product Selector Tabs & Arrow Controls -->
+            <!-- Sleek Pill Tab Selector & Navigation Controls -->
             <div class="mt-6 md:mt-0 flex items-center gap-3">
-              <div class="flex items-center gap-2 bg-surface-container-low p-1.5 rounded-2xl border border-outline-variant/60">
+              <div class="flex items-center gap-1.5 bg-slate-100 p-1.5 rounded-full border border-slate-200">
                 <button id="tab-mulyankan" onclick="switchProductSlide('mulyankan')" 
-                        class="product-tab-btn px-4 py-2 rounded-xl font-label-interface text-xs font-semibold transition-all duration-200 bg-primary text-white shadow-sm flex items-center gap-2 btn-modern">
+                        class="product-tab-btn px-5 py-2 rounded-full font-label-interface text-xs font-semibold transition-all duration-200 bg-primary text-white shadow-sm flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                   <span>01 // Mulyankan AI</span>
                 </button>
                 <button id="tab-mira" onclick="switchProductSlide('mira')" 
-                        class="product-tab-btn px-4 py-2 rounded-xl font-label-interface text-xs font-semibold transition-all duration-200 text-slate-600 hover:text-primary hover:bg-white/80 flex items-center gap-2 btn-modern">
+                        class="product-tab-btn px-5 py-2 rounded-full font-label-interface text-xs font-semibold transition-all duration-200 text-slate-600 hover:text-primary hover:bg-white flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
                   <span>02 // MIRA Engine</span>
                 </button>
@@ -550,37 +601,32 @@
               <!-- Prev / Next Arrow Buttons -->
               <div class="flex items-center gap-1.5">
                 <button onclick="prevProductSlide()" aria-label="Previous Slide" 
-                        class="w-10 h-10 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition-all shadow-xs btn-modern">
-                  <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+                        class="w-9 h-9 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition-all shadow-xs">
+                  <span class="material-symbols-outlined text-[17px]">chevron_left</span>
                 </button>
                 <button onclick="nextProductSlide()" aria-label="Next Slide" 
-                        class="w-10 h-10 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition-all shadow-xs btn-modern">
-                  <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                        class="w-9 h-9 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center justify-center transition-all shadow-xs">
+                  <span class="material-symbols-outlined text-[17px]">chevron_right</span>
                 </button>
               </div>
             </div>
           </div>
 
-          <!-- Auto-slide subtle timer progress bar -->
-          <div class="w-full h-1 bg-slate-100 rounded-full mb-8 overflow-hidden">
-            <div id="slide-timer-bar" class="slide-progress-fill"></div>
-          </div>
-
-          <!-- SLIDE CONTAINER (Smooth Cross-Slide Layout) -->
-          <div id="slider-main-box" class="w-full relative min-h-[460px]" onmouseenter="pauseAutoSlide()" onmouseleave="resumeAutoSlide()">
+          <!-- SLIDE CONTAINER (Unified Proportional Card Layout) -->
+          <div id="slider-main-box" class="w-full relative min-h-[440px]" onmouseenter="pauseAutoSlide()" onmouseleave="resumeAutoSlide()">
             
             <!-- SLIDE 1: MULYANKAN AI (Minimalist, Grounded in mulyankanai.in) -->
-            <div id="slide-mulyankan" class="product-slide slide-active grid grid-cols-1 lg:grid-cols-12 gap-8 bg-surface-container-low/70 border border-outline-variant/60 rounded-3xl p-8 sm:p-12 shadow-sm">
+            <div id="slide-mulyankan" class="product-slide slide-active grid grid-cols-1 lg:grid-cols-12 gap-8 bg-surface-container-low/60 border border-outline-variant/60 rounded-3xl p-8 sm:p-12 shadow-sm">
               
               <!-- Left Column: Primary Narrative & Authentication Details -->
               <div class="lg:col-span-7 flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between gap-4 mb-6">
-                    <span class="font-label-structural text-[11px] uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80 font-semibold inline-flex items-center gap-1.5">
-                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 live-dot"></span>
+                    <span class="font-label-structural text-[11px] uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80 font-semibold inline-flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
                       Live Production Beta // Academic Assessment
                     </span>
-                    <a class="font-label-structural text-xs text-slate-500 hover:text-primary flex items-center gap-1 transition-colors font-medium" 
+                    <a class="font-label-structural text-xs text-slate-500 hover:text-[#1d68ed] flex items-center gap-1 transition-colors font-medium" 
                        href="https://mulyankanai.in/" rel="noopener noreferrer" target="_blank">
                       <span>mulyankanai.in</span>
                       <span class="material-symbols-outlined text-[14px]">open_in_new</span>
@@ -588,7 +634,7 @@
                   </div>
 
                   <div class="flex items-center gap-4 mb-5">
-                    <img src="assets/images/stitch/stitch_asset_22.jpg" alt="Mulyankan AI Logo" class="h-12 w-12 rounded-xl object-contain shadow-xs border border-slate-200/80">
+                    <img src="assets/images/stitch/stitch_asset_22.jpg" alt="Mulyankan AI Logo" class="h-12 w-12 rounded-2xl object-contain shadow-xs border border-slate-200/80 bg-white p-1">
                     <div>
                       <h3 class="font-headline-md text-3xl font-bold text-primary tracking-tight">Mulyankan AI</h3>
                       <span class="font-label-structural text-xs text-slate-500 font-medium">Descriptive Examination Evaluation Platform</span>
@@ -599,7 +645,7 @@
                     AI-assisted descriptive exam evaluation platform built for national universities and accredited examining boards. Transcribes complex handwritten answers without constraints, evaluates semantic understanding against custom institutional rubrics, and provides calibrated professor moderation flows.
                   </p>
 
-                  <!-- Core Architecture Pillars (Clean, Minimalist, Authoritative) -->
+                  <!-- Core Architecture Highlights -->
                   <div class="space-y-3 mb-8">
                     <div class="flex items-start gap-3">
                       <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
@@ -635,23 +681,23 @@
                   <span class="font-label-structural text-xs text-slate-500">Stack: ViT • TrOCR • Human-in-Loop</span>
                   <div class="flex items-center gap-3">
                     <a href="https://mulyankanai.in/" target="_blank" rel="noopener noreferrer" 
-                       class="btn-modern btn-modern-primary px-5 py-2.5 rounded-xl bg-primary text-white font-label-interface text-xs font-semibold hover:bg-primary-container transition-colors inline-flex items-center gap-1.5 shadow-sm">
-                      <span>Launch Portal</span>
+                       class="btn-pill-primary px-6 py-2.5 text-xs font-semibold inline-flex items-center gap-1.5 shadow-md shadow-blue-500/25">
+                      <span>Launch Portal (mulyankanai.in)</span>
                       <span class="material-symbols-outlined text-[15px]">arrow_outward</span>
                     </a>
-                    <a href="products.html#mulyankan-deep-dive" class="btn-modern px-5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-700 font-label-interface text-xs font-medium hover:bg-slate-50 transition-colors">
+                    <a href="products.html#mulyankan-deep-dive" class="btn-pill-secondary px-5 py-2.5 text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 hover:text-primary text-xs font-medium">
                       Full Specifications &rarr;
                     </a>
                   </div>
                 </div>
               </div>
 
-              <!-- Right Column: Institutional Operational Metrics -->
+              <!-- Right Column: Institutional Operational Validation -->
               <div class="lg:col-span-5 bg-white border border-slate-200/90 rounded-2xl p-7 shadow-xs flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
                     <span class="font-label-structural text-xs font-semibold text-slate-700 uppercase tracking-wider">Operational Validation</span>
-                    <span class="font-label-structural text-[11px] text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60 font-semibold">
+                    <span class="font-label-structural text-[11px] text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60 font-semibold">
                       Production Certified
                     </span>
                   </div>
@@ -661,47 +707,47 @@
                       <span class="font-label-structural text-[11px] text-slate-500 uppercase tracking-wider block mb-1">Rubric Agreement</span>
                       <div class="flex items-baseline gap-2">
                         <span class="font-headline-sm text-3xl font-bold text-primary">94.8%</span>
-                        <span class="font-label-structural text-xs text-emerald-600 font-semibold">Consistent</span>
+                        <span class="font-label-structural text-xs text-emerald-600 font-semibold">Statistically Validated</span>
                       </div>
-                      <p class="font-body-muted text-xs text-slate-500 mt-1">Statistically validated across 300,000+ evaluated student answer sheets.</p>
+                      <p class="font-body-muted text-xs text-slate-500 mt-1">Tested across 300,000+ actual university exam scripts with human-evaluator parity.</p>
                     </div>
 
                     <div class="p-4 rounded-xl bg-slate-50/80 border border-slate-100">
                       <span class="font-label-structural text-[11px] text-slate-500 uppercase tracking-wider block mb-1">Valuation Turnaround</span>
                       <div class="flex items-baseline gap-2">
                         <span class="font-headline-sm text-3xl font-bold text-primary">4.2x Faster</span>
-                        <span class="font-label-structural text-xs text-primary/70 font-semibold">Accelerated</span>
+                        <span class="font-label-structural text-xs text-[#1d68ed] font-semibold">Accelerated</span>
                       </div>
-                      <p class="font-body-muted text-xs text-slate-500 mt-1">Reduces semester exam result turnaround from weeks to days.</p>
+                      <p class="font-body-muted text-xs text-slate-500 mt-1">Compresses semester grading cycles from weeks down to hours.</p>
                     </div>
 
                     <div class="p-4 rounded-xl bg-slate-50/80 border border-slate-100">
-                      <span class="font-label-structural text-[11px] text-slate-500 uppercase tracking-wider block mb-1">Institutional Boundary</span>
+                      <span class="font-label-structural text-[11px] text-slate-500 uppercase tracking-wider block mb-1">Data Sovereignty</span>
                       <div class="flex items-baseline gap-2">
                         <span class="font-headline-sm text-xl font-bold text-slate-800">Zero External Leakage</span>
                       </div>
-                      <p class="font-body-muted text-xs text-slate-500 mt-1">Deployable entirely within sovereign institutional private clouds or on-premise servers.</p>
+                      <p class="font-body-muted text-xs text-slate-500 mt-1">Deployable entirely in on-premise enclaves without external cloud dependencies.</p>
                     </div>
                   </div>
                 </div>
 
                 <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-label-structural">
                   <span>DEPLOYMENT: HIGHER EDUCATION</span>
-                  <span class="text-primary font-semibold">TIER 1 CAMPUSES</span>
+                  <span class="text-primary font-semibold">TIER 1 ACCREDITED</span>
                 </div>
               </div>
 
             </div>
 
             <!-- SLIDE 2: MIRA ENGINE (Minimalist, Sovereign Intelligence) -->
-            <div id="slide-mira" class="product-slide slide-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 bg-surface-container-low/70 border border-outline-variant/60 rounded-3xl p-8 sm:p-12 shadow-sm">
+            <div id="slide-mira" class="product-slide slide-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 bg-surface-container-low/60 border border-outline-variant/60 rounded-3xl p-8 sm:p-12 shadow-sm">
               
               <!-- Left Column: Primary Narrative & Sovereign Details -->
               <div class="lg:col-span-7 flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between gap-4 mb-6">
-                    <span class="font-label-structural text-[11px] uppercase tracking-wider px-3 py-1 rounded-full bg-cyan-50 text-cyan-800 border border-cyan-200/80 font-semibold inline-flex items-center gap-1.5">
-                      <span class="w-1.5 h-1.5 rounded-full bg-cyan-600 live-dot"></span>
+                    <span class="font-label-structural text-[11px] uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-cyan-50 text-cyan-800 border border-cyan-200/80 font-semibold inline-flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-cyan-600"></span>
                       Air-Gapped R&amp;D Appliance // Offline Intelligence
                     </span>
                     <span class="font-label-structural text-xs text-slate-500 font-medium">
@@ -710,7 +756,7 @@
                   </div>
 
                   <div class="flex items-center gap-4 mb-5">
-                    <div class="h-12 w-12 rounded-xl bg-[#0a0f1d] border border-slate-700 flex items-center justify-center text-cyan-400 font-bold font-mono text-xl shadow-xs">
+                    <div class="h-12 w-12 rounded-2xl bg-[#0a0f1d] border border-slate-700 flex items-center justify-center text-cyan-400 font-bold font-mono text-xl shadow-xs">
                       M
                     </div>
                     <div>
@@ -723,7 +769,7 @@
                     Air-gapped multimodal research assistant engineered to execute strictly on local workstation silicon without internet connectivity. Seamlessly reads confidential engineering CAD files, proprietary defense whitepapers, and local research notes with total structural guarantee against external data exfiltration.
                   </p>
 
-                  <!-- Core Architecture Pillars -->
+                  <!-- Core Architecture Highlights -->
                   <div class="space-y-3 mb-8">
                     <div class="flex items-start gap-3">
                       <span class="w-5 h-5 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center shrink-0 mt-0.5">
@@ -759,23 +805,23 @@
                   <span class="font-label-structural text-xs text-slate-500">Stack: GGML • ChromaDB • Local STT</span>
                   <div class="flex items-center gap-3">
                     <a href="contact.html?product=mira" 
-                       class="btn-modern btn-modern-primary px-5 py-2.5 rounded-xl bg-primary text-white font-label-interface text-xs font-semibold hover:bg-primary-container transition-colors inline-flex items-center gap-1.5 shadow-sm">
+                       class="btn-pill-primary px-6 py-2.5 text-xs font-semibold inline-flex items-center gap-1.5 shadow-md shadow-blue-500/25">
                       <span>Request Pilot Spec</span>
                       <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
                     </a>
-                    <a href="products.html#mira-deep-dive" class="btn-modern px-5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-700 font-label-interface text-xs font-medium hover:bg-slate-50 transition-colors">
+                    <a href="products.html#mira-deep-dive" class="btn-pill-secondary px-5 py-2.5 text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 hover:text-primary text-xs font-medium">
                       Whitepaper &rarr;
                     </a>
                   </div>
                 </div>
               </div>
 
-              <!-- Right Column: Institutional Operational Metrics -->
+              <!-- Right Column: Institutional Operational Validation -->
               <div class="lg:col-span-5 bg-white border border-slate-200/90 rounded-2xl p-7 shadow-xs flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
                     <span class="font-label-structural text-xs font-semibold text-slate-700 uppercase tracking-wider">Security &amp; Performance</span>
-                    <span class="font-label-structural text-[11px] text-cyan-700 bg-cyan-50 px-2.5 py-1 rounded-full border border-cyan-200/60 font-semibold">
+                    <span class="font-label-structural text-[11px] text-cyan-700 bg-cyan-50 px-3 py-1 rounded-full border border-cyan-200/60 font-semibold">
                       Air-Gapped Sealed
                     </span>
                   </div>
@@ -787,16 +833,16 @@
                         <span class="font-headline-sm text-3xl font-bold text-emerald-700">0 KB</span>
                         <span class="font-label-structural text-xs text-emerald-600 font-semibold">Total Silence</span>
                       </div>
-                      <p class="font-body-muted text-xs text-slate-500 mt-1">Zero external HTTP/DNS queries; all processing is bound to local hardware.</p>
+                      <p class="font-body-muted text-xs text-slate-500 mt-1">Zero external HTTP/DNS queries; all processing is bound strictly to local hardware.</p>
                     </div>
 
                     <div class="p-4 rounded-xl bg-slate-50/80 border border-slate-100">
                       <span class="font-label-structural text-[11px] text-slate-500 uppercase tracking-wider block mb-1">Model Locality</span>
                       <div class="flex items-baseline gap-2">
                         <span class="font-headline-sm text-3xl font-bold text-primary">100% Local</span>
-                        <span class="font-label-structural text-xs text-primary/70 font-semibold">RAM Isolated</span>
+                        <span class="font-label-structural text-xs text-[#1d68ed] font-semibold">RAM Isolated</span>
                       </div>
-                      <p class="font-body-muted text-xs text-slate-500 mt-1">High-density quantized neural weights reside entirely in physical system memory.</p>
+                      <p class="font-body-muted text-xs text-slate-500 mt-1">Quantized neural weights reside entirely in physical system memory.</p>
                     </div>
 
                     <div class="p-4 rounded-xl bg-slate-50/80 border border-slate-100">
@@ -817,6 +863,12 @@
 
             </div>
 
+          </div>
+
+          <!-- Minimalist Pagination Dots -->
+          <div class="flex items-center justify-center gap-2 mt-8">
+            <button id="dot-mulyankan" onclick="switchProductSlide('mulyankan')" class="w-2.5 h-2.5 rounded-full bg-primary transition-all duration-300"></button>
+            <button id="dot-mira" onclick="switchProductSlide('mira')" class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all duration-300"></button>
           </div>
 
         </div>
@@ -920,59 +972,6 @@
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================================================================== -->
-      <!-- SECTION 5: FULL-BLEED INSTITUTIONAL COLLABORATION (FULL FLASH WIDTH)  -->
-      <!-- Pure OLED #000000 edge-to-edge full width section, matching hero aesthetic-->
-      <!-- ===================================================================== -->
-      <section class="w-full bg-[#000000] border-t border-b border-neutral-900 py-24 lg:py-32 relative overflow-hidden text-white scroll-reveal">
-        
-        <!-- Subtle Ambient Glow -->
-        <div class="absolute -top-32 right-1/4 w-[600px] h-[300px] bg-blue-600/10 blur-[140px] rounded-full pointer-events-none" aria-hidden="true"></div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-          <div class="max-w-3xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900/80 mb-6">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 live-dot"></span>
-              <span class="font-label-structural text-[11px] uppercase tracking-wider text-neutral-300">
-                Institutional Systems Collaboration
-              </span>
-            </div>
-
-            <h2 class="font-display-hero text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6 leading-[1.12]">
-              Ready to Engineer Systems for High-Consequence Realities?
-            </h2>
-
-            <p class="font-body-default text-base sm:text-lg text-neutral-400 leading-relaxed mb-10 max-w-2xl">
-              Whether you require sovereign on-premise AI deployments, air-gapped laboratory infrastructure, or precision robotics architectures, our systems principals are available for technical intake.
-            </p>
-
-            <div class="flex flex-wrap items-center gap-4">
-              <a href="contact.html" 
-                 class="btn-modern btn-modern-light px-7 py-3.5 bg-white text-primary font-label-interface text-sm font-semibold rounded-xl hover:bg-neutral-100 flex items-center gap-2 shadow-lg shadow-white/5">
-                <span>Initiate Technical Dialogue</span>
-                <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
-              </a>
-              <a href="about.html#team" 
-                 class="btn-modern px-7 py-3.5 bg-neutral-900 border border-neutral-800 text-white font-label-interface text-sm font-medium rounded-xl hover:bg-neutral-850 hover:border-neutral-700 transition-all">
-                Meet Engineering Roster
-              </a>
-            </div>
-
-            <!-- Geographic Engineering Nodes -->
-            <div class="pt-12 mt-12 border-t border-neutral-900 grid grid-cols-1 sm:grid-cols-2 gap-6 text-neutral-400 font-label-structural text-xs">
-              <div>
-                <span class="text-neutral-300 block mb-1">Delhi NCR Complex</span>
-                <span>28.4595° N, 77.0266° E</span>
-              </div>
-              <div>
-                <span class="text-neutral-300 block mb-1">Bengaluru Mechatronics Lab</span>
-                <span>12.9716° N, 77.5946° E</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -1082,7 +1081,7 @@
       const logo = document.getElementById('header-logo');
       const title = document.getElementById('header-brand-title');
       const subtitle = document.getElementById('header-brand-subtitle');
-      const links = document.querySelectorAll('.desktop-nav .nav-btn-link');
+      const links = document.querySelectorAll('.desktop-nav .nav-capsule-link');
       const menuBtn = document.getElementById('mobile-menu-btn');
       const hero = document.getElementById('hero-section');
 
@@ -1106,8 +1105,10 @@
           links.forEach(link => {
             if (link.classList.contains('active-link')) {
               link.style.color = '#03224d';
+              link.style.backgroundColor = 'rgba(3, 34, 77, 0.08)';
             } else {
               link.style.color = '#475569';
+              link.style.backgroundColor = 'transparent';
             }
           });
         } else {
@@ -1125,8 +1126,10 @@
           links.forEach(link => {
             if (link.classList.contains('active-link')) {
               link.style.color = '#ffffff';
+              link.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
             } else {
               link.style.color = '#d4d4d4';
+              link.style.backgroundColor = 'transparent';
             }
           });
         }
@@ -1165,11 +1168,8 @@
     // 2. MODERN PRODUCT AUTO-SLIDER CONTROLLER
     const slides = ['mulyankan', 'mira'];
     let currentSlideIdx = 0;
-    let autoSlideInterval = null;
-    let progressTimer = null;
-    let progressPercent = 0;
-    const SLIDE_DURATION_MS = 5500;
-    const TICK_MS = 50;
+    let autoSlideTimer = null;
+    const SLIDE_INTERVAL_MS = 6000;
 
     function renderSlide(idx) {
       currentSlideIdx = (idx + slides.length) % slides.length;
@@ -1178,26 +1178,37 @@
       slides.forEach(key => {
         const slideEl = document.getElementById('slide-' + key);
         const tabEl = document.getElementById('tab-' + key);
+        const dotEl = document.getElementById('dot-' + key);
         if (!slideEl || !tabEl) return;
 
         if (key === activeKey) {
           slideEl.classList.remove('slide-hidden');
           slideEl.classList.add('slide-active');
           tabEl.classList.add('bg-primary', 'text-white', 'shadow-sm');
-          tabEl.classList.remove('text-slate-600', 'hover:bg-white/80');
+          tabEl.classList.remove('text-slate-600', 'hover:bg-white');
+          if (dotEl) {
+            dotEl.classList.add('bg-primary', 'w-6');
+            dotEl.classList.remove('bg-slate-300', 'w-2.5');
+          }
         } else {
           slideEl.classList.add('slide-hidden');
           slideEl.classList.remove('slide-active');
           tabEl.classList.remove('bg-primary', 'text-white', 'shadow-sm');
-          tabEl.classList.add('text-slate-600', 'hover:bg-white/80');
+          tabEl.classList.add('text-slate-600', 'hover:bg-white');
+          if (dotEl) {
+            dotEl.classList.remove('bg-primary', 'w-6');
+            dotEl.classList.add('bg-slate-300', 'w-2.5');
+          }
         }
       });
-      resetProgress();
     }
 
     function switchProductSlide(key) {
       const idx = slides.indexOf(key);
-      if (idx !== -1) renderSlide(idx);
+      if (idx !== -1) {
+        renderSlide(idx);
+        restartAutoSlide();
+      }
     }
 
     function nextProductSlide() {
@@ -1208,31 +1219,23 @@
       renderSlide(currentSlideIdx - 1);
     }
 
-    function resetProgress() {
-      progressPercent = 0;
-      const bar = document.getElementById('slide-timer-bar');
-      if (bar) bar.style.width = '0%';
-    }
-
     function startAutoSlide() {
-      if (autoSlideInterval) clearInterval(autoSlideInterval);
-      if (progressTimer) clearInterval(progressTimer);
-
-      progressTimer = setInterval(() => {
-        progressPercent += (TICK_MS / SLIDE_DURATION_MS) * 100;
-        const bar = document.getElementById('slide-timer-bar');
-        if (bar) bar.style.width = Math.min(progressPercent, 100) + '%';
-        if (progressPercent >= 100) {
-          nextProductSlide();
-        }
-      }, TICK_MS);
+      if (autoSlideTimer) clearInterval(autoSlideTimer);
+      autoSlideTimer = setInterval(() => {
+        nextProductSlide();
+      }, SLIDE_INTERVAL_MS);
     }
 
     function pauseAutoSlide() {
-      if (progressTimer) clearInterval(progressTimer);
+      if (autoSlideTimer) clearInterval(autoSlideTimer);
     }
 
     function resumeAutoSlide() {
+      startAutoSlide();
+    }
+
+    function restartAutoSlide() {
+      pauseAutoSlide();
       startAutoSlide();
     }
 

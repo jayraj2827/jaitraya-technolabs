@@ -27,49 +27,57 @@
 }
 </style>
 </head><body class="bg-surface-container-lowest text-on-surface font-body-default text-body-default antialiased selection:bg-secondary-container selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
-      <div class="flex items-center gap-4">
-        <a class="flex items-center gap-3.5 group brand-link" data-path="home" href="index.html" aria-label="Jaitraya TechnoLabs Homepage">
-          <img id="header-logo" alt="Jaitraya TechnoLabs Logo" class="h-9 w-auto object-contain transition-opacity duration-300 brand-logo-img" 
-               src="assets/images/stitch/stitch_asset_23.jpg" 
-               data-dark-src="assets/images/stitch/stitch_asset_23.jpg" 
-               data-light-src="assets/images/stitch/stitch_asset_21.jpg">
-          <div class="flex flex-col justify-center">
-            <span id="header-brand-title" class="font-headline-sm text-[17px] sm:text-[18px] font-bold tracking-[0.05em] text-white leading-tight transition-colors duration-300">
-              JAITRAYA TECHNOLABS
-            </span>
-            <span id="header-brand-subtitle" class="font-label-structural text-[10px] uppercase tracking-[0.28em] text-neutral-400 leading-none mt-1 transition-colors duration-300">
-              IDEAS · INTELLIGENCE · IMPACT
-            </span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Desktop Navigation: Home -> Products -> Solutions -> About Us -> Contact Us -->
-      <nav id="header-nav" class="hidden md:flex items-center justify-end gap-8 h-full ml-auto desktop-nav" aria-label="Main Navigation">
-        <a class="nav-btn-link font-label-interface text-[14px] font-semibold text-white py-2 text-neutral-300 hover:text-white transition-colors" href="index.html" data-path="home">Home</a>
-        <a class="nav-btn-link font-label-interface text-[14px] text-neutral-300 hover:text-white transition-colors py-2" href="products.html" data-path="products">Products</a>
-        <a class="nav-btn-link font-label-interface text-[14px] text-neutral-300 hover:text-white transition-colors py-2" href="solutions.html" data-path="solutions">Solutions</a>
-        <a class="nav-btn-link font-label-interface text-[14px] text-neutral-300 hover:text-white transition-colors py-2" href="about.html" class="nav-btn-link font-label-interface text-[14px] font-semibold text-white py-2 active active-link" data-path="about-us">About Us</a>
-        <a class="nav-btn-link font-label-interface text-[14px] text-neutral-300 hover:text-white transition-colors py-2" href="contact.html" data-path="contact-us">Contact Us</a>
-
-        <!-- Subpage contract helper for automated suites -->
-        <div class="nav-dropdown-menu hidden" aria-hidden="true" style="display:none;">
-          <a href="mulyankan-ai.html">Mulyankan AI</a>
-          <a href="mira.html">MIRA</a>
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
+    
+    <!-- Brand Logo & Identity -->
+    <div class="flex items-center gap-4">
+      <a class="flex items-center gap-3.5 group brand-link" data-path="home" href="index.html" aria-label="Jaitraya TechnoLabs Homepage">
+        <img id="header-logo" alt="Jaitraya TechnoLabs Logo" class="h-9 w-auto object-contain transition-opacity duration-300 brand-logo-img" 
+             src="assets/images/stitch/stitch_asset_23.jpg" 
+             data-dark-src="assets/images/stitch/stitch_asset_23.jpg" 
+             data-light-src="assets/images/stitch/stitch_asset_21.jpg">
+        <div class="flex flex-col justify-center">
+          <span id="header-brand-title" class="font-headline-sm text-[17px] sm:text-[18px] font-bold tracking-[0.05em] text-white leading-tight transition-colors duration-300">
+            JAITRAYA TECHNOLABS
+          </span>
+          <span id="header-brand-subtitle" class="font-label-structural text-[10px] uppercase tracking-[0.28em] text-neutral-400 leading-none mt-1 transition-colors duration-300">
+            IDEAS · INTELLIGENCE · IMPACT
+          </span>
         </div>
-      </nav>
-
-      <!-- Mobile Hamburger Toggle -->
-      <div class="md:hidden flex items-center">
-        <button id="mobile-menu-btn" class="mobile-toggle p-2 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
+      </a>
     </div>
-  </header>
+
+    <!-- Desktop Navigation -->
+    <nav id="header-nav" class="hidden md:flex items-center justify-end gap-2 h-full ml-auto desktop-nav" aria-label="Main Navigation">
+      <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="index.html" data-path="home">Home</a>
+      <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="products.html" data-path="products">Products</a>
+      <a class="nav-capsule-link font-label-interface text-[14px] text-neutral-300 hover:text-white px-4 py-2 rounded-full transition-colors" href="solutions.html" data-path="solutions">Solutions</a>
+      <a class="nav-capsule-link font-label-interface text-[14px] text-white font-semibold bg-white/10 active active-link px-4 py-2 rounded-full transition-colors" href="about.html" data-path="about-us">About Us</a>
+      
+      <!-- Contact Us Pill Button -->
+      <a class="btn-pill-primary ml-2 px-5 py-2 font-label-interface text-xs font-semibold inline-flex items-center gap-1.5 transition-all shadow-sm shadow-blue-500/25 " 
+         href="contact.html" data-path="contact-us">
+        <span>Contact Us</span>
+        <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+      </a>
+
+      <!-- Subpage contract helper for automated suites -->
+      <div class="nav-dropdown-menu hidden" aria-hidden="true" style="display:none;">
+        <a href="mulyankan-ai.html">Mulyankan AI</a>
+        <a href="mira.html">MIRA</a>
+      </div>
+    </nav>
+
+    <!-- Mobile Hamburger Toggle -->
+    <div class="md:hidden flex items-center">
+      <button id="mobile-menu-btn" class="mobile-toggle p-2 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
 
 <!-- Mobile Navigation Drawer Overlay & Panel -->
 <div id="mobile-drawer-overlay" class="mobile-drawer-overlay fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-sm transition-opacity"></div>
@@ -324,4 +332,188 @@
 
 
 
+<script>
+    // 1. SMART NAVBAR SCROLL LOGIC
+    (function() {
+      const header = document.getElementById('site-header');
+      const logo = document.getElementById('header-logo');
+      const title = document.getElementById('header-brand-title');
+      const subtitle = document.getElementById('header-brand-subtitle');
+      const links = document.querySelectorAll('.desktop-nav .nav-capsule-link');
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const hero = document.getElementById('hero-section');
+
+      function onScroll() {
+        const heroHeight = hero ? hero.offsetHeight : 500;
+        const triggerThreshold = hero ? (heroHeight - 88) : 80;
+        const isPastHero = window.scrollY >= triggerThreshold;
+
+        if (isPastHero) {
+          header.style.backgroundColor = 'rgba(255, 255, 255, 0.94)';
+          header.style.backdropFilter = 'blur(16px)';
+          header.style.borderBottomColor = 'rgba(226, 232, 240, 0.9)';
+          header.style.boxShadow = '0 4px 20px -2px rgba(0, 0, 0, 0.05)';
+          if (logo && logo.dataset.lightSrc) logo.src = logo.dataset.lightSrc;
+          if (title) title.style.color = '#03224d';
+          if (subtitle) subtitle.style.color = '#64748b';
+          if (menuBtn) {
+            menuBtn.style.color = '#03224d';
+            menuBtn.style.borderColor = '#cbd5e1';
+          }
+          links.forEach(link => {
+            if (link.classList.contains('active-link')) {
+              link.style.color = '#03224d';
+              link.style.backgroundColor = 'rgba(3, 34, 77, 0.08)';
+            } else {
+              link.style.color = '#475569';
+              link.style.backgroundColor = 'transparent';
+            }
+          });
+        } else {
+          header.style.backgroundColor = 'rgba(0, 0, 0, 0.45)';
+          header.style.backdropFilter = 'blur(14px)';
+          header.style.borderBottomColor = 'transparent';
+          header.style.boxShadow = 'none';
+          if (logo && logo.dataset.darkSrc) logo.src = logo.dataset.darkSrc;
+          if (title) title.style.color = '#ffffff';
+          if (subtitle) subtitle.style.color = '#a3a3a3';
+          if (menuBtn) {
+            menuBtn.style.color = '#ffffff';
+            menuBtn.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+          }
+          links.forEach(link => {
+            if (link.classList.contains('active-link')) {
+              link.style.color = '#ffffff';
+              link.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            } else {
+              link.style.color = '#d4d4d4';
+              link.style.backgroundColor = 'transparent';
+            }
+          });
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      onScroll();
+
+      // Mobile Drawer Toggle
+      const toggle = document.getElementById('mobile-menu-btn');
+      const drawer = document.getElementById('mobile-drawer');
+      const overlay = document.getElementById('mobile-drawer-overlay');
+      const closeBtn = document.getElementById('drawer-close-btn');
+
+      if (toggle && drawer && overlay && closeBtn) {
+        toggle.addEventListener('click', function() {
+          drawer.classList.remove('translate-x-full');
+          overlay.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+          toggle.setAttribute('aria-expanded', 'true');
+        });
+
+        function closeMenu() {
+          drawer.classList.add('translate-x-full');
+          overlay.classList.add('hidden');
+          document.body.style.overflow = '';
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+      }
+    })();
+
+    // 2. MODERN PRODUCT AUTO-SLIDER CONTROLLER
+    const slides = ['mulyankan', 'mira'];
+    let currentSlideIdx = 0;
+    let autoSlideTimer = null;
+    const SLIDE_INTERVAL_MS = 6000;
+
+    function renderSlide(idx) {
+      currentSlideIdx = (idx + slides.length) % slides.length;
+      const activeKey = slides[currentSlideIdx];
+
+      slides.forEach(key => {
+        const slideEl = document.getElementById('slide-' + key);
+        const tabEl = document.getElementById('tab-' + key);
+        const dotEl = document.getElementById('dot-' + key);
+        if (!slideEl || !tabEl) return;
+
+        if (key === activeKey) {
+          slideEl.classList.remove('slide-hidden');
+          slideEl.classList.add('slide-active');
+          tabEl.classList.add('bg-primary', 'text-white', 'shadow-sm');
+          tabEl.classList.remove('text-slate-600', 'hover:bg-white');
+          if (dotEl) {
+            dotEl.classList.add('bg-primary', 'w-6');
+            dotEl.classList.remove('bg-slate-300', 'w-2.5');
+          }
+        } else {
+          slideEl.classList.add('slide-hidden');
+          slideEl.classList.remove('slide-active');
+          tabEl.classList.remove('bg-primary', 'text-white', 'shadow-sm');
+          tabEl.classList.add('text-slate-600', 'hover:bg-white');
+          if (dotEl) {
+            dotEl.classList.remove('bg-primary', 'w-6');
+            dotEl.classList.add('bg-slate-300', 'w-2.5');
+          }
+        }
+      });
+    }
+
+    function switchProductSlide(key) {
+      const idx = slides.indexOf(key);
+      if (idx !== -1) {
+        renderSlide(idx);
+        restartAutoSlide();
+      }
+    }
+
+    function nextProductSlide() {
+      renderSlide(currentSlideIdx + 1);
+    }
+
+    function prevProductSlide() {
+      renderSlide(currentSlideIdx - 1);
+    }
+
+    function startAutoSlide() {
+      if (autoSlideTimer) clearInterval(autoSlideTimer);
+      autoSlideTimer = setInterval(() => {
+        nextProductSlide();
+      }, SLIDE_INTERVAL_MS);
+    }
+
+    function pauseAutoSlide() {
+      if (autoSlideTimer) clearInterval(autoSlideTimer);
+    }
+
+    function resumeAutoSlide() {
+      startAutoSlide();
+    }
+
+    function restartAutoSlide() {
+      pauseAutoSlide();
+      startAutoSlide();
+    }
+
+    startAutoSlide();
+
+    // 3. SCROLL REVEAL INTERSECTION OBSERVER
+    (function() {
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+      } else {
+        document.querySelectorAll('.scroll-reveal').forEach(el => el.classList.add('revealed'));
+      }
+    })();
+  </script>
 </body></html>
