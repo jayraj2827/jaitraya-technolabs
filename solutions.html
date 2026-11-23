@@ -15,9 +15,125 @@
   transform: translateY(0);
   box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.08);
 }
+
+    /* Radar Ping Live Indicator */
+    .radar-dot-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+    }
+    .radar-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      opacity: 0.6;
+      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    .radar-center {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
+    }
+    @keyframes radarPulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+    }
+    .btn-pill-secondary {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
 </style>
 </head><body class="bg-surface-container-lowest text-on-surface font-body-default text-body-default antialiased selection:bg-secondary-container selection:text-primary" style="--tw-color-primary: #0e1e38; --tw-color-primary-container: #112240; --tw-color-primary-fixed: #c6d6f5;"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta content="web_standard" name="shell-type"><title>Jaitraya TechnoLabs</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#9ea2ab", "on-secondary-container": "#596375", "secondary-fixed-dim": "#bdc7dc", "primary": "#03224d", "on-tertiary-fixed": "#171c23", "surface-container-high": "#e4e8f1", "error-container": "#ffdad6", "tertiary-fixed": "#dee3ec", "surface-container": "#eaeef6", "on-secondary-fixed-variant": "#3e4758", "on-secondary-fixed": "#121c2b", "error": "#ba1a1a", "secondary": "#555f71", "on-tertiary-fixed-variant": "#42474f", "tertiary-container": "#343940", "surface-bright": "#f7f9ff", "background": "#f7f9ff", "on-primary-fixed-variant": "#2e4673", "tertiary-fixed-dim": "#c2c7d0", "secondary-container": "#d6e0f5", "secondary-fixed": "#d9e3f8", "primary-container": "#1f3864", "inverse-surface": "#2c3137", "surface": "#f7f9ff", "on-surface": "#171c22", "on-primary-fixed": "#001a41", "on-background": "#171c22", "primary-fixed": "#d8e2ff", "on-error": "#ffffff", "inverse-on-surface": "#edf1f9", "inverse-primary": "#afc6fb", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "surface-container-highest": "#dee3eb", "on-primary-container": "#8ba2d5", "surface-tint": "#475e8c", "on-tertiary": "#ffffff", "outline": "#747780", "primary-fixed-dim": "#afc6fb", "surface-dim": "#d6dae2", "outline-variant": "#c4c6d0", "on-secondary": "#ffffff", "on-surface-variant": "#44474f", "surface-variant": "#dee3eb", "tertiary": "#1e242a", "on-primary": "#ffffff", "surface-container-low": "#f0f4fc" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "4rem", "margin-mobile": "1.25rem", "margin-tablet": "2rem", "space-xl": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg": ["Plus Jakarta Sans", "Geist", "sans-serif"], "display-hero-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-muted": ["Inter", "Geist", "sans-serif"], "label-structural": ["IBM Plex Mono", "Geist", "monospace"], "headline-md": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-default": ["Inter", "Geist", "sans-serif"], "label-interface": ["Inter", "Geist", "sans-serif"], "display-hero": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-lead": ["Inter", "Geist", "sans-serif"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-muted": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-structural": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-default": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-interface": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lead": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script><header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }
+    /* Radar Ping Live Indicator */
+    .radar-dot-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+    }
+    .radar-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      opacity: 0.6;
+      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    .radar-center {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
+    }
+    @keyframes radarPulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+    }
+    .btn-pill-secondary {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#9ea2ab", "on-secondary-container": "#596375", "secondary-fixed-dim": "#bdc7dc", "primary": "#03224d", "on-tertiary-fixed": "#171c23", "surface-container-high": "#e4e8f1", "error-container": "#ffdad6", "tertiary-fixed": "#dee3ec", "surface-container": "#eaeef6", "on-secondary-fixed-variant": "#3e4758", "on-secondary-fixed": "#121c2b", "error": "#ba1a1a", "secondary": "#555f71", "on-tertiary-fixed-variant": "#42474f", "tertiary-container": "#343940", "surface-bright": "#f7f9ff", "background": "#f7f9ff", "on-primary-fixed-variant": "#2e4673", "tertiary-fixed-dim": "#c2c7d0", "secondary-container": "#d6e0f5", "secondary-fixed": "#d9e3f8", "primary-container": "#1f3864", "inverse-surface": "#2c3137", "surface": "#f7f9ff", "on-surface": "#171c22", "on-primary-fixed": "#001a41", "on-background": "#171c22", "primary-fixed": "#d8e2ff", "on-error": "#ffffff", "inverse-on-surface": "#edf1f9", "inverse-primary": "#afc6fb", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "surface-container-highest": "#dee3eb", "on-primary-container": "#8ba2d5", "surface-tint": "#475e8c", "on-tertiary": "#ffffff", "outline": "#747780", "primary-fixed-dim": "#afc6fb", "surface-dim": "#d6dae2", "outline-variant": "#c4c6d0", "on-secondary": "#ffffff", "on-surface-variant": "#44474f", "surface-variant": "#dee3eb", "tertiary": "#1e242a", "on-primary": "#ffffff", "surface-container-low": "#f0f4fc" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "4rem", "margin-mobile": "1.25rem", "margin-tablet": "2rem", "space-xl": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg": ["Plus Jakarta Sans", "Geist", "sans-serif"], "display-hero-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-muted": ["Inter", "Geist", "sans-serif"], "label-structural": ["IBM Plex Mono", "Geist", "monospace"], "headline-md": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-default": ["Inter", "Geist", "sans-serif"], "label-interface": ["Inter", "Geist", "sans-serif"], "display-hero": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-lead": ["Inter", "Geist", "sans-serif"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-muted": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-structural": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-default": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-interface": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lead": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script><header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
     
     <!-- Brand Logo & Identity -->
@@ -181,7 +297,26 @@
 })();
 </script><main class="w-full pt-20 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
 <!-- Top Technical Anchor Navigation & Hero Zone -->
-<section class="relative w-full bg-[#030712] text-white px-gutter pt-space-xl pb-space-xl overflow-hidden border-b border-white/10"><div class="absolute right-0 top-0 w-1/2 h-full pointer-events-none opacity-20"><svg class="w-full h-full text-white/15" fill="none" viewBox="0 0 600 600"><defs><pattern height="40" id="hero-tech-grid" patternUnits="userSpaceOnUse" width="40"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.75"></path></pattern></defs><rect fill="url(#hero-tech-grid)" height="600" width="600"></rect></svg></div><div class="max-w-7xl mx-auto relative z-10"><div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 border border-white/15 backdrop-blur-md rounded-full mb-space-md"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span class="font-label-structural text-label-structural text-neutral-300 tracking-widest uppercase">ENTERPRISE ARCHITECTURE // VERIFIED PLATFORMS</span></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end mb-space-lg"><div class="lg:col-span-8"><h1 class="font-display-hero text-display-hero text-white tracking-tight leading-[1.08]">Deterministic Enterprise Systems Engineered for Zero Fault Tolerance.</h1></div><div class="lg:col-span-4 pb-2"><p class="font-body-lead text-body-lead text-neutral-300">From high-throughput vision pipelines to air-gapped sovereign intelligence, Jaitraya TechnoLabs builds physical and digital architectures that execute reliably under severe institutional constraints.</p></div></div><div class="flex flex-wrap items-center gap-space-md pt-space-sm mb-space-xl"><a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-primary font-label-interface text-label-interface font-semibold rounded-xl hover:bg-neutral-100 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-white/5 cursor-pointer" href="#custom-software">Explore Deployments<span class="material-symbols-outlined text-[18px]">arrow_downward</span></a><a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/5 border border-white/20 text-white font-label-interface text-label-interface font-medium rounded-xl hover:bg-white/10 hover:border-white transition-all cursor-pointer" href="#hardware-robotics">Technical Specifications<span class="material-symbols-outlined text-[18px]">arrow_forward</span></a></div><div class="p-space-md bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl grid grid-cols-2 md:grid-cols-4 gap-gutter"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-neutral-300 text-[22px]">memory</span><div><span class="font-label-structural text-[10px] text-neutral-400 uppercase block tracking-wider">RTOS Latency</span><span class="font-headline-sm text-[16px] text-white font-semibold">&lt; 1 ms Determinism</span></div></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-neutral-300 text-[22px]">security</span><div><span class="font-label-structural text-[10px] text-neutral-400 uppercase block tracking-wider">Air-Gapped Loop</span><span class="font-headline-sm text-[16px] text-white font-semibold">100% Zero-Egress</span></div></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-neutral-300 text-[22px]">sync_saved_locally</span><div><span class="font-label-structural text-[10px] text-neutral-400 uppercase block tracking-wider">Throughput</span><span class="font-headline-sm text-[16px] text-white font-semibold">1.42M msg/sec</span></div></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-neutral-300 text-[22px]">precision_manufacturing</span><div><span class="font-label-structural text-[10px] text-neutral-400 uppercase block tracking-wider">Actuation Acc.</span><span class="font-headline-sm text-[16px] text-white font-semibold">±0.05 mm Repeat</span></div></div></div></div></section>
+<section class="relative w-full bg-[#030712] text-white px-gutter pt-space-xl pb-space-xl overflow-hidden border-b border-white/10"><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none" aria-hidden="true"></div><div class="max-w-7xl mx-auto relative z-10"><div class="mb-6 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)]">
+          <span class="radar-dot-wrapper" aria-hidden="true">
+            <span class="radar-ring"></span>
+            <span class="radar-center"></span>
+          </span>
+          <span class="font-sans text-[11.5px] uppercase tracking-[0.14em] text-neutral-300 font-medium flex items-center gap-2">
+            <span>Enterprise Solutions</span>
+            <span class="text-white/20 font-light mx-0.5">/</span>
+            <span>Mission-Critical Systems</span>
+          </span>
+        </div><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end mb-space-lg"><div class="lg:col-span-8"><h1 class="font-display-hero text-display-hero text-white tracking-tight leading-[1.08]">Deterministic Enterprise Systems Engineered for Zero Fault Tolerance.</h1></div><div class="lg:col-span-4 pb-2"><p class="font-body-lead text-body-lead text-neutral-300">From high-throughput vision pipelines to air-gapped sovereign intelligence, Jaitraya TechnoLabs builds physical and digital architectures that execute reliably under severe institutional constraints.</p></div></div><div class="flex flex-wrap items-center gap-4 pt-2 mb-12">
+          <a class="btn-pill-primary inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold shadow-md shadow-blue-500/25 cursor-pointer" href="#custom-software">
+            <span>Explore Deployments</span>
+            <span class="material-symbols-outlined text-[17px]">arrow_downward</span>
+          </a>
+          <a class="btn-pill-secondary inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium cursor-pointer" href="#hardware-robotics">
+            <span>Technical Specifications</span>
+            <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+          </a>
+        </div><div class="p-space-md bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl grid grid-cols-2 md:grid-cols-4 gap-gutter"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-neutral-300 text-[22px]">memory</span><div><span class="font-label-structural text-[10px] text-neutral-400 uppercase block tracking-wider">RTOS Latency</span><span class="font-headline-sm text-[16px] text-white font-semibold">&lt; 1 ms Determinism</span></div></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-neutral-300 text-[22px]">security</span><div><span class="font-label-structural text-[10px] text-neutral-400 uppercase block tracking-wider">Air-Gapped Loop</span><span class="font-headline-sm text-[16px] text-white font-semibold">100% Zero-Egress</span></div></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-neutral-300 text-[22px]">sync_saved_locally</span><div><span class="font-label-structural text-[10px] text-neutral-400 uppercase block tracking-wider">Throughput</span><span class="font-headline-sm text-[16px] text-white font-semibold">1.42M msg/sec</span></div></div><div class="flex items-center gap-3"><span class="material-symbols-outlined text-neutral-300 text-[22px]">precision_manufacturing</span><div><span class="font-label-structural text-[10px] text-neutral-400 uppercase block tracking-wider">Actuation Acc.</span><span class="font-headline-sm text-[16px] text-white font-semibold">±0.05 mm Repeat</span></div></div></div></div></section>
 <!-- Metric Strip Banner -->
 <section class="w-full bg-surface-container-low py-space-md border-y border-outline-variant/50">
 <div class="max-w-7xl mx-auto px-gutter grid grid-cols-2 md:grid-cols-4 gap-gutter">

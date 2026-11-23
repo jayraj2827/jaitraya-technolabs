@@ -8,7 +8,123 @@
   .rounded { border-radius: 0.5rem !important; }
   .rounded-lg { border-radius: 0.625rem !important; }
   .rounded-xl { border-radius: 0.875rem !important; }
-</style><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#9ea2ab", "on-secondary-container": "#596375", "secondary-fixed-dim": "#bdc7dc", "primary": "#03224d", "on-tertiary-fixed": "#171c23", "surface-container-high": "#e4e8f1", "error-container": "#ffdad6", "tertiary-fixed": "#dee3ec", "surface-container": "#eaeef6", "on-secondary-fixed-variant": "#3e4758", "on-secondary-fixed": "#121c2b", "error": "#ba1a1a", "secondary": "#555f71", "on-tertiary-fixed-variant": "#42474f", "tertiary-container": "#343940", "surface-bright": "#f7f9ff", "background": "#f7f9ff", "on-primary-fixed-variant": "#2e4673", "tertiary-fixed-dim": "#c2c7d0", "secondary-container": "#d6e0f5", "secondary-fixed": "#d9e3f8", "primary-container": "#1f3864", "inverse-surface": "#2c3137", "surface": "#f7f9ff", "on-surface": "#171c22", "on-primary-fixed": "#001a41", "on-background": "#171c22", "primary-fixed": "#d8e2ff", "on-error": "#ffffff", "inverse-on-surface": "#edf1f9", "inverse-primary": "#afc6fb", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "surface-container-highest": "#dee3eb", "on-primary-container": "#8ba2d5", "surface-tint": "#475e8c", "on-tertiary": "#ffffff", "outline": "#747780", "primary-fixed-dim": "#afc6fb", "surface-dim": "#d6dae2", "outline-variant": "#c4c6d0", "on-secondary": "#ffffff", "on-surface-variant": "#44474f", "surface-variant": "#dee3eb", "tertiary": "#1e242a", "on-primary": "#ffffff", "surface-container-low": "#f0f4fc" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "4rem", "margin-mobile": "1.25rem", "margin-tablet": "2rem", "space-xl": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg": ["Plus Jakarta Sans", "Geist", "sans-serif"], "display-hero-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-muted": ["Inter", "Geist", "sans-serif"], "label-structural": ["IBM Plex Mono", "Geist", "monospace"], "headline-md": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-default": ["Inter", "Geist", "sans-serif"], "label-interface": ["Inter", "Geist", "sans-serif"], "display-hero": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-lead": ["Inter", "Geist", "sans-serif"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-muted": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-structural": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-default": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-interface": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lead": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script><style>
+
+    /* Radar Ping Live Indicator */
+    .radar-dot-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+    }
+    .radar-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      opacity: 0.6;
+      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    .radar-center {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
+    }
+    @keyframes radarPulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+    }
+    .btn-pill-secondary {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+</style><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }
+    /* Radar Ping Live Indicator */
+    .radar-dot-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+    }
+    .radar-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      opacity: 0.6;
+      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    .radar-center {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
+    }
+    @keyframes radarPulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+    }
+    .btn-pill-secondary {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#9ea2ab", "on-secondary-container": "#596375", "secondary-fixed-dim": "#bdc7dc", "primary": "#03224d", "on-tertiary-fixed": "#171c23", "surface-container-high": "#e4e8f1", "error-container": "#ffdad6", "tertiary-fixed": "#dee3ec", "surface-container": "#eaeef6", "on-secondary-fixed-variant": "#3e4758", "on-secondary-fixed": "#121c2b", "error": "#ba1a1a", "secondary": "#555f71", "on-tertiary-fixed-variant": "#42474f", "tertiary-container": "#343940", "surface-bright": "#f7f9ff", "background": "#f7f9ff", "on-primary-fixed-variant": "#2e4673", "tertiary-fixed-dim": "#c2c7d0", "secondary-container": "#d6e0f5", "secondary-fixed": "#d9e3f8", "primary-container": "#1f3864", "inverse-surface": "#2c3137", "surface": "#f7f9ff", "on-surface": "#171c22", "on-primary-fixed": "#001a41", "on-background": "#171c22", "primary-fixed": "#d8e2ff", "on-error": "#ffffff", "inverse-on-surface": "#edf1f9", "inverse-primary": "#afc6fb", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "surface-container-highest": "#dee3eb", "on-primary-container": "#8ba2d5", "surface-tint": "#475e8c", "on-tertiary": "#ffffff", "outline": "#747780", "primary-fixed-dim": "#afc6fb", "surface-dim": "#d6dae2", "outline-variant": "#c4c6d0", "on-secondary": "#ffffff", "on-surface-variant": "#44474f", "surface-variant": "#dee3eb", "tertiary": "#1e242a", "on-primary": "#ffffff", "surface-container-low": "#f0f4fc" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "4rem", "margin-mobile": "1.25rem", "margin-tablet": "2rem", "space-xl": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg": ["Plus Jakarta Sans", "Geist", "sans-serif"], "display-hero-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-muted": ["Inter", "Geist", "sans-serif"], "label-structural": ["IBM Plex Mono", "Geist", "monospace"], "headline-md": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-default": ["Inter", "Geist", "sans-serif"], "label-interface": ["Inter", "Geist", "sans-serif"], "display-hero": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-lead": ["Inter", "Geist", "sans-serif"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-muted": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-structural": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-default": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-interface": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lead": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script><style>
 .btn-modern {
   position: relative;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
@@ -25,6 +141,64 @@
   transform: translateY(0);
   box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.08);
 }
+
+    /* Radar Ping Live Indicator */
+    .radar-dot-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+    }
+    .radar-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      opacity: 0.6;
+      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    .radar-center {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
+    }
+    @keyframes radarPulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+    }
+    .btn-pill-secondary {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
 </style>
 </head><body class="bg-surface-container-lowest text-on-surface font-body-default text-body-default antialiased selection:bg-secondary-container selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
@@ -113,7 +287,7 @@
         <span class="font-label-structural text-xs text-primary font-semibold uppercase tracking-widest">Engineering Groups &amp; Culture</span>
         <h2 class="font-headline-lg text-headline-lg text-primary mt-2">Principal Engineering Talent &amp; Leadership</h2>
       </div>
-      <a href="contact.html?type=careers" class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-xs font-semibold rounded-lg hover:bg-primary-container transition-colors shadow-sm">
+      <a href="contact.html?type=careers" class="btn-pill-primary inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold shadow-md shadow-blue-500/25">
         Explore Engineering Careers &rarr;
       </a>
     </div>
@@ -122,7 +296,26 @@
 <!-- Top Subtle Architectural Bar -->
 
 <!-- Hero Section -->
-<section class="w-full bg-[#030712] py-space-xl lg:py-24 border-b border-white/10 relative overflow-hidden"><div class="max-w-7xl mx-auto px-gutter relative z-10"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-space-xl items-center"><div class="lg:col-span-8 flex flex-col items-start"><div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/15 text-slate-200 font-label-structural text-label-structural uppercase tracking-wider mb-space-md rounded-full backdrop-blur-sm shadow-sm"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span>INSTITUTIONAL AUTONOMY PROTOCOLS ACTIVE</span><span class="text-slate-400">//</span><span class="text-slate-400">v4.2</span></div><h1 class="font-headline-lg text-headline-lg text-white tracking-tight mb-space-md max-w-4xl">Pioneering Independent Technology Through Disciplined Engineering.</h1><p class="font-body-lead text-body-lead text-slate-300 max-w-2xl mb-space-lg">Jaitraya TechnoLabs was founded to build durable software, physical robotics, and verifiable intelligence for mission-critical institutional operations. We replace transient industry abstraction with deterministic, physical-grade technical integrity.</p><div class="flex flex-wrap items-center gap-space-md"><a href="solutions.html" data-path="solutions" class="px-5 py-3 bg-white text-slate-900 font-label-interface text-label-interface font-medium hover:bg-slate-100 transition-all rounded-xl inline-flex items-center gap-2 shadow-sm"><span>Explore System Frameworks</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a><a href="contact.html" data-path="contact-us" class="px-5 py-3 border border-white/20 bg-white/5 text-white font-label-interface text-label-interface font-medium hover:bg-white/10 hover:border-white/30 transition-all rounded-xl inline-flex items-center gap-2 backdrop-blur-sm"><span class="material-symbols-outlined text-[18px] text-slate-300">terminal</span><span>Technical Briefing NDA</span></a></div></div><div class="lg:col-span-4 flex flex-col gap-space-md bg-white/[0.04] p-space-lg border border-white/10 shadow-sm rounded-2xl backdrop-blur-md"><div class="flex items-center justify-between"><span class="font-label-structural text-label-structural text-slate-400 uppercase tracking-widest">Engineering Cohort</span><span class="font-label-structural text-label-structural px-2.5 py-1 bg-white/10 border border-white/20 text-white font-medium rounded-lg">6 Roster Principals</span></div><div class="grid grid-cols-2 gap-space-sm pt-space-xs"><div class="p-space-sm bg-white/5 border border-white/10 rounded-xl"><span class="block font-headline-sm text-headline-sm text-white font-semibold">100%</span><span class="font-label-structural text-[10px] text-slate-400 uppercase tracking-wider">Air-Gapped IP</span></div><div class="p-space-sm bg-white/5 border border-white/10 rounded-xl"><span class="block font-headline-sm text-headline-sm text-white font-semibold">0.0 ms</span><span class="font-label-structural text-[10px] text-slate-400 uppercase tracking-wider">Cloud Egress Lag</span></div></div><p class="font-body-muted text-body-muted text-slate-400 leading-relaxed">All primary systems operate on bare-metal firmware, custom sensory rigs, and offline edge transformers with zero runtime dependencies.</p><div class="pt-space-sm border-t border-white/10 flex items-center justify-between font-label-structural text-[11px] text-slate-300"><span>Zero-Cloud Telemetry</span><span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>ONLINE</span></div></div></div></div></section>
+<section class="w-full bg-[#030712] py-space-xl lg:py-24 border-b border-white/10 relative overflow-hidden"><div class="max-w-7xl mx-auto px-gutter relative z-10"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-space-xl items-center"><div class="lg:col-span-8 flex flex-col items-start"><div class="mb-6 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)]">
+            <span class="radar-dot-wrapper" aria-hidden="true">
+              <span class="radar-ring"></span>
+              <span class="radar-center"></span>
+            </span>
+            <span class="font-sans text-[11.5px] uppercase tracking-[0.14em] text-neutral-300 font-medium flex items-center gap-2">
+              <span>Institutional Autonomy</span>
+              <span class="text-white/20 font-light mx-0.5">/</span>
+              <span>Disciplined Engineering</span>
+            </span>
+          </div><h1 class="font-headline-lg text-headline-lg text-white tracking-tight mb-space-md max-w-4xl">Pioneering Independent Technology Through Disciplined Engineering.</h1><p class="font-body-lead text-body-lead text-slate-300 max-w-2xl mb-space-lg">Jaitraya TechnoLabs was founded to build durable software, physical robotics, and verifiable intelligence for mission-critical institutional operations. We replace transient industry abstraction with deterministic, physical-grade technical integrity.</p><div class="flex flex-wrap items-center gap-4">
+            <a href="solutions.html" data-path="solutions" class="btn-pill-primary inline-flex items-center gap-2 px-6 py-3 font-sans text-xs font-semibold shadow-md shadow-blue-500/25">
+              <span>Explore System Frameworks</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+            <a href="contact.html" data-path="contact-us" class="btn-pill-secondary inline-flex items-center gap-2 px-6 py-3 font-sans text-xs font-medium">
+              <span class="material-symbols-outlined text-[16px] text-slate-300">terminal</span>
+              <span>Technical Briefing NDA</span>
+            </a>
+          </div></div><div class="lg:col-span-4 flex flex-col gap-space-md bg-white/[0.04] p-space-lg border border-white/10 shadow-sm rounded-2xl backdrop-blur-md"><div class="flex items-center justify-between"><span class="font-label-structural text-label-structural text-slate-400 uppercase tracking-widest">Engineering Cohort</span><span class="font-label-structural text-label-structural px-2.5 py-1 bg-white/10 border border-white/20 text-white font-medium rounded-lg">6 Roster Principals</span></div><div class="grid grid-cols-2 gap-space-sm pt-space-xs"><div class="p-space-sm bg-white/5 border border-white/10 rounded-xl"><span class="block font-headline-sm text-headline-sm text-white font-semibold">100%</span><span class="font-label-structural text-[10px] text-slate-400 uppercase tracking-wider">Air-Gapped IP</span></div><div class="p-space-sm bg-white/5 border border-white/10 rounded-xl"><span class="block font-headline-sm text-headline-sm text-white font-semibold">0.0 ms</span><span class="font-label-structural text-[10px] text-slate-400 uppercase tracking-wider">Cloud Egress Lag</span></div></div><p class="font-body-muted text-body-muted text-slate-400 leading-relaxed">All primary systems operate on bare-metal firmware, custom sensory rigs, and offline edge transformers with zero runtime dependencies.</p><div class="pt-space-sm border-t border-white/10 flex items-center justify-between font-label-structural text-[11px] text-slate-300"><span>Zero-Cloud Telemetry</span><span class="text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>ONLINE</span></div></div></div></div></section>
 <!-- Strategic Milestone Roadmap (2024-2030) -->
 <section class="w-full bg-surface py-space-xl lg:py-20 border-b border-outline-variant/40"><div class="max-w-7xl mx-auto px-gutter"><div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md"><div><span class="font-label-structural text-label-structural text-secondary uppercase tracking-widest block mb-space-xs">Horizon Vector</span><h2 class="font-headline-md text-headline-md text-primary tracking-tight">Strategic Milestone Roadmap (2024–2030)</h2></div><p class="font-body-muted text-body-muted text-secondary max-w-md">A phased trajectory translating applied deep research into sovereign hardware systems and institutional-grade deployments.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative"><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-surface border border-outline-variant/60 text-primary font-semibold rounded-lg">2024</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Phase I: Completed</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Foundational Platform Pilots</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Successful deployment of Mulyankan AI across select university evaluation centers, scoring unconstrained handwritten answer scripts offline.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">verified</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">300K+ Scripts Scored</span></div></div><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-primary text-on-primary font-semibold rounded-lg">2025</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-primary font-medium">Phase II: Active</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">MIRA Offline Workstation</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Commercial rollout of the MIRA unified desktop terminal and expansion of our dedicated physical mechatronics lab in Delhi NCR.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">precision_manufacturing</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">1.2 kW Turnkey Rig</span></div></div><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-surface border border-outline-variant/60 text-secondary font-semibold rounded-lg">2026</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Phase III: Engineering</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Multi-DoF Kinematics</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Commercialization of autonomous 6-DoF robotic manipulation arms paired with low-wattage Edge TPUs for high-speed automated document handling.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">memory</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Sub-Millimeter Feedback</span></div></div><div class="flex flex-col bg-surface-container-lowest p-space-lg border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow relative rounded-2xl card-hover-lift"><div class="flex items-center justify-between mb-space-md"><span class="font-label-structural text-label-structural px-2.5 py-1 bg-surface border border-outline-variant/60 text-secondary font-semibold rounded-lg">2027–2030</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Phase IV: Vision</span></div><h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Sovereign Ecosystems</h3><p class="font-body-default text-body-default text-secondary mb-space-md flex-1">Integrated autonomous software-hardware computing matrices deployed across pan-national testing bodies, defense telemetry, and statutory registries.</p><div class="pt-space-sm flex items-center gap-2 text-secondary border-t border-outline-variant/40"><span class="material-symbols-outlined text-[16px] text-primary">public</span><span class="font-label-structural text-[10px] uppercase tracking-wider text-secondary">Institutional Scale</span></div></div></div></div></section>
 <!-- Institutional Tri-Pillar Philosophy -->

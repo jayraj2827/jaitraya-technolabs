@@ -8,7 +8,123 @@
   .rounded { border-radius: 0.5rem !important; }
   .rounded-lg { border-radius: 0.625rem !important; }
   .rounded-xl { border-radius: 0.875rem !important; }
-</style><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#9ea2ab", "on-secondary-container": "#596375", "secondary-fixed-dim": "#bdc7dc", "primary": "#03224d", "on-tertiary-fixed": "#171c23", "surface-container-high": "#e4e8f1", "error-container": "#ffdad6", "tertiary-fixed": "#dee3ec", "surface-container": "#eaeef6", "on-secondary-fixed-variant": "#3e4758", "on-secondary-fixed": "#121c2b", "error": "#ba1a1a", "secondary": "#555f71", "on-tertiary-fixed-variant": "#42474f", "tertiary-container": "#343940", "surface-bright": "#f7f9ff", "background": "#f7f9ff", "on-primary-fixed-variant": "#2e4673", "tertiary-fixed-dim": "#c2c7d0", "secondary-container": "#d6e0f5", "secondary-fixed": "#d9e3f8", "primary-container": "#1f3864", "inverse-surface": "#2c3137", "surface": "#f7f9ff", "on-surface": "#171c22", "on-primary-fixed": "#001a41", "on-background": "#171c22", "primary-fixed": "#d8e2ff", "on-error": "#ffffff", "inverse-on-surface": "#edf1f9", "inverse-primary": "#afc6fb", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "surface-container-highest": "#dee3eb", "on-primary-container": "#8ba2d5", "surface-tint": "#475e8c", "on-tertiary": "#ffffff", "outline": "#747780", "primary-fixed-dim": "#afc6fb", "surface-dim": "#d6dae2", "outline-variant": "#c4c6d0", "on-secondary": "#ffffff", "on-surface-variant": "#44474f", "surface-variant": "#dee3eb", "tertiary": "#1e242a", "on-primary": "#ffffff", "surface-container-low": "#f0f4fc" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "4rem", "margin-mobile": "1.25rem", "margin-tablet": "2rem", "space-xl": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg": ["Plus Jakarta Sans", "Geist", "sans-serif"], "display-hero-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-muted": ["Inter", "Geist", "sans-serif"], "label-structural": ["IBM Plex Mono", "Geist", "monospace"], "headline-md": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-default": ["Inter", "Geist", "sans-serif"], "label-interface": ["Inter", "Geist", "sans-serif"], "display-hero": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-lead": ["Inter", "Geist", "sans-serif"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-muted": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-structural": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-default": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-interface": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lead": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script><style>
+
+    /* Radar Ping Live Indicator */
+    .radar-dot-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+    }
+    .radar-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      opacity: 0.6;
+      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    .radar-center {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
+    }
+    @keyframes radarPulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+    }
+    .btn-pill-secondary {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+</style><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }
+    /* Radar Ping Live Indicator */
+    .radar-dot-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+    }
+    .radar-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      opacity: 0.6;
+      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    .radar-center {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
+    }
+    @keyframes radarPulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+    }
+    .btn-pill-secondary {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#9ea2ab", "on-secondary-container": "#596375", "secondary-fixed-dim": "#bdc7dc", "primary": "#03224d", "on-tertiary-fixed": "#171c23", "surface-container-high": "#e4e8f1", "error-container": "#ffdad6", "tertiary-fixed": "#dee3ec", "surface-container": "#eaeef6", "on-secondary-fixed-variant": "#3e4758", "on-secondary-fixed": "#121c2b", "error": "#ba1a1a", "secondary": "#555f71", "on-tertiary-fixed-variant": "#42474f", "tertiary-container": "#343940", "surface-bright": "#f7f9ff", "background": "#f7f9ff", "on-primary-fixed-variant": "#2e4673", "tertiary-fixed-dim": "#c2c7d0", "secondary-container": "#d6e0f5", "secondary-fixed": "#d9e3f8", "primary-container": "#1f3864", "inverse-surface": "#2c3137", "surface": "#f7f9ff", "on-surface": "#171c22", "on-primary-fixed": "#001a41", "on-background": "#171c22", "primary-fixed": "#d8e2ff", "on-error": "#ffffff", "inverse-on-surface": "#edf1f9", "inverse-primary": "#afc6fb", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "surface-container-highest": "#dee3eb", "on-primary-container": "#8ba2d5", "surface-tint": "#475e8c", "on-tertiary": "#ffffff", "outline": "#747780", "primary-fixed-dim": "#afc6fb", "surface-dim": "#d6dae2", "outline-variant": "#c4c6d0", "on-secondary": "#ffffff", "on-surface-variant": "#44474f", "surface-variant": "#dee3eb", "tertiary": "#1e242a", "on-primary": "#ffffff", "surface-container-low": "#f0f4fc" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "4rem", "margin-mobile": "1.25rem", "margin-tablet": "2rem", "space-xl": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.75rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg": ["Plus Jakarta Sans", "Geist", "sans-serif"], "display-hero-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "headline-lg-mobile": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-muted": ["Inter", "Geist", "sans-serif"], "label-structural": ["IBM Plex Mono", "Geist", "monospace"], "headline-md": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-default": ["Inter", "Geist", "sans-serif"], "label-interface": ["Inter", "Geist", "sans-serif"], "display-hero": ["Plus Jakarta Sans", "Geist", "sans-serif"], "body-lead": ["Inter", "Geist", "sans-serif"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-muted": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "label-structural": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-default": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-interface": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lead": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script><style>
 .btn-modern {
   position: relative;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
@@ -25,6 +141,64 @@
   transform: translateY(0);
   box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.08);
 }
+
+    /* Radar Ping Live Indicator */
+    .radar-dot-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+    }
+    .radar-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      opacity: 0.6;
+      animation: radarPulse 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    .radar-center {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: #1d68ed;
+      box-shadow: 0 0 10px rgba(29, 104, 237, 0.85);
+    }
+    @keyframes radarPulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(0.95); opacity: 0; }
+    }
+    .btn-pill-primary {
+      background-color: #1d68ed;
+      color: #ffffff;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px -1px rgba(29, 104, 237, 0.35);
+    }
+    .btn-pill-primary:hover {
+      background-color: #1557c0;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -2px rgba(29, 104, 237, 0.45);
+    }
+    .btn-pill-secondary {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      border-radius: 9999px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-pill-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
 </style>
 </head><body class="bg-surface-container-lowest text-on-surface font-body-default text-body-default antialiased selection:bg-secondary-container selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-transparent transition-all duration-300 site-header" id="site-header">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
@@ -107,7 +281,26 @@
   </div>
 </aside><main class="w-full pt-20 bg-[#030712] min-h-screen"><div class="flex flex-col w-full">
 <!-- Top Monolith Hero Intro -->
-<section class="w-full bg-[#030712] text-white px-gutter pt-space-xl pb-space-xl border-b border-white/10"><div class="max-w-7xl mx-auto flex flex-col pt-space-md"><div class="flex items-center gap-space-sm mb-space-md"><span class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></span><span class="font-label-structural text-label-structural uppercase tracking-widest text-slate-400">FLAGSHIP PLATFORMS // AUDITED RELEASES</span><span class="text-slate-600 font-label-structural text-label-structural px-space-xs">/</span><span class="font-label-structural text-label-structural text-slate-400">SYS-SPEC: 2026.Q1</span></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end pb-space-lg"><div class="lg:col-span-8 flex flex-col"><h1 class="font-display-hero text-display-hero text-white tracking-tight leading-tight">Sovereign Products Engineered for Verifiable Autonomy.</h1></div><div class="lg:col-span-4 flex flex-col"><p class="font-body-lead text-body-lead text-slate-400 leading-relaxed">Explore Mulyankan AI<span id="mulyankan-deep-dive"></span>, our high-density sensory hardware platforms, and real-time offline inferencing engines purpose-built for zero-egress environments.</p></div></div><div class="flex flex-wrap items-center gap-space-md pb-space-xl"><a class="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-[#030712] font-label-interface text-label-interface font-semibold rounded-2xl hover:bg-slate-200 transition-all shadow-sm" href="#mulyankan-deep-dive"><span>Inspect Product Suite</span><span class="material-symbols-outlined text-[18px]">arrow_downward</span></a><a class="inline-flex items-center gap-2 px-6 py-3.5 border border-white/20 text-white font-label-interface text-label-interface font-medium rounded-2xl hover:bg-white/10 hover:border-white transition-all" data-path="contact-us" href="contact.html"><span>Request Evaluation Kit</span><span class="material-symbols-outlined text-[18px]">arrow_outward</span></a></div><div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-sm"><div class="p-space-lg bg-white/5 border border-white/10 backdrop-blur-sm shadow-sm flex items-center justify-between rounded-2xl transition-all duration-200 hover:bg-white/10"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="font-label-structural text-label-structural text-slate-400">PLATFORM 01 // ACADEMIC GOVERNANCE</span></div><span class="font-headline-sm text-headline-sm text-white mt-1">Mulyankan AI<span id="mulyankan-deep-dive"></span></span><span class="font-body-muted text-body-muted text-slate-300 mt-1">Automated descriptive script evaluation &amp; scoring verification.</span></div><a class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white shadow-sm hover:bg-white hover:text-[#030712] transition-all shrink-0 ml-4" href="#mulyankan-deep-dive"><span class="material-symbols-outlined text-[20px]">arrow_downward</span></a></div><div class="p-space-lg bg-white/5 border border-white/10 backdrop-blur-sm shadow-sm flex items-center justify-between rounded-2xl transition-all duration-200 hover:bg-white/10"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="font-label-structural text-label-structural text-slate-400">PLATFORM 02 // DEFENSE &amp; R&amp;D</span></div><span class="font-headline-sm text-headline-sm text-white mt-1">MIRA Engine<span id="mira-deep-dive"></span></span><span class="font-body-muted text-body-muted text-slate-300 mt-1">Zero-cloud air-gapped multimodal knowledge discovery.</span></div><a class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white shadow-sm hover:bg-white hover:text-[#030712] transition-all shrink-0 ml-4" href="#mira-deep-dive"><span class="material-symbols-outlined text-[20px]">arrow_downward</span></a></div></div></div></section>
+<section class="w-full bg-[#030712] text-white px-gutter pt-space-xl pb-space-xl border-b border-white/10"><div class="max-w-7xl mx-auto flex flex-col pt-space-md"><div class="mb-6 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)]">
+          <span class="radar-dot-wrapper" aria-hidden="true">
+            <span class="radar-ring"></span>
+            <span class="radar-center"></span>
+          </span>
+          <span class="font-sans text-[11.5px] uppercase tracking-[0.14em] text-neutral-300 font-medium flex items-center gap-2">
+            <span>Flagship Platforms</span>
+            <span class="text-white/20 font-light mx-0.5">/</span>
+            <span>Audited Production Systems</span>
+          </span>
+        </div><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end pb-space-lg"><div class="lg:col-span-8 flex flex-col"><h1 class="font-display-hero text-display-hero text-white tracking-tight leading-tight">Sovereign Products Engineered for Verifiable Autonomy.</h1></div><div class="lg:col-span-4 flex flex-col"><p class="font-body-lead text-body-lead text-slate-400 leading-relaxed">Explore Mulyankan AI<span id="mulyankan-deep-dive"></span>, our high-density sensory hardware platforms, and real-time offline inferencing engines purpose-built for zero-egress environments.</p></div></div><div class="flex flex-wrap items-center gap-4 pb-12">
+          <a class="btn-pill-primary inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold shadow-md shadow-blue-500/25" href="#mulyankan-deep-dive">
+            <span>Inspect Product Suite</span>
+            <span class="material-symbols-outlined text-[17px]">arrow_downward</span>
+          </a>
+          <a class="btn-pill-secondary inline-flex items-center gap-2 px-6 py-3 text-sm font-medium" data-path="contact-us" href="contact.html">
+            <span>Request Evaluation Kit</span>
+            <span class="material-symbols-outlined text-[17px]">arrow_outward</span>
+          </a>
+        </div><div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-sm"><div class="p-space-lg bg-white/5 border border-white/10 backdrop-blur-sm shadow-sm flex items-center justify-between rounded-2xl transition-all duration-200 hover:bg-white/10"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="font-label-structural text-label-structural text-slate-400">PLATFORM 01 // ACADEMIC GOVERNANCE</span></div><span class="font-headline-sm text-headline-sm text-white mt-1">Mulyankan AI<span id="mulyankan-deep-dive"></span></span><span class="font-body-muted text-body-muted text-slate-300 mt-1">Automated descriptive script evaluation &amp; scoring verification.</span></div><a class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white shadow-sm hover:bg-white hover:text-[#030712] transition-all shrink-0 ml-4" href="#mulyankan-deep-dive"><span class="material-symbols-outlined text-[20px]">arrow_downward</span></a></div><div class="p-space-lg bg-white/5 border border-white/10 backdrop-blur-sm shadow-sm flex items-center justify-between rounded-2xl transition-all duration-200 hover:bg-white/10"><div class="flex flex-col"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="font-label-structural text-label-structural text-slate-400">PLATFORM 02 // DEFENSE &amp; R&amp;D</span></div><span class="font-headline-sm text-headline-sm text-white mt-1">MIRA Engine<span id="mira-deep-dive"></span></span><span class="font-body-muted text-body-muted text-slate-300 mt-1">Zero-cloud air-gapped multimodal knowledge discovery.</span></div><a class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white shadow-sm hover:bg-white hover:text-[#030712] transition-all shrink-0 ml-4" href="#mira-deep-dive"><span class="material-symbols-outlined text-[20px]">arrow_downward</span></a></div></div></div></section>
 <!-- PRODUCT 01: MULYANKAN AI -->
 <section class="w-full bg-surface-container-low px-gutter py-space-xl scroll-mt-24" id="mulyankan-deep-dive">
 <div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
@@ -122,12 +315,12 @@
 <!-- Headline + Core Narrative Grid -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
 <div class="lg:col-span-7 flex flex-col">
-<div class="flex items-start gap-space-md mb-space-md"><img src="assets/images/stitch/stitch_asset_13.jpg" alt="Mulyankan AI<span id="mulyankan-deep-dive"></span> Logo" class="h-12 w-12 object-contain shrink-0 shadow-sm border border-outline-variant/50 mt-1 rounded-2xl"><h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Automating Descriptive University Examination Evaluation at Scale.</h2></div>
+<div class="flex items-start gap-space-md mb-space-md"><img src="assets/images/stitch/stitch_asset_13.jpg" alt="Mulyankan AI Logo" class="h-12 w-12 object-contain shrink-0 shadow-sm border border-outline-variant/50 mt-1 rounded-2xl"><h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Automating Descriptive University Examination Evaluation at Scale.</h2></div>
 <p class="font-body-default text-body-default text-on-surface-variant leading-relaxed mb-space-md">
             Eliminating grader fatigue, inter-evaluator variance, and multi-week processing delays in university exam evaluation through unconstrained handwritten OCR and multi-tiered rubric matching. Mulyankan AI<span id="mulyankan-deep-dive"></span> preserves faculty judgment through deterministic verification checkpoints.
           </p>
 <div class="flex flex-wrap gap-space-md items-center pt-space-xs">
-<a class="inline-flex items-center gap-2 px-5 py-3 bg-primary text-on-primary font-label-interface text-label-interface hover:bg-primary-container shadow-sm transition-all rounded-xl" href="https://mulyankanai.in/" rel="noopener noreferrer" target="_blank">
+<a class="btn-pill-primary inline-flex items-center gap-2 px-6 py-3 font-sans text-xs font-semibold shadow-md shadow-blue-500/25" href="https://mulyankanai.in/" rel="noopener noreferrer" target="_blank">
 <span>Visit Mulyankan AI<span id="mulyankan-deep-dive"></span> Platform</span>
 <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
 </a>
